@@ -11,8 +11,10 @@ import io
 import os
 import re
 import csv
+import sys
 import datetime
-from catalog import ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS, NO_REDISTRIBUTION
+import subprocess
+from catalog import Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS, NO_REDISTRIBUTION
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -35,7 +37,6 @@ def valid_date(text):
     return False
 
 CJK = re.compile(r"[一-鿿]")
-FIELDS = "first updated title org genre org_kind topics tags url key"
 TAG_EN = [en for en, _ in TAGS]
 TAG_ZH = dict(TAGS)
 # 标签与主题重合到这个比例以上，说明两个名字圈的是同一堆材料，留一个就够
@@ -43,9 +44,8 @@ OVERLAP_MAX = 0.7
 
 
 def _rows():
-    """把 ITEMS 转成 dict，避免位置下标——元组形状改过三次，下标必然算错。"""
-    names = FIELDS.split()
-    return [dict(zip(names, t)) for t in ITEMS]
+    """用共享结构解析 ITEMS；字段数变化时立即失败，不静默截断。"""
+    return [Item(*t)._asdict() for t in ITEMS]
 
 
 def check_data():
@@ -125,32 +125,52 @@ def check_fetched():
     if not os.path.exists(path):
         return bad
     with io.open(path, encoding="utf-8") as fh:
-        rec = {r["名称"] for r in csv.DictReader(fh, delimiter="\t")}
-    keys = {r["key"] for r in _rows() if r["key"]}
-    orphan = sorted(rec - keys)
+        reader = csv.DictReader(fh, delimiter="\t")
+        columns = ["名称", "原始类型", "抓取日期", "出处地址"]
+        if reader.fieldnames != columns:
+            return ["fetched.tsv 表头应为 %s，实际为 %s；请恢复四列表头" % (
+                "／".join(columns), "／".join(reader.fieldnames or []))]
+        records = list(reader)
+    valid_records = []
+    for line, record in enumerate(records, start=2):
+        missing = [column for column in columns if not record.get(column)]
+        if missing:
+            bad.append("fetched.tsv 第 %d 行缺少 %s；请补全该记录" % (line, "／".join(missing)))
+        else:
+            valid_records.append(record)
+    records = valid_records
+    names = [r["名称"] for r in records]
+    duplicate = sorted({name for name in names if names.count(name) > 1})
+    if duplicate:
+        bad.append("fetched.tsv 名称重复：%s；请为每个名称只保留一条记录" % "、".join(duplicate))
+    rec = {r["名称"]: r for r in records}
+    rows = {r["key"]: r for r in _rows() if r["key"]}
+    orphan = sorted(set(rec) - set(rows))
     if orphan:
         bad.append("fetched.tsv 有孤儿记录，catalog.py 已不引用：%s" % "、".join(orphan))
-    dangling = sorted(keys - rec)
+    dangling = sorted(set(rows) - set(rec))
     if dangling:
         bad.append("catalog.py 引用了 fetched.tsv 里没有的键：%s" % "、".join(dangling))
+    for key in sorted(set(rows) & set(rec)):
+        if rows[key]["url"] != rec[key]["出处地址"]:
+            bad.append("%s 的出处与 fetched.tsv 抓取地址不一致：%s != %s；"
+                       "请重新核对后同步两处地址" % (
+                key, rows[key]["url"], rec[key]["出处地址"]))
     return bad
 
 
-def check_index_tsv():
-    """校验生成出来的 index.tsv：列数一致，且没有空列。
+def check_index_text(raw):
+    """校验 index.tsv 内容：列数一致，且没有空列。
 
     制表符是 IFS 空白字符，连续两个会被 shell 的 read 当成一个分隔符吞掉，
     后面所有列左移一位，fetch.sh 就会拿错 url 去下载。所以一列都不许为空。
     """
     bad = []
-    path = os.path.join(ROOT, "index.tsv")
-    if not os.path.exists(path):
-        return ["index.tsv 还没生成"]
-    with io.open(path, encoding="utf-8", newline="") as fh:
-        raw = fh.read()
     if "\r" in raw:
         bad.append("index.tsv 含 \\r：行尾必须是 LF，否则 shell 切出的末列会带游离字符")
     rows = list(csv.reader(io.StringIO(raw), delimiter="\t"))
+    if not rows:
+        return bad + ["index.tsv 是空文件"]
     width = len(rows[0])
     for n, r in enumerate(rows[1:], start=2):
         if len(r) != width:
@@ -161,12 +181,38 @@ def check_index_tsv():
     return bad
 
 
+def check_index_tsv():
+    """校验当前 index.tsv 文件。"""
+    path = os.path.join(ROOT, "index.tsv")
+    if not os.path.exists(path):
+        return ["index.tsv 还没生成"]
+    with io.open(path, encoding="utf-8", newline="") as fh:
+        return check_index_text(fh.read())
+
+
+def check_generated_freshness():
+    """调用生成器的只读模式，避免校验模块反向导入生成模块。"""
+    command = [sys.executable, os.path.join(HERE, "build.py"), "--check-generated"]
+    try:
+        result = subprocess.run(command, text=True, capture_output=True, timeout=30)
+    except subprocess.TimeoutExpired:
+        return ["生成物一致性检查超过 30 秒；请单独运行 %s 定位卡住的步骤" % " ".join(command)]
+    if result.returncode == 0:
+        return []
+    output = result.stdout.strip() or result.stderr.strip()
+    return output.splitlines() if output else ["生成物一致性检查异常退出；请单独运行 %s" % " ".join(command)]
+
+
 def run(stage="全部"):
     bad = []
+    data_bad = []
     if stage in ("全部", "数据"):
-        bad += check_data() + check_fetched()
+        data_bad = check_data() + check_fetched()
+        bad += data_bad
     if stage in ("全部", "生成物"):
         bad += check_index_tsv()
+        if stage == "生成物" or not data_bad:
+            bad += check_generated_freshness()
     return bad
 
 
