@@ -1,59 +1,24 @@
 # -*- coding: utf-8 -*-
 """条目清单——本仓唯一的数据源，README 与 index.tsv 都由它生成。
 
-每条十个字段：发布日期、最后更新、标题、出品方、体裁、出品方类型、主题、标签、出处地址、
-原件键名（连到 fetched.tsv，取 sha256 与最后核对日期）。
+每条十个字段：首发日期、最后更新、标题、出品方、体裁、出品方类型、主题、标签、
+出处地址、原件键名（连到 fetched.tsv，记录本仓哪天取过原件）。
+**不写评价，不写解读**——本仓只做收集、打标签、按发布时间排序。
 
-发布日期是**首发日**：论文取 arXiv v1 的投稿日，代码仓取 created_at，网页取互联网
-档案馆最早快照（那是下界，只能证明该 URL 至少此时已存在）。修订日不写在这一列。
+四根轴互相独立，各答一个问题：体裁问材料是什么形态（六选一，互斥），出品方类型
+问谁出的（八选一，互斥），主题问什么在被重构（七个区，可多挂），标签是横切主题的
+检索词（英文正名配中文别名，条目只存英文正名，中文由 TAGS 带出）。
 
-最后更新是**原文自己最后改动的日子**，逐行不同。**默认写 `-`，只有实际采集到明确信号
-才填日期**：论文有修订版的取修订日，代码仓取 pushed_at。未修订的论文、一次性的文章与
-公告，都不拿首发日回填——那是推断，不是采集。查不到就是 `-`，不许拿抓取日或今天冒充。
+**每一轴的判据写在 README.md 的「怎么分类」一节，那里是唯一出处，此处不复述。**
+加条目前先读那一节；判据要改也改那里，改完跑 build.py 重新生成。
 
-最后核对不是行的属性，是**整份清单的属性**：52 条是同一天抓的，逐行重复毫无信息量。
-它由 fetched.tsv 的抓取日期汇总，只在 README 顶部出现一次。**不写评价，不写解读**——本仓只做收集、打标签、按发布时间排序。
-
-四根轴互相独立，各答一个问题，不叠在一起：
-  体裁     这份材料是什么形态          六选一，互斥
-  出品方类型 谁出的                   八选一，互斥
-  主题     什么在被重构                七个区，可多挂，不互斥
-  标签     谈的具体对象或取证方式         可多挂，横切主题
-
-体裁与出品方类型是两个问题，别混成一根轴——厂商能发论文，公司能维护清单，
-非营利组织能出规范。混成一根就得靠没写下来的优先级维持互斥，下一个人加条目时
-必然走样。判据：
-
-  体裁 = 论文 ｜ 规范 ｜ 文档 ｜ 清单 ｜ 报告 ｜ 文章
-    论文  发在 arXiv、会议、期刊上的
-    规范  约束他人的规范文本：协议规范、风险框架、监管文件、行业基线、API 政策
-    文档  出品方自家的说明：开发者文档、官网说明页、产品页、定价页
-    清单  第三方汇编：清单、时间线、评分表
-    报告  有方法有数据的调研或评估出版物：问卷报告、分析机构报告、技术雷达
-    文章  单篇观点、公告、工程博客
-
-  出品方类型 = 学界 ｜ 厂商 ｜ 产学合作 ｜ 标准组织 ｜ 分析机构 ｜ 投资机构 ｜ 社区与非营利 ｜ 个人
-    先看有没有混：同时含大学院所与公司 → 产学合作；只含其一 → 学界 或 厂商
-    标准化机构与协议项目 → 标准组织；分析咨询机构 → 分析机构；风险投资机构 → 投资机构
-    非营利组织与独立研究组织 → 社区与非营利；个人署名或原文未署机构 → 个人
-
-  主题 = 界面与接入 ｜ 应用内部 ｜ 构造方式 ｜ 安全与攻防 ｜ 运行与问责 ｜ 协议与生态 ｜ 商业与组织
-    判据是「什么在被重构」。**可以多挂**——一条材料同时谈两件事就挂两个区，
-    同一条出现在两个区不是重复收录。
-    安全与攻防、运行与问责两区的分界：材料谈的是**怎么被攻破、怎么防住**（威胁、
-    漏洞、越权、隔离、安全普查），还是**跑起来之后谁管、按什么规矩管、出事谁负责**
-    （法规、风险框架、可观测、管控面、责任边界）。
-
-  标签 见 TAGS，英文正名配中文别名。它横着穿过主题，不在主题之下
-    （`MCP` 一个词就落在 5 个主题里）。
-    加新标签有一条规矩：**它若和某个主题圈住的是同一堆材料，就不要它**——主题已经
-    承担了，两个名字指一件事，用的人不知道该按哪个找。
-
-出品方按原文署名的机构填写。arXiv 摘要页不含机构信息，故取自正文首页
-（HTML 版的作者块，或 PDF 第 1 页）；原文通篇未署机构的，写明「原文未署机构」
-并附作者名，不留「见原文」。
+日期与出品方的填法同样见 README 清单下方的三段说明：首发取原文第一次出现的日子，
+最后更新默认 `-` 只填实际采集到的，出品方按原文署名机构填、未署机构的写明。
 """
 
+# 四轴的受控词表。判据见 README.md「怎么分类」。
+TOPICS = ["界面与接入", "应用内部", "构造方式", "安全与攻防", "运行与问责",
+          "协议与生态", "商业与组织"]
 GENRES = ["论文", "规范", "文档", "清单", "报告", "文章"]
 ORG_KINDS = ["学界", "厂商", "产学合作", "标准组织", "分析机构", "投资机构",
              "社区与非营利", "个人"]
@@ -321,13 +286,13 @@ ITEMS = [
      ["orchestration"],
      "https://github.com/langchain-ai/langgraph",
      "vendor-langgraph"),
-    ("2022-11-02", "2026-09-19", "LlamaIndex: llamaIndex is the document processing platform for AI",
+    ("2022-11-02", "2026-09-19", "LlamaIndex: the document processing platform for AI",
      "LlamaIndex",
      "文档", "厂商", ["应用内部"],
      ["RAG", "context-engineering"],
      "https://github.com/run-llama/llama_index",
      "vendor-llamaindex"),
-    ("2023-10-27", "2026-09-20", "CrewAI: framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks",
+    ("2023-10-27", "2026-09-20", "CrewAI: framework for orchestrating role-playing, autonomous AI agents",
      "CrewAI",
      "文档", "厂商", ["构造方式"],
      ["orchestration"],
@@ -345,7 +310,7 @@ ITEMS = [
      ["orchestration", "tool-interface"],
      "https://github.com/openai/openai-agents-python",
      "vendor-openai-agents-sdk"),
-    ("2024-06-21", "2026-09-19", "Pydantic AI: how Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end",
+    ("2024-06-21", "2026-09-19", "Pydantic AI: how Python does AI",
      "Pydantic",
      "文档", "厂商", ["构造方式"],
      ["tool-interface"],
@@ -357,7 +322,7 @@ ITEMS = [
      ["orchestration"],
      "https://github.com/microsoft/semantic-kernel",
      "vendor-microsoft-semantic-kernel"),
-    ("2019-11-14", "2026-09-19", "Haystack: open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems",
+    ("2019-11-14", "2026-09-19", "Haystack: open-source AI orchestration framework for building context-engineered, production-ready LLM applications",
      "deepset",
      "文档", "厂商", ["构造方式", "应用内部"],
      ["orchestration", "RAG"],
@@ -567,7 +532,7 @@ ITEMS = [
      ["payments"],
      "https://arxiv.org/abs/2602.00213",
      "academic-2602.00213-tesspay-verify-then-pay"),
-    ("2026-01-31", "-", "Engineering AI Agents for Clinical Workflows: A Case Study in Architecture,MLOps, and Governance",
+    ("2026-01-31", "-", "Engineering AI Agents for Clinical Workflows: A Case Study in Architecture, MLOps, and Governance",
      "A3Data, CEFET-MG",
      "论文", "产学合作", ["构造方式", "运行与问责"],
      ["empirical-study"],
@@ -723,7 +688,7 @@ ITEMS = [
      ["context-engineering", "curated-list"],
      "https://github.com/Meirtz/Awesome-Context-Engineering",
      "community-context-engineering-readme"),
-    ("2026-05-13", "-", "ServiceNow opens its full system of action to every AI Agent in the enterprise（Action Fabric）",
+    ("2026-05-13", "-", "ServiceNow opens its full system of action to every AI Agent in the enterprise (Action Fabric)",
      "ServiceNow",
      "文章", "厂商", ["界面与接入", "运行与问责"],
      ["headless"],
@@ -758,7 +723,7 @@ ITEMS = [
      "文章", "投资机构", ["商业与组织"],
      ["headless"],
      "https://a16z.com/good-news-ai-will-eat-application-software/",
-     None),
+     "investor-a16z-eat-application-software"),
     ("2026-03", "-", "AI Isn't Going to \"Eat\" Software: Agentic AI Needs the Authoritative Data and Rules Inside Enterprise Apps",
      "IDC",
      "报告", "分析机构", ["商业与组织"],
@@ -788,9 +753,9 @@ ITEMS = [
      "规范", "社区与非营利", ["安全与攻防"],
      ["risk-framework"],
      "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
-     None),
+     "standard-owasp-top10-agentic"),
     ("2025-11-25", "-", "Securing the Model Context Protocol (MCP): Risks, Controls, and Governance",
-     "Vanta、MintMCP、Darktrace",
+     "Vanta, MintMCP, Darktrace",
      "论文", "厂商", ["安全与攻防"],
      ["MCP"],
      "https://arxiv.org/abs/2511.20920",
@@ -800,7 +765,7 @@ ITEMS = [
      "报告", "分析机构", ["协议与生态"],
      ["MCP"],
      "https://www.thoughtworks.com/radar/platforms/model-context-protocol-mcp",
-     None),
+     "analyst-thoughtworks-radar-mcp"),
     ("2025-08-05", "2025-10-20", "Evolution of AI Agent Registry Solutions: Centralized, Enterprise, and Distributed Approaches",
      "MIT, Cisco, Cleveland State University, et al.",
      "论文", "产学合作", ["协议与生态"],
@@ -904,13 +869,13 @@ ITEMS = [
      "https://github.com/VoltAgent/awesome-ai-agent-papers",
      "community-voltagent-agent-papers"),
     ("2025-04-08", "2026-03-03", "awesome-mcp-security",
-     "Puliczek",
+     "Maciej Pulikowski (Puliczek)",
      "清单", "个人", ["安全与攻防"],
      ["MCP", "curated-list"],
      "https://github.com/Puliczek/awesome-mcp-security",
      "community-puliczek-mcp-security"),
     ("2026-03-14", "2026-03-14", "Awesome MCP Security: security scores for 800+ MCP servers",
-     "getagentseal",
+     "Agentseal",
      "清单", "厂商", ["安全与攻防", "协议与生态"],
      ["MCP", "curated-list"],
      "https://github.com/getagentseal/awesome-mcp-security",
