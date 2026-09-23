@@ -15,7 +15,7 @@ import sys
 import datetime
 import subprocess
 from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
-                     NO_REDISTRIBUTION, SUMMARY_GAPS)
+                     NO_REDISTRIBUTION, SUMMARY_GAPS, BRAND_CONTEXT)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -90,6 +90,14 @@ def check_data():
             fail(r, "标题与出品方语言不一致：%s ／ %s" % (r["title"][:24], r["org"][:24]))
         if not r["url"].startswith("http"):
             fail(r, "出处不是网址：%s" % r["url"])
+
+    item_urls = {r["url"] for r in rows}
+    for url, context in BRAND_CONTEXT.items():
+        if url not in item_urls:
+            bad.append("品牌/产品标注指向不存在的条目：%s" % url)
+        parts = context.split("；")
+        if len(parts) != 2 or not all(part.strip() for part in parts):
+            bad.append("品牌/代表产品标注格式应为「品牌；代表产品/项目」：%s" % url)
 
     for name, seq in (("出处", [r["url"] for r in rows]),
                       ("原件键", [r["key"] for r in rows if r["key"]])):

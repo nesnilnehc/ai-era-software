@@ -10,7 +10,7 @@ import sys
 import tempfile
 import check
 from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
-                     NO_REDISTRIBUTION, SUMMARY_GAPS, ARXIV_NOTE)
+                     NO_REDISTRIBUTION, SUMMARY_GAPS, BRAND_CONTEXT, ARXIV_NOTE)
 from policy import (TITLE, SCOPE, OUT_OF_SCOPE, ADMISSION_RULE, FIRST_DATE_RULE,
                     UPDATED_DATE_RULE, ORG_RULE, AXES_INTRO, GENRE_RULE,
                     ORG_KIND_RULE, TOPIC_BOUNDARY_RULE, TAG_RULE,
@@ -32,8 +32,19 @@ def with_alias(tags):
             out.append(TAG_ZH[t])
     return out
 
+
+def publisher_display(item):
+    """公开可识别的品牌/项目；出品方与品牌同名时避免重复展示。"""
+    context = BRAND_CONTEXT.get(item.url)
+    if not context:
+        return md(item.org)
+    brand, project = context.split("；", 1)
+    if brand.casefold() == item.org.casefold():
+        return "%s（%s）" % (md(item.org), md(project))
+    return "%s（%s；%s）" % (md(item.org), md(brand), md(project))
+
 TSV_COLUMNS = ["首发日期", "最后更新", "标题", "出品方", "体裁", "出品方类型",
-               "主题", "标签", "出处", "摘要", "收录理由"]
+               "主题", "标签", "出处", "摘要", "收录理由", "出品方品牌与代表产品/项目"]
 
 
 def widest_tag(items):
@@ -93,7 +104,7 @@ def render_outputs():
         # 当成一个分隔符吞掉，后面所有列左移一位，fetch.sh 就会拿错 url 去下载。
         w.writerow([i.first, i.updated, i.title, i.org, i.genre, i.org_kind,
                     "|".join(i.topics), "|".join(with_alias(i.tags)), i.url,
-                    i.summary or "—", i.rationale])
+                    i.summary or "—", i.rationale, BRAND_CONTEXT.get(i.url, "—")])
     index_text = index_out.getvalue()
 
     # ── README.md：给人读 ──
@@ -138,7 +149,7 @@ def render_outputs():
     L.append("## 清单（按发布时间倒序）\n")
     # 出品方单独成列，便于读者快速识别来源；摘要和收录理由放在材料单元格内。
     # 主题与标签只在展示层合并，机器可读数据仍是两个字段。
-    L.append("| 日期 | 材料 | 出品方 | 分类 |")
+    L.append("| 日期 | 材料 | 出品方（品牌；代表产品/项目） | 分类 |")
     L.append("|---|---|---|---|")
     for i in items:
         mark = " ⚠" if i.key in NO_REDISTRIBUTION else ""
@@ -153,7 +164,8 @@ def render_outputs():
         classification = "**主题** %s<br>**标签** %s" % (
             " ".join("`%s`" % t for t in i.topics),
             " ".join("`%s`" % t for t in with_alias(i.tags)))
-        L.append("| %s | %s | %s | %s |" % (when, material, md(i.org), classification))
+        producer = publisher_display(i)
+        L.append("| %s | %s | %s | %s |" % (when, material, producer, classification))
     L.append("")
     filled = sum(1 for i in items if i.updated != "-")
     L.append("**日期列**写的是「首发 → 最后更新」，原文自首发后没改过、或改没改采集不到的，"
@@ -231,7 +243,7 @@ def render_outputs():
              "set -euo pipefail",
              'cd "$(dirname "$0")"',
              "mkdir -p originals",
-             'tail -n +2 index.tsv | while IFS=$\'\\t\' read -r first updated title org genre okind topics tags url summary rationale; do',
+             'tail -n +2 index.tsv | while IFS=$\'\\t\' read -r first updated title org genre okind topics tags url summary rationale org_context; do',
              '  # 文件名末尾拼 URL 的短哈希：只截前 80 字符会让长 URL 撞名并静默互相覆盖。',
              '  slug=$(printf "%s" "$url" | tr -c "A-Za-z0-9._-" "_" | cut -c1-80)',
              '  h=$(printf "%s" "$url" | shasum -a 256 | cut -c1-8)',

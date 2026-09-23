@@ -58,6 +58,44 @@ TAGS = [
     ("market-data", "市场数据"),
 ]
 
+# 可辨识的品牌与代表产品/项目，值为「品牌；代表产品/项目」。只在出处明确关联、
+# 且能帮助读者认出出品方时填写；未列出的条目不推断关联。
+BRAND_CONTEXT = {
+    "https://github.com/google/adk-python": "Google AI；Agent Development Kit",
+    "https://github.com/strands-agents/harness-sdk": "AWS；Strands Agents",
+    "https://github.com/vercel/ai": "Vercel；AI SDK",
+    "https://github.com/google-agentic-commerce/AP2": "Google；AP2",
+    "https://dora.dev/research/2025/dora-report/": "Google Cloud；DORA",
+    "https://github.com/microsoft/playwright-mcp": "Microsoft；Playwright MCP",
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool": "Anthropic；Claude computer use",
+    "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills": "Anthropic；Claude Agent Skills",
+    "https://github.com/anthropics/skills": "Anthropic；Claude Skills",
+    "https://github.com/langchain-ai/langchain": "LangChain；LangChain",
+    "https://github.com/langchain-ai/langgraph": "LangChain；LangGraph",
+    "https://github.com/microsoft/autogen": "Microsoft；AutoGen",
+    "https://github.com/openai/openai-agents-python": "OpenAI；Agents SDK",
+    "https://github.com/microsoft/semantic-kernel": "Microsoft；Semantic Kernel",
+    "https://blog.palantir.com/connecting-agents-to-decisions-277dee8ddb40": "Palantir；AIP",
+    "https://www.palantir.com/docs/foundry/architecture-center/ontology-system": "Palantir；Foundry Ontology",
+    "https://github.com/openai/codex": "OpenAI；Codex",
+    "https://github.com/anthropics/claude-code": "Anthropic；Claude Code",
+    "https://github.com/google-gemini/gemini-cli": "Google；Gemini CLI",
+    "https://github.com/QwenLM/qwen-code": "Alibaba；Qwen Code",
+    "https://github.com/langgenius/dify": "LangGenius；Dify",
+    "https://github.com/bytedance/UI-TARS": "ByteDance；UI-TARS",
+    "https://github.com/deepseek-ai/deepseek-harness": "DeepSeek；DeepSeek Harness",
+    "https://arxiv.org/abs/2609.15066": "Salesforce；Koa",
+    "https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/": "Salesforce；Koa",
+    "https://www.salesforce.com/news/stories/why-we-post-trained-our-own-reasoning-model/": "Salesforce；Koa",
+    "https://www.salesforce.com/news/stories/expanding-headless-360-enterprise-capabilities/": "Salesforce；Headless 360",
+    "https://www.salesforce.com/agentforce/pricing/": "Salesforce；Agentforce",
+    "https://fin.ai/pricing": "Intercom；Fin AI Agent",
+    "https://platform.openai.com/docs/guides/function-calling": "OpenAI；Function calling",
+    "https://typesafe.ai/blog/introducing-system-one-models-and-jev": "TypeSafe AI；System One / Jev",
+    "https://docs.typesafe.ai/introduction": "TypeSafe AI；Jev",
+    "https://github.com/zai-org/ZCode": "智谱 AI；GLM",
+}
+
 # 条目结构由生成器与校验器共用；ITEMS 仍保持紧凑的元组写法。
 Item = namedtuple("Item", "first updated title org genre org_kind topics tags url key summary rationale")
 

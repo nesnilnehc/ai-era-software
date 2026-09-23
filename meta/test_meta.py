@@ -26,7 +26,10 @@ class ReadmeRenderingTests(unittest.TestCase):
         self.assertIn("[分类口径](#怎么分类)", readme)
         self.assertIn("rg 'MCP' index.tsv", readme)
         self.assertIn("[`meta/policy.py`](meta/policy.py)", readme)
-        self.assertIn("| 日期 | 材料 | 出品方 | 分类 |", readme)
+        self.assertIn("| 日期 | 材料 | 出品方（品牌；代表产品/项目） | 分类 |", readme)
+        self.assertIn("Z.ai（智谱 AI；GLM）", readme)
+        self.assertIn("Salesforce（Koa）", readme)
+        self.assertIn("TypeSafe AI（System One / Jev）", readme)
         self.assertIn("摘要：提出用计算机操作智能体模拟用户需求", readme)
         self.assertIn("收录理由：", readme)
         self.assertIn("收录理由说明材料为何在本目录", readme)
@@ -41,7 +44,7 @@ class ReadmeRenderingTests(unittest.TestCase):
 
         self.assertEqual(
             header,
-            "首发日期\t最后更新\t标题\t出品方\t体裁\t出品方类型\t主题\t标签\t出处\t摘要\t收录理由",
+            "首发日期\t最后更新\t标题\t出品方\t体裁\t出品方类型\t主题\t标签\t出处\t摘要\t收录理由\t出品方品牌与代表产品/项目",
         )
 
 
