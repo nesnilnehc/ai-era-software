@@ -10,11 +10,11 @@ import sys
 import tempfile
 import check
 from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
-                     NO_REDISTRIBUTION, ARXIV_NOTE)
-from policy import (TITLE, SCOPE, OUT_OF_SCOPE, FIRST_DATE_RULE,
+                     NO_REDISTRIBUTION, SUMMARY_GAPS, ARXIV_NOTE)
+from policy import (TITLE, SCOPE, OUT_OF_SCOPE, ADMISSION_RULE, FIRST_DATE_RULE,
                     UPDATED_DATE_RULE, ORG_RULE, AXES_INTRO, GENRE_RULE,
                     ORG_KIND_RULE, TOPIC_BOUNDARY_RULE, TAG_RULE,
-                    CONTRIBUTION_RULE, AXIS_WARNINGS)
+                    CONTRIBUTION_RULE, RATIONALE_RULE, AXIS_WARNINGS)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -33,7 +33,7 @@ def with_alias(tags):
     return out
 
 TSV_COLUMNS = ["首发日期", "最后更新", "标题", "出品方", "体裁", "出品方类型",
-               "主题", "标签", "出处"]
+               "主题", "标签", "出处", "摘要", "收录理由"]
 
 
 def widest_tag(items):
@@ -92,7 +92,8 @@ def render_outputs():
         # 任何一列都不许为空：制表符是 IFS 空白字符，连续两个会被 shell 的 read
         # 当成一个分隔符吞掉，后面所有列左移一位，fetch.sh 就会拿错 url 去下载。
         w.writerow([i.first, i.updated, i.title, i.org, i.genre, i.org_kind,
-                    "|".join(i.topics), "|".join(with_alias(i.tags)), i.url])
+                    "|".join(i.topics), "|".join(with_alias(i.tags)), i.url,
+                    i.summary or "—", i.rationale])
     index_text = index_out.getvalue()
 
     # ── README.md：给人读 ──
@@ -104,6 +105,7 @@ def render_outputs():
     L.append("# %s\n" % TITLE)
     L.append(SCOPE + "\n")
     L.append(OUT_OF_SCOPE + "\n")
+    L.append(ADMISSION_RULE + "\n")
 
     L.append("## 怎么用\n")
     L.append("- **要数据**：[`index.tsv`](index.tsv)，%d 条 × %d 列，制表符分隔。列为 %s；"
@@ -122,23 +124,36 @@ def render_outputs():
     L.append("**抓取记录最近更新：%s**——%d／%d 条有与当前出处一致的抓取记录，"
              "其余 %d 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。\n"
              % (dates[-1] if dates else "尚未核对", got, len(items), len(items) - got))
+    summaries = sum(1 for i in items if i.summary)
+    L.append("**内容摘要：%d／%d 条已核实补齐**——摘要只概括原文事实，不含评价。\n"
+             % (summaries, len(items)))
+    if SUMMARY_GAPS:
+        L.append("以下条目暂不提供摘要：\n")
+        for i in items:
+            reason = SUMMARY_GAPS.get(i.url)
+            if reason:
+                L.append("- [%s](%s)：%s" % (md(i.title), md(i.url), reason))
+        L.append("")
 
     L.append("## 清单（按发布时间倒序）\n")
-    # README 只保留三列，避免窄屏把标题挤成竖条；完整九列见 index.tsv。
+    # 出品方单独成列，便于读者快速识别来源；摘要和收录理由放在材料单元格内。
     # 主题与标签只在展示层合并，机器可读数据仍是两个字段。
-    L.append("| 日期 | 材料 | 分类 |")
-    L.append("|---|---|---|")
+    L.append("| 日期 | 材料 | 出品方 | 分类 |")
+    L.append("|---|---|---|---|")
     for i in items:
         mark = " ⚠" if i.key in NO_REDISTRIBUTION else ""
         # 相同也不画箭头：首发当天之后没改过，写两遍等于噪声
         same = i.updated in ("-", i.first)
         when = i.first if same else "%s → %s" % (i.first, i.updated)
-        material = "[%s](%s)%s<br>%s · %s · %s" % (
-            md(i.title), md(i.url), mark, md(i.org), i.genre, i.org_kind)
+        material = "[%s](%s)%s<br>%s · %s" % (
+            md(i.title), md(i.url), mark, i.genre, i.org_kind)
+        if i.summary:
+            material += "<br>摘要：%s" % md(i.summary)
+        material += "<br>收录理由：%s" % md(i.rationale)
         classification = "**主题** %s<br>**标签** %s" % (
             " ".join("`%s`" % t for t in i.topics),
             " ".join("`%s`" % t for t in with_alias(i.tags)))
-        L.append("| %s | %s | %s |" % (when, material, classification))
+        L.append("| %s | %s | %s | %s |" % (when, material, md(i.org), classification))
     L.append("")
     filled = sum(1 for i in items if i.updated != "-")
     L.append("**日期列**写的是「首发 → 最后更新」，原文自首发后没改过、或改没改采集不到的，"
@@ -189,7 +204,7 @@ def render_outputs():
     L.append("## 怎么加一条\n")
     L.append("改 [`meta/catalog.py`](meta/catalog.py) 里的 `ITEMS`；分类判据在 "
              "[`meta/policy.py`](meta/policy.py)。完成后跑 `python3 meta/build.py` 重新生成。"
-             + CONTRIBUTION_RULE + "\n")
+             + CONTRIBUTION_RULE + RATIONALE_RULE + "\n")
     L.append("生成前会先跑 [`meta/check.py`](meta/check.py)：日期是否真实存在、"
              "最后更新不得早于首发、四轴取值是否在词表内、同一行标题与出品方是否同语言、"
              "出处与原件键是否重复、标签是否与某个主题圈了同一堆材料。"
@@ -216,7 +231,7 @@ def render_outputs():
              "set -euo pipefail",
              'cd "$(dirname "$0")"',
              "mkdir -p originals",
-             'tail -n +2 index.tsv | while IFS=$\'\\t\' read -r first updated title org genre okind topics tags url; do',
+             'tail -n +2 index.tsv | while IFS=$\'\\t\' read -r first updated title org genre okind topics tags url summary rationale; do',
              '  # 文件名末尾拼 URL 的短哈希：只截前 80 字符会让长 URL 撞名并静默互相覆盖。',
              '  slug=$(printf "%s" "$url" | tr -c "A-Za-z0-9._-" "_" | cut -c1-80)',
              '  h=$(printf "%s" "$url" | shasum -a 256 | cut -c1-8)',

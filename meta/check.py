@@ -14,7 +14,8 @@ import csv
 import sys
 import datetime
 import subprocess
-from catalog import Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS, NO_REDISTRIBUTION
+from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
+                     NO_REDISTRIBUTION, SUMMARY_GAPS)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -57,6 +58,10 @@ def check_data():
         bad.append("%s ｜ %s" % (row["title"][:46], msg))
 
     for r in rows:
+        if not r["rationale"] or "\n" in r["rationale"] or len(r["rationale"]) > 300:
+            fail(r, "收录理由必须是单段、非空且不超过 300 字")
+        if r["summary"] and ("\n" in r["summary"] or len(r["summary"]) > 300):
+            fail(r, "摘要必须是单段且不超过 300 字")
         if not valid_date(r["first"]):
             fail(r, "首发日期格式不对：%s" % r["first"])
         if r["updated"] != "-":
@@ -95,6 +100,14 @@ def check_data():
     missing = sorted(set(NO_REDISTRIBUTION) - {r["key"] for r in rows if r["key"]})
     if missing:
         bad.append("NO_REDISTRIBUTION 指向不存在的条目：%s" % "、".join(missing))
+
+    blank_summary_urls = {r["url"] for r in rows if not r["summary"]}
+    untracked_gaps = sorted(blank_summary_urls - set(SUMMARY_GAPS))
+    stale_gaps = sorted(set(SUMMARY_GAPS) - blank_summary_urls)
+    if untracked_gaps:
+        bad.append("缺少摘要原因记录：%s" % "、".join(untracked_gaps))
+    if stale_gaps:
+        bad.append("摘要缺口记录已过期：%s" % "、".join(stale_gaps))
 
     alias = [z for z in TAG_ZH.values() if z]
     clash = sorted(set(alias) & (set(TOPICS) | set(GENRES) | set(ORG_KINDS)))

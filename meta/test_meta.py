@@ -21,13 +21,18 @@ class ReadmeRenderingTests(unittest.TestCase):
 
         self.assertIn("# AI 重构软件 · 一手材料清单", readme)
         self.assertIn("不收录仅讨论模型能力", readme)
+        self.assertIn("正式收录须同时通过三道门", readme)
+        self.assertIn("权威性用于判断证据强度和主张边界", readme)
         self.assertIn("[分类口径](#怎么分类)", readme)
         self.assertIn("rg 'MCP' index.tsv", readme)
         self.assertIn("[`meta/policy.py`](meta/policy.py)", readme)
-        self.assertIn("| 日期 | 材料 | 分类 |", readme)
+        self.assertIn("| 日期 | 材料 | 出品方 | 分类 |", readme)
+        self.assertIn("摘要：提出用计算机操作智能体模拟用户需求", readme)
+        self.assertIn("收录理由：", readme)
+        self.assertIn("收录理由说明材料为何在本目录", readme)
         self.assertIn("**主题** `安全与攻防` `界面与接入`<br>**标签**", readme)
         self.assertIn("| 英文标签 | 中文别名 | 条目数 |", readme)
-        self.assertNotIn("| 日期 | 标题 | 出品方 | 体裁 · 出品方类型 | 主题 | 标签 |", readme)
+        self.assertNotIn("<br>Salesforce · 文章 · 厂商", readme)
 
     def test_index_preserves_separate_topic_and_tag_columns_when_rendered(self):
         _, outputs = build.render_outputs()
@@ -36,7 +41,7 @@ class ReadmeRenderingTests(unittest.TestCase):
 
         self.assertEqual(
             header,
-            "首发日期\t最后更新\t标题\t出品方\t体裁\t出品方类型\t主题\t标签\t出处",
+            "首发日期\t最后更新\t标题\t出品方\t体裁\t出品方类型\t主题\t标签\t出处\t摘要\t收录理由",
         )
 
 
@@ -100,6 +105,15 @@ class GeneratedOutputTests(unittest.TestCase):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_check_data_rejects_missing_collection_rationale(self):
+        rows = check._rows()
+        rows[0]["rationale"] = ""
+
+        with mock.patch.object(check, "_rows", return_value=rows):
+            problems = check.check_data()
+
+        self.assertTrue(any("收录理由必须是单段" in problem for problem in problems))
+
     def test_check_generated_freshness_reports_action_when_subprocess_times_out(self):
         with mock.patch.object(
                 check.subprocess, "run", side_effect=check.subprocess.TimeoutExpired("build", 30)):

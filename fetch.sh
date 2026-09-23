@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 mkdir -p originals
-tail -n +2 index.tsv | while IFS=$'\t' read -r first updated title org genre okind topics tags url; do
+tail -n +2 index.tsv | while IFS=$'\t' read -r first updated title org genre okind topics tags url summary rationale; do
   # 文件名末尾拼 URL 的短哈希：只截前 80 字符会让长 URL 撞名并静默互相覆盖。
   slug=$(printf "%s" "$url" | tr -c "A-Za-z0-9._-" "_" | cut -c1-80)
   h=$(printf "%s" "$url" | shasum -a 256 | cut -c1-8)
