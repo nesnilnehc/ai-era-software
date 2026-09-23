@@ -119,8 +119,8 @@ def render_outputs():
     L.append("常用检索：\n\n```sh\nrg 'MCP' index.tsv\nrg '商业与组织' index.tsv\n```\n")
     dates = sorted({d for d in fetched.values() if d})
     got = sum(1 for i in items if fetched.get(i.key))
-    L.append("**本清单最后核对：%s**——那天逐条取过一遍，%d／%d 条有与当前出处一致的抓取记录，"
-             "其余 %d 条只给链接。核对是整份清单的属性，不是每行的：这些条目是同一天过的。\n"
+    L.append("**抓取记录最近更新：%s**——%d／%d 条有与当前出处一致的抓取记录，"
+             "其余 %d 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。\n"
              % (dates[-1] if dates else "尚未核对", got, len(items), len(items) - got))
 
     L.append("## 清单（按发布时间倒序）\n")

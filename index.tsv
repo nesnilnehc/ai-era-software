@@ -1,8 +1,10 @@
 首发日期	最后更新	标题	出品方	体裁	出品方类型	主题	标签	出处
 2026-09-18	-	网络安全标准实践指南——智能体系统开发安全指南（征求意见稿 v1.0-202609）	全国网络安全标准化技术委员会	规范	标准组织	安全与攻防|界面与接入	regulation|法规	https://www.tc260.org.cn/tc260/tzgg/202609/e5b82ae7aca244d19d36b39575cbb458.shtml
 2026-09-16	-	Characterizing Network Centralization and Observability in the Remote MCP Ecosystem	University of Calgary	论文	学界	协议与生态|运行与问责	MCP|empirical-study|实证测量	https://arxiv.org/abs/2609.19100
+2026-09-16	-	Why We Post-Trained Our Own Reasoning Model (Koa)	Salesforce	文章	厂商	构造方式	tool-interface|工具接口	https://www.salesforce.com/news/stories/why-we-post-trained-our-own-reasoning-model/
 2026-09-15	-	Introducing System One Models & Jev	TypeSafe AI	文章	厂商	构造方式|应用内部	decision-model|决策模型|tool-interface|工具接口	https://typesafe.ai/blog/introducing-system-one-models-and-jev
 2026-09-15	-	Introduction — TypeSafe AI (Jev developer documentation)	TypeSafe AI	文档	厂商	构造方式	decision-model|决策模型|tool-interface|工具接口	https://docs.typesafe.ai/introduction
+2026-09-15	-	Announcing Koa: Salesforce’s First CRM Reasoning Model, Built on NVIDIA Nemotron	Salesforce	文章	厂商	构造方式	tool-interface|工具接口	https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/
 2026-09-14	-	Salesforce Koa: An Enterprise Language Model for Agentic Tool Use	Salesforce	论文	厂商	构造方式	tool-interface|工具接口	https://arxiv.org/abs/2609.15066
 2026-09-14	-	Authorization Architectures for Tool-Using AI Agents	Westcliff University, University of the Cumberlands, Delta Air Lines, Georgia Institute of Technology	论文	产学合作	安全与攻防	authorization|身份与授权|survey|综述	https://arxiv.org/abs/2609.15906
 2026-09-14	-	When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary	AVIV Group, independent researcher	论文	厂商	构造方式	tool-interface|工具接口	https://arxiv.org/abs/2609.15397

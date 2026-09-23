@@ -8,7 +8,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，139 条 × 9 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，141 条 × 9 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -25,7 +25,7 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**本清单最后核对：2026-09-20**——那天逐条取过一遍，137／139 条有与当前出处一致的抓取记录，其余 2 条只给链接。核对是整份清单的属性，不是每行的：这些条目是同一天过的。
+**抓取记录最近更新：2026-09-23**——139／141 条有与当前出处一致的抓取记录，其余 2 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
 ## 清单（按发布时间倒序）
 
@@ -33,8 +33,10 @@ rg '商业与组织' index.tsv
 |---|---|---|
 | 2026-09-18 | [网络安全标准实践指南——智能体系统开发安全指南（征求意见稿 v1.0-202609）](https://www.tc260.org.cn/tc260/tzgg/202609/e5b82ae7aca244d19d36b39575cbb458.shtml) ⚠<br>全国网络安全标准化技术委员会 · 规范 · 标准组织 | **主题** `安全与攻防` `界面与接入`<br>**标签** `regulation` `法规` |
 | 2026-09-16 | [Characterizing Network Centralization and Observability in the Remote MCP Ecosystem](https://arxiv.org/abs/2609.19100)<br>University of Calgary · 论文 · 学界 | **主题** `协议与生态` `运行与问责`<br>**标签** `MCP` `empirical-study` `实证测量` |
+| 2026-09-16 | [Why We Post-Trained Our Own Reasoning Model (Koa)](https://www.salesforce.com/news/stories/why-we-post-trained-our-own-reasoning-model/)<br>Salesforce · 文章 · 厂商 | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
 | 2026-09-15 | [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)<br>TypeSafe AI · 文章 · 厂商 | **主题** `构造方式` `应用内部`<br>**标签** `decision-model` `决策模型` `tool-interface` `工具接口` |
 | 2026-09-15 | [Introduction — TypeSafe AI (Jev developer documentation)](https://docs.typesafe.ai/introduction)<br>TypeSafe AI · 文档 · 厂商 | **主题** `构造方式`<br>**标签** `decision-model` `决策模型` `tool-interface` `工具接口` |
+| 2026-09-15 | [Announcing Koa: Salesforce’s First CRM Reasoning Model, Built on NVIDIA Nemotron](https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/)<br>Salesforce · 文章 · 厂商 | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
 | 2026-09-14 | [Salesforce Koa: An Enterprise Language Model for Agentic Tool Use](https://arxiv.org/abs/2609.15066)<br>Salesforce · 论文 · 厂商 | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
 | 2026-09-14 | [Authorization Architectures for Tool-Using AI Agents](https://arxiv.org/abs/2609.15906)<br>Westcliff University, University of the Cumberlands, Delta Air Lines, Georgia Institute of Technology · 论文 · 产学合作 | **主题** `安全与攻防`<br>**标签** `authorization` `身份与授权` `survey` `综述` |
 | 2026-09-14 | [When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary](https://arxiv.org/abs/2609.15397)<br>AVIV Group, independent researcher · 论文 · 厂商 | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
@@ -175,7 +177,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。139 条里实填 70 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。141 条里实填 70 条。
 
 **出品方**按原文署名的机构填写。arXiv 摘要页不带机构信息，这一列取自正文首页（HTML 版的作者块，或 PDF 第 1 页）；原文通篇未署机构的，直接写明「原文未署机构」并附作者名。
 
@@ -187,21 +189,21 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（57） ｜ `规范`（14） ｜ `文档`（49） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（9）
+`论文`（57） ｜ `规范`（14） ｜ `文档`（49） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（11）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（25） ｜ `厂商`（71） ｜ `产学合作`（14） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（4）
+`学界`（25） ｜ `厂商`（73） ｜ `产学合作`（14） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（4）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，139 条里有 51 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，141 条里有 51 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（23 条）
 - `应用内部`（21 条）
-- `构造方式`（59 条）
+- `构造方式`（61 条）
 - `安全与攻防`（24 条）
 - `运行与问责`（23 条）
 - `协议与生态`（30 条）
@@ -217,7 +219,7 @@ rg '商业与组织' index.tsv
 | `A2A` | — | 3 |
 | `ACP` | — | 1 |
 | `registry` | `注册表` | 3 |
-| `tool-interface` | `工具接口` | 33 |
+| `tool-interface` | `工具接口` | 35 |
 | `payments` | `支付` | 4 |
 | `context-engineering` | `上下文工程` | 11 |
 | `ontology` | `本体` | 6 |
