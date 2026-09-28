@@ -1095,6 +1095,13 @@ ITEMS = [
      "https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke",
      None, "介绍 Agent Substrate 的智能体沙箱运行架构：以微虚拟机或 gVisor 隔离执行环境，通过独立控制面与预热工作节点调度，并以快照暂停、恢复空闲会话；配套核心实现和架构文档已公开。",
      "原文具体说明智能体执行不可信代码时的内核与网络隔离、凭据注入，以及暂停恢复如何从 Kubernetes 节点管理中分离；这些机制对应 AI 开发运行环境的构造方式和安全边界。"),
+    ("2026-09-27", "-", "Building an Agentic Software Factory",
+     "Zach Rattner",
+     "文章", "个人", ["构造方式", "运行与问责"],
+     ["skills", "orchestration", "authorization"],
+     "https://zachrattner.com/resources/building-an-agentic-software-factory",
+     None, "介绍将现有开发流程转为编码 Agent 工作流的方法：把团队约定写入仓库规则和技能，将可重复步骤脚本化，以测试、日志和截图检查结果，并由人审查发布；文中给出仓库结构与发布检查报告示例。",
+     "作者以 Yembo 的开发流程为背景，逐步说明技能拆分、命令权限清单、任务隔离及带证据的发布检查如何接入工程流水线；这些具体实践对应 AI 参与软件构造与人类发布责任的安排。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
