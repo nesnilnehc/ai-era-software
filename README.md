@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，164 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，167 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／164 条有与当前出处一致的抓取记录，其余 24 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／167 条有与当前出处一致的抓取记录，其余 27 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：162／164 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：165／167 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -49,6 +49,8 @@ rg '商业与组织' index.tsv
 | 2026-09-24 | [Between the Commits: Process, Error, and Claim Reliability in a Wholly AI-Authored Codebase](https://arxiv.org/abs/2609.29744)<br>论文 · 学界<br>摘要：分析一个由 Claude 编写的约 2.1 万行 Python 工具的完整开发历史，包括 210 次提交、25 个会话与 678 条用户指令；通过代码来源追踪和会话记录，统计开发触发因素、测试发现的错误及交互陈述的准确性，数据集已公开。<br>收录理由：论文将代码块、提交和会话中的用户指令及智能体自我修正相连，提供仅查看最终提交无法取得的编码错误与陈述核查证据；它直接呈现 AI 主导代码开发时的过程与验证问题。 | Trinity College Dublin | **主题** `构造方式`<br>**标签** `empirical-study` `实证测量` `observability` `可观测` |
 | 2026-09-24 → 2026-09-25 | [Orchestrating AI-Assisted Code Remediation: Socio-Technical Bottlenecks in a Large Industrial Repository](https://arxiv.org/abs/2609.29172)<br>论文 · 产学合作<br>摘要：报告在大型工业 C++ 仓库中开展的 15 天单案例研究，结合 Gerrit 元数据、开发者日记和团队沟通记录，分析 AI 辅助批量修复对按提交构建的 CI、代码评审和团队协调的影响；原始数据因敏感性未公开。<br>收录理由：论文记录按文件提交使 CI 和评审队列承压后，改用目录批处理、限制单次改动规模和主动协调评审的过程；它提供 AI 降低编辑成本后开发流水线及团队分工如何调整的现场证据。 | Ericsson AB; Lund University; Mälardalen University; Carleton University | **主题** `构造方式` `商业与组织`<br>**标签** `empirical-study` `实证测量` `orchestration` `编排` |
 | 2026-09-24 | [On the Impact of Requirement Smells in LLM-Based Code Generation](https://arxiv.org/abs/2609.29208)<br>论文 · 产学合作<br>摘要：在四个应用的需求与系统测试数据上，逐步注入语义、句法和词汇层面的需求缺陷，比较两种模型生成代码的测试结果；论文报告缺陷密度与功能正确性的关系，并公开代码、提示词、数据及复现实验包。<br>收录理由：研究将软件需求直接作为生成代码的输入，并用对应系统测试检验不同需求缺陷下的实现；其受控实验说明 AI 辅助开发中需求表述与代码验证如何衔接。 | fortiss GmbH; Netlight Consulting; Technical University of Munich; Chalmers University of Technology; Trinity College Dublin; University of Duisburg-Essen; Blekinge Institute of Technology | **主题** `构造方式`<br>**标签** `empirical-study` `实证测量` `benchmark` `基准评测` |
+| 2026-09-24 | [NEUROTESTGEN: Neuro-Symbolic Guided Test Generation with Large Language Models](https://arxiv.org/abs/2609.30178)<br>论文 · 学界<br>摘要：提出针对目标代码行或分支的测试生成方法：用符号执行和 Z3 求解数值路径条件，用模型处理对象相关路径，再通过编译、执行和覆盖率反馈迭代生成测试；论文在 Defects4J 的 14 个项目上报告覆盖率与通过率。<br>收录理由：论文给出从未覆盖路径提取约束、生成可执行测试并以覆盖率反馈修正的具体流程，同时列出项目、基线和消融实验；这些可核对的工程方法与数据对应 AI 参与软件测试构造。 | York University | **主题** `构造方式`<br>**标签** `empirical-study` `实证测量` `benchmark` `基准评测` |
+| 2026-09-24 | [Scan me, Scan me not: Anthropic Built A Skill Scanner. We let Claude bypass it in 7 minutes.](https://www.air.security/blog-posts/anthropic-scanner)<br>文章 · 厂商<br>摘要：记录研究团队向技能扫描器提交恶意技能的测试，展示外部依赖网址仿冒和二进制隐藏行为两个案例，并说明扫描器返回的判定。<br>收录理由：原文以具体技能文件及扫描判定说明所测案例中安装前静态审查未识别外部资源与隐藏行为，直接涉及编码 Agent 技能供应链的安全检查方式。 | AIR Security | **主题** `安全与攻防`<br>**标签** `skills` `技能` |
 | 2026-09-23 → 2026-09-24 | [Engineering a security harness for AI coding agents](https://www.endorlabs.com/learn/engineering-a-security-harness-for-ai-coding-agents)<br>文章 · 厂商<br>摘要：提出安全编码 Agent 的七项设计问题，按读取、建议、准备、发布、执行划分权限，并说明证据获取、验证门、审批、故障恢复和版本管理的工作流。<br>收录理由：文章以依赖修复为例，具体规定 Agent 从分析到改动、发布时所需的证据与授权边界，以及运行后的评估和中断处理，对应开发智能体的安全控制与问责流程。 | Endor Labs | **主题** `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` `risk-framework` `风险框架` |
 | 2026-09-22 | [MCP Bastion](https://github.com/Matthew0822/MCPBastion)<br>文档 · 个人<br>摘要：提供本地 MCP 消息网关，按策略允许、拒绝或脱敏工具调用，并记录审计事件；仓库说明其只处理 stdio JSON-RPC 消息，不负责传输桥接或服务器启动。<br>收录理由：它把策略控制和审计放到 MCP 工具调用路径中，具体呈现了智能体接入软件工具时的运行安全设计。 | Matthew0822 | **主题** `安全与攻防` `协议与生态`<br>**标签** `MCP` `authorization` `身份与授权` `observability` `可观测` |
 | 2026-09-20 → 2026-09-21 | [ZCode](https://github.com/zai-org/ZCode)<br>文档 · 厂商<br>摘要：提供 AI 编程工作台，包含桌面应用、浏览器界面和终端 Agent；仓库包含客户端、后端、共享 UI 以及 Agent CLI 与运行时源码。<br>收录理由：项目将编程 Agent 作为桌面、浏览器和终端工作台的核心能力，具体体现 AI 对软件开发工具形态与交互入口的改变。 | Z.ai（智谱 AI；GLM） | **主题** `构造方式`<br>**标签** `orchestration` `编排` |
@@ -56,6 +58,7 @@ rg '商业与组织' index.tsv
 | 2026-09-18 | [网络安全标准实践指南——智能体系统开发安全指南（征求意见稿 v1.0-202609）](https://www.tc260.org.cn/tc260/tzgg/202609/e5b82ae7aca244d19d36b39575cbb458.shtml) ⚠<br>规范 · 标准组织<br>摘要：该征求意见稿旨在为智能体系统的安全开发提供实践指引，通知说明其面向社会公开征求意见。<br>收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | 全国网络安全标准化技术委员会 | **主题** `安全与攻防` `界面与接入`<br>**标签** `regulation` `法规` |
 | 2026-09-18 → 2026-09-23 | [agent-chaperone](https://github.com/agent-chaperone/agent-chaperone)<br>文档 · 个人<br>摘要：提供 MCP 代理和客户端 Hook，在工具调用执行前及结果交给智能体前进行筛查，并将概率判断、策略阈值和审计记录写入本地日志；仓库附有公开基准和人工标注集的评测结果。<br>收录理由：项目在 Agent 与工具之间加入可配置筛查、运行日志和评测机制，呈现智能体软件的安全控制如何进入实际开发与运行流程。 | agent-chaperone | **主题** `安全与攻防` `运行与问责`<br>**标签** `MCP` `observability` `可观测` |
 | 2026-09-18 | [Changing the game: Using agentic AI to secure infrastructure code](https://cloud.google.com/blog/topics/systems/using-ai-agents-to-secure-google-infrastructure/)<br>文章 · 厂商<br>摘要：介绍在代码提交前使用智能体扫描安全问题，结合局部威胁模型、调用图和结构化规则做分层验证；夜间再扫描跨变更问题，并由修复 Agent 提交补丁供人工审查。<br>收录理由：原文给出 Google 将扫描、结构化验证、修复建议和人工审查接入代码变更流程的具体步骤，呈现 AI 如何改变基础设施代码的开发与安全检查。 | Google Cloud | **主题** `构造方式` `安全与攻防`<br>**标签** `orchestration` `编排` `context-engineering` `上下文工程` |
+| 2026-09-17 | [Plugin4Shell - Zero Click RCE Vulnerability found in top 4 most popular coding agents, millions of agents affected](https://www.air.security/blog-posts/plugin4shell)<br>文章 · 厂商<br>摘要：披露编码 Agent 安装插件时的 Git 提交固定校验问题：恶意仓库可让同名分支或 FETCH_HEAD 分支覆盖指定提交的解析结果；文章给出两种触发路径及安装后核对实际 HEAD 的修复检查。<br>收录理由：原文列出插件仓库控制、后台更新、Git 引用解析和缺失的提交核对如何组成攻击链，并给出客户端校验条件；它具体呈现 AI 开发工具的插件分发与执行安全边界。 | AIR Security | **主题** `安全与攻防` `构造方式`<br>**标签** `plugins` `插件` |
 | 2026-09-16 | [Characterizing Network Centralization and Observability in the Remote MCP Ecosystem](https://arxiv.org/abs/2609.19100)<br>论文 · 学界<br>摘要：通过目录元数据、被动合规信号和实时漏洞分析研究远程 MCP 生态的网络结构与可观测性。<br>收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。 | University of Calgary | **主题** `协议与生态` `运行与问责`<br>**标签** `MCP` `empirical-study` `实证测量` |
 | 2026-09-16 | [Why We Post-Trained Our Own Reasoning Model (Koa)](https://www.salesforce.com/news/stories/why-we-post-trained-our-own-reasoning-model/)<br>文章 · 厂商<br>摘要：Salesforce 介绍为企业工作训练 Koa 推理模型的原因、后训练流程及其与通用模型的区别。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Salesforce（Koa） | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
 | 2026-09-16 → 2026-09-23 | [Migrating the GitHub Copilot runtime to Rust, using Copilot](https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/)<br>文章 · 厂商<br>摘要：记录使用 Copilot 将共享智能体运行时从 TypeScript 分批迁移至 Rust 的过程，说明临时互操作层、SDK 接口、渐进发布与测试安排，并给出拉取请求和会话日志数据。<br>收录理由：文章以已落地的运行时迁移为对象，展示编码 Agent 如何参与跨组件改写、并行协作和验证，以及共享 Agent 运行时的构造方式；其迁移步骤和日志数据提供了具体工程证据。 | GitHub | **主题** `构造方式`<br>**标签** `orchestration` `编排` `empirical-study` `实证测量` |
@@ -209,7 +212,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。164 条里实填 78 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。167 条里实填 78 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -221,22 +224,22 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（64） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（22）
+`论文`（65） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（24）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（26） ｜ `厂商`（84） ｜ `产学合作`（20） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（9）
+`学界`（27） ｜ `厂商`（86） ｜ `产学合作`（20） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（9）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，164 条里有 66 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，167 条里有 67 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（24 条）
 - `应用内部`（22 条）
-- `构造方式`（78 条）
-- `安全与攻防`（34 条）
+- `构造方式`（80 条）
+- `安全与攻防`（36 条）
 - `运行与问责`（28 条）
 - `协议与生态`（32 条）
 - `商业与组织`（15 条）
@@ -256,7 +259,8 @@ rg '商业与组织' index.tsv
 | `context-engineering` | `上下文工程` | 13 |
 | `ontology` | `本体` | 6 |
 | `RAG` | `检索增强` | 9 |
-| `skills` | `技能` | 6 |
+| `skills` | `技能` | 7 |
+| `plugins` | `插件` | 1 |
 | `memory` | `记忆` | 3 |
 | `sandbox` | `沙箱` | 6 |
 | `observability` | `可观测` | 6 |
@@ -266,8 +270,8 @@ rg '商业与组织' index.tsv
 | `authorization` | `身份与授权` | 9 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 12 |
-| `empirical-study` | `实证测量` | 17 |
+| `benchmark` | `基准评测` | 13 |
+| `empirical-study` | `实证测量` | 18 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |
