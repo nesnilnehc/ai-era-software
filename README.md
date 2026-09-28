@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，154 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，163 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／154 条有与当前出处一致的抓取记录，其余 14 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／163 条有与当前出处一致的抓取记录，其余 23 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：152／154 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：161／163 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -42,6 +42,12 @@ rg '商业与组织' index.tsv
 |---|---|---|---|
 | 2026-09-25 | [A new, no-compromises database architecture for the agentic era](https://cloud.google.com/blog/products/databases/alloydbs-agentic-database-architecture)<br>文章 · 厂商<br>摘要：介绍 AlloyDB 面向智能体查询的架构：以只读微虚拟机节点访问实时生产数据，并在计算和存储路径上与主集群隔离；文章给出并发索引查询与扩容测试的设置和结果。<br>收录理由：原文具体说明 Agent 突发查询如何改变数据库计算、存储与生产负载的隔离方式，并提供节点扩容测试；它对应应用内部数据架构及智能体访问生产数据的隔离控制。 | Google Cloud | **主题** `应用内部` `安全与攻防`<br>**标签** `MCP` `sandbox` `沙箱` |
 | 2026-09-24 | [Control the Harness, Control the Cost: Routing and Governing AI Coding Agents in the Enterprise](https://arxiv.org/abs/2609.28919)<br>论文 · 产学合作<br>摘要：提出面向编码 Agent 的缓存感知模型路由方法，在会话开始、旁路任务和子智能体启动时选择模型；用公开会话数据和合成任务模拟企业席位成本，并列出方法与适用限制。<br>收录理由：论文把提示缓存、子智能体和模型选择纳入编码 Agent 的运行架构及企业成本决策，并公开路由规则、成本模型和模拟设定；这些具体机制对应开发工具构造与软件采购治理。 | Accenture Responsible AI; Accenture Americas Advanced AI Practice; Harvard Extension School, Harvard University | **主题** `构造方式` `商业与组织`<br>**标签** `orchestration` `编排` `pricing` `定价` `buy-vs-build` `买还是自建` |
+| 2026-09-24 | [AI-powered fuzzing with the GitHub Security Lab Taskflow Agent](https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/)<br>文章 · 厂商<br>摘要：介绍面向 C/C++ 项目的智能体模糊测试流程：自动生成测试入口与 harness，运行 AFL++，按覆盖率反馈调整输入和 harness，并对崩溃去重、复现及生成待人工审查的报告；配套实现已公开。<br>收录理由：原文给出驱动脚本、分阶段任务流、MCP 执行工具和 SQLite 状态库的分工，并说明覆盖率循环与崩溃分诊规则；这些具体实现呈现 AI 如何进入软件安全测试流程。 | GitHub Security Lab | **主题** `构造方式` `安全与攻防`<br>**标签** `orchestration` `编排` `MCP` |
+| 2026-09-24 | [When chat is the wrong UI](https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/)<br>文章 · 厂商<br>摘要：以 GitHub Copilot app 的 Canvas 为例，说明可由智能体生成并在应用内运行交互界面；人和智能体可通过共享状态双向操作，文中展示游戏、本地包管理及开发工作流界面的实例。<br>收录理由：文章具体描述 Canvas 作为带服务端能力的共享界面，允许用户操作控件、智能体调用界面能力并持续修改工作流；它呈现了 AI 开发工具从聊天窗口扩展到可交互软件界面的机制。 | GitHub | **主题** `界面与接入` `构造方式`<br>**标签** `tool-interface` `工具接口` `orchestration` `编排` |
+| 2026-09-24 | [Evaluating Agent Skills for Version-Specific Plugin Migration: A Retrospective Study](https://arxiv.org/abs/2609.30120)<br>论文 · 产学合作<br>摘要：回顾一个插件升级技能在 16 项版本迁移任务上的 64 份诊断报告，逐项审查 328 个评分判断，并以可执行探针和跨模型盲评检查契约错误及评分敏感性；原始报告和分析脚本在项目仓库公开。<br>收录理由：论文把编码 Agent 技能的迁移建议与目标版本契约逐项对应，并检查自动评分能否发现路径边界和生命周期错误；其任务、报告及复核记录为 AI 辅助软件维护的验证流程提供了具体证据。 | Tsinghua University; Fudan University; PetroChina Southwest Oil & Gasfield Company, et al. | **主题** `构造方式`<br>**标签** `skills` `技能` `benchmark` `基准评测` `empirical-study` `实证测量` |
+| 2026-09-24 | [Between the Commits: Process, Error, and Claim Reliability in a Wholly AI-Authored Codebase](https://arxiv.org/abs/2609.29744)<br>论文 · 学界<br>摘要：分析一个由 Claude 编写的约 2.1 万行 Python 工具的完整开发历史，包括 210 次提交、25 个会话与 678 条用户指令；通过代码来源追踪和会话记录，统计开发触发因素、测试发现的错误及交互陈述的准确性，数据集已公开。<br>收录理由：论文将代码块、提交和会话中的用户指令及智能体自我修正相连，提供仅查看最终提交无法取得的编码错误与陈述核查证据；它直接呈现 AI 主导代码开发时的过程与验证问题。 | Trinity College Dublin | **主题** `构造方式`<br>**标签** `empirical-study` `实证测量` `observability` `可观测` |
+| 2026-09-24 → 2026-09-25 | [Orchestrating AI-Assisted Code Remediation: Socio-Technical Bottlenecks in a Large Industrial Repository](https://arxiv.org/abs/2609.29172)<br>论文 · 产学合作<br>摘要：报告在大型工业 C++ 仓库中开展的 15 天单案例研究，结合 Gerrit 元数据、开发者日记和团队沟通记录，分析 AI 辅助批量修复对按提交构建的 CI、代码评审和团队协调的影响；原始数据因敏感性未公开。<br>收录理由：论文记录按文件提交使 CI 和评审队列承压后，改用目录批处理、限制单次改动规模和主动协调评审的过程；它提供 AI 降低编辑成本后开发流水线及团队分工如何调整的现场证据。 | Ericsson AB; Lund University; Mälardalen University; Carleton University | **主题** `构造方式` `商业与组织`<br>**标签** `empirical-study` `实证测量` `orchestration` `编排` |
+| 2026-09-24 | [On the Impact of Requirement Smells in LLM-Based Code Generation](https://arxiv.org/abs/2609.29208)<br>论文 · 产学合作<br>摘要：在四个应用的需求与系统测试数据上，逐步注入语义、句法和词汇层面的需求缺陷，比较两种模型生成代码的测试结果；论文报告缺陷密度与功能正确性的关系，并公开代码、提示词、数据及复现实验包。<br>收录理由：研究将软件需求直接作为生成代码的输入，并用对应系统测试检验不同需求缺陷下的实现；其受控实验说明 AI 辅助开发中需求表述与代码验证如何衔接。 | fortiss GmbH; Netlight Consulting; Technical University of Munich; Chalmers University of Technology; Trinity College Dublin; University of Duisburg-Essen; Blekinge Institute of Technology | **主题** `构造方式`<br>**标签** `empirical-study` `实证测量` `benchmark` `基准评测` |
 | 2026-09-23 → 2026-09-24 | [Engineering a security harness for AI coding agents](https://www.endorlabs.com/learn/engineering-a-security-harness-for-ai-coding-agents)<br>文章 · 厂商<br>摘要：提出安全编码 Agent 的七项设计问题，按读取、建议、准备、发布、执行划分权限，并说明证据获取、验证门、审批、故障恢复和版本管理的工作流。<br>收录理由：文章以依赖修复为例，具体规定 Agent 从分析到改动、发布时所需的证据与授权边界，以及运行后的评估和中断处理，对应开发智能体的安全控制与问责流程。 | Endor Labs | **主题** `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` `risk-framework` `风险框架` |
 | 2026-09-22 | [MCP Bastion](https://github.com/Matthew0822/MCPBastion)<br>文档 · 个人<br>摘要：提供本地 MCP 消息网关，按策略允许、拒绝或脱敏工具调用，并记录审计事件；仓库说明其只处理 stdio JSON-RPC 消息，不负责传输桥接或服务器启动。<br>收录理由：它把策略控制和审计放到 MCP 工具调用路径中，具体呈现了智能体接入软件工具时的运行安全设计。 | Matthew0822 | **主题** `安全与攻防` `协议与生态`<br>**标签** `MCP` `authorization` `身份与授权` `observability` `可观测` |
 | 2026-09-20 → 2026-09-21 | [ZCode](https://github.com/zai-org/ZCode)<br>文档 · 厂商<br>摘要：提供 AI 编程工作台，包含桌面应用、浏览器界面和终端 Agent；仓库包含客户端、后端、共享 UI 以及 Agent CLI 与运行时源码。<br>收录理由：项目将编程 Agent 作为桌面、浏览器和终端工作台的核心能力，具体体现 AI 对软件开发工具形态与交互入口的改变。 | Z.ai（智谱 AI；GLM） | **主题** `构造方式`<br>**标签** `orchestration` `编排` |
@@ -55,6 +61,8 @@ rg '商业与组织' index.tsv
 | 2026-09-15 | [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)<br>文章 · 厂商<br>摘要：TypeSafe AI 介绍 System One 模型系列和 Jev，说明其面向软件自动化提供结构化决策输出。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | TypeSafe AI（System One / Jev） | **主题** `构造方式` `应用内部`<br>**标签** `decision-model` `决策模型` `tool-interface` `工具接口` |
 | 2026-09-15 | [Introduction — TypeSafe AI (Jev developer documentation)](https://docs.typesafe.ai/introduction)<br>文档 · 厂商<br>摘要：介绍 Jev API 的状态输入和类型化问题接口，以及供程序和编程智能体使用结构化回答的方式。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | TypeSafe AI（Jev） | **主题** `构造方式`<br>**标签** `decision-model` `决策模型` `tool-interface` `工具接口` |
 | 2026-09-15 | [Announcing Koa: Salesforce’s First CRM Reasoning Model, Built on NVIDIA Nemotron](https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/)<br>文章 · 厂商<br>摘要：Salesforce 与 NVIDIA 发布 Koa CRM 推理模型，说明其面向企业多步骤任务并基于 Salesforce 业务数据训练。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Salesforce（Koa） | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
+| 2026-09-15 | [Introducing Filestore agent volumes: fully managed storage for agent workspaces](https://cloud.google.com/blog/products/storage-data-transfer/filestore-agent-volumes)<br>文章 · 厂商<br>摘要：介绍面向 Agent 工作区的 Filestore 卷：GKE 沙箱启动时分配并挂载独立的持久文件空间，支持会话恢复及以 POSIX 锁和共享读写方式协作；官方文档说明卷池、卷与私有连接的架构。<br>收录理由：原文说明编码 Agent 安装依赖、修改文件和运行测试所需的持久工作区如何随沙箱按需分配、隔离与共享；这为开发智能体的运行存储和多租户安全提供了具体架构。 | Google Cloud | **主题** `构造方式` `安全与攻防`<br>**标签** `sandbox` `沙箱` `orchestration` `编排` |
+| 2026-09-15 | [Agent Substrate brings high-density, scalable, trusted infrastructure to GKE](https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke)<br>文章 · 厂商<br>摘要：介绍 Agent Substrate 的智能体沙箱运行架构：以微虚拟机或 gVisor 隔离执行环境，通过独立控制面与预热工作节点调度，并以快照暂停、恢复空闲会话；配套核心实现和架构文档已公开。<br>收录理由：原文具体说明智能体执行不可信代码时的内核与网络隔离、凭据注入，以及暂停恢复如何从 Kubernetes 节点管理中分离；这些机制对应 AI 开发运行环境的构造方式和安全边界。 | Google Cloud | **主题** `构造方式` `安全与攻防`<br>**标签** `sandbox` `沙箱` `orchestration` `编排` |
 | 2026-09-14 | [Salesforce Koa: An Enterprise Language Model for Agentic Tool Use](https://arxiv.org/abs/2609.15066)<br>论文 · 厂商<br>摘要：介绍 Salesforce Koa 的模型构建方法，描述其以 Nemotron 基础模型为起点并通过强化学习适配企业工具使用。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Salesforce（Koa） | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
 | 2026-09-14 | [Authorization Architectures for Tool-Using AI Agents](https://arxiv.org/abs/2609.15906)<br>论文 · 产学合作<br>摘要：提出面向工具型 AI 智能体的授权架构，讨论如何将行动绑定到用户主体、权限范围和审计记录。<br>收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Westcliff University, University of the Cumberlands, Delta Air Lines, Georgia Institute of Technology | **主题** `安全与攻防`<br>**标签** `authorization` `身份与授权` `survey` `综述` |
 | 2026-09-14 | [When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary](https://arxiv.org/abs/2609.15397)<br>论文 · 厂商<br>摘要：研究重试、并发和部分失败时智能体工作流与外部工具状态不一致的情况，包括操作遗漏、重复及已取消操作残留。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | AVIV Group, independent researcher | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
@@ -62,6 +70,7 @@ rg '商业与组织' index.tsv
 | 2026-09-13 | [The Stochastic Deputy: Structural Tenant Isolation for Tool-Using LLM Agents](https://arxiv.org/abs/2609.14780)<br>论文 · 产学合作<br>摘要：提出结构化多租户隔离方法，将租户范围绑定到已验证凭据并在服务器侧强制执行，而不让模型自行选择租户标识。<br>收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Fandaqah, Heidelberg University | **主题** `安全与攻防`<br>**标签** `MCP` `authorization` `身份与授权` |
 | 2026-09-12 | [Same Name, Different Server: A Security Census of Silent Drift in MCP](https://arxiv.org/abs/2609.14119)<br>论文 · 学界<br>摘要：对公开 MCP 注册表中的服务器及版本进行安全普查，研究同名服务器在版本间静默变化的情况。<br>收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Texas Tech University | **主题** `协议与生态` `安全与攻防`<br>**标签** `MCP` `empirical-study` `实证测量` |
 | 2026-09-10 | [Is Bash All You Need? An Empirical Study of Tool Interfaces for Enterprise Digital Worker Agents](https://arxiv.org/abs/2609.11999)<br>论文 · 产学合作<br>摘要：比较企业数字工作任务中的多种智能体工具接口，包括专用类型化工具与通用 shell。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Microsoft, Carnegie Mellon University | **主题** `构造方式` `界面与接入`<br>**标签** `tool-interface` `工具接口` `benchmark` `基准评测` |
+| 2026-09-10 | [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/)<br>文章 · 厂商<br>摘要：介绍通过 API 创建由 Codex harness 管理的云端智能体会话，指定模型、工具、子智能体及执行环境；文中说明托管或自有沙箱、长会话上下文压缩、按需工具检索和并行工具调用。<br>收录理由：原文给出会话创建示例，并将智能体编排层与可选执行沙箱分开，说明长任务状态、工具发现和子智能体如何由托管运行时提供；这对应 AI 软件的构造架构与运行边界。 | OpenAI | **主题** `构造方式` `运行与问责`<br>**标签** `sandbox` `沙箱` `orchestration` `编排` `context-engineering` `上下文工程` |
 | 2026-09-05 | [Intent Drift at SME Scale: Deployment Practice, Not Model Capability, Determines Agentic Compliance](https://arxiv.org/abs/2609.05975)<br>论文 · 学界<br>摘要：提出适用于受监管小型企业的 Chain of Intent 治理框架，并通过模拟资产管理场景检验部署约束的执行情况。<br>收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Hong Kong University of Science and Technology | **主题** `运行与问责` `应用内部`<br>**标签** `regulation` `法规` `empirical-study` `实证测量` |
 | 2026-09-02 | [How we make AI coding more cost efficient without sacrificing task quality](https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/)<br>文章 · 厂商<br>摘要：GitHub 介绍 Copilot 编码 Agent 在工具输出压缩、提示词缩短和后台任务通知等方面的改动，并报告离线基准与线上实验的评估方法和结果。<br>收录理由：文章给出编码 Agent 的上下文管理、任务编排和评估实践，直接记录 AI 编程工具的工程实现如何变化。 | GitHub | **主题** `构造方式`<br>**标签** `orchestration` `编排` `empirical-study` `实证测量` |
 | 2026-08-31 | [Delegation Without Trust: An Empirical Gap Analysis of Identity, Authorization, and Runtime](https://arxiv.org/abs/2609.00267)<br>论文 · 厂商<br>摘要：分析多智能体系统在身份、授权和运行时治理上的委托机制，并通过案例评估现有设计缺口。<br>收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。 | VotalAI | **主题** `安全与攻防`<br>**标签** `authorization` `身份与授权` |
@@ -199,7 +208,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。154 条里实填 77 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。163 条里实填 78 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -211,25 +220,25 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（60） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（16）
+`论文`（64） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（21）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（25） ｜ `厂商`（79） ｜ `产学合作`（17） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（8）
+`学界`（26） ｜ `厂商`（84） ｜ `产学合作`（20） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（8）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，154 条里有 59 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，163 条里有 65 条是这样，同一条出现在两个区不是重复收录。
 
-- `界面与接入`（23 条）
+- `界面与接入`（24 条）
 - `应用内部`（22 条）
-- `构造方式`（68 条）
-- `安全与攻防`（31 条）
-- `运行与问责`（26 条）
+- `构造方式`（77 条）
+- `安全与攻防`（34 条）
+- `运行与问责`（27 条）
 - `协议与生态`（32 条）
-- `商业与组织`（14 条）
+- `商业与组织`（15 条）
 
 `安全与攻防` 与 `运行与问责` 的分界：材料谈的是**怎么被攻破、怎么防住**（威胁、漏洞、越权、隔离、安全普查），还是**跑起来之后谁管、按什么规矩管、出事谁负责**（法规、风险框架、可观测、管控面、责任边界）。
 
@@ -237,27 +246,27 @@ rg '商业与组织' index.tsv
 
 | 英文标签 | 中文别名 | 条目数 |
 |---|---|---:|
-| `MCP` | — | 31 |
+| `MCP` | — | 32 |
 | `A2A` | — | 3 |
 | `ACP` | — | 1 |
 | `registry` | `注册表` | 3 |
-| `tool-interface` | `工具接口` | 35 |
+| `tool-interface` | `工具接口` | 36 |
 | `payments` | `支付` | 4 |
-| `context-engineering` | `上下文工程` | 12 |
+| `context-engineering` | `上下文工程` | 13 |
 | `ontology` | `本体` | 6 |
 | `RAG` | `检索增强` | 9 |
-| `skills` | `技能` | 4 |
+| `skills` | `技能` | 5 |
 | `memory` | `记忆` | 3 |
-| `sandbox` | `沙箱` | 3 |
-| `observability` | `可观测` | 5 |
+| `sandbox` | `沙箱` | 6 |
+| `observability` | `可观测` | 6 |
 | `computer-use` | `计算机操作` | 3 |
 | `decision-model` | `决策模型` | 2 |
-| `orchestration` | `编排` | 30 |
+| `orchestration` | `编排` | 36 |
 | `authorization` | `身份与授权` | 8 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 10 |
-| `empirical-study` | `实证测量` | 13 |
+| `benchmark` | `基准评测` | 12 |
+| `empirical-study` | `实证测量` | 17 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |
