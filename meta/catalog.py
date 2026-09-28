@@ -1124,6 +1124,13 @@ ITEMS = [
      "https://www.air.security/blog-posts/plugin4shell",
      None, "披露编码 Agent 安装插件时的 Git 提交固定校验问题：恶意仓库可让同名分支或 FETCH_HEAD 分支覆盖指定提交的解析结果；文章给出两种触发路径及安装后核对实际 HEAD 的修复检查。",
      "原文列出插件仓库控制、后台更新、Git 引用解析和缺失的提交核对如何组成攻击链，并给出客户端校验条件；它具体呈现 AI 开发工具的插件分发与执行安全边界。"),
+    ("2026-09-24", "-", "Plan mode is dead",
+     "Ayman Nadeem",
+     "文章", "个人", ["界面与接入", "构造方式"],
+     ["tool-interface"],
+     "https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html",
+     None, "作者回顾 Nuanced 将聊天中的决策整理为持久计划，再进入实现与审查的工作流；介绍 Spec Tour 和计划／构建双模式，记录早期用户对长规格文档的反馈及自己对线性流程的反思。",
+     "作者以亲自开发的编码应用为例，具体说明持久计划、规格文档导览和模式切换的设计与使用问题；这些界面与流程安排对应 AI 开发工具的交互和软件构造方式。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
