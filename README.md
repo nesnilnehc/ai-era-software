@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，168 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，171 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／168 条有与当前出处一致的抓取记录，其余 28 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／171 条有与当前出处一致的抓取记录，其余 31 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：166／168 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：169／171 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -40,8 +40,11 @@ rg '商业与组织' index.tsv
 
 | 日期 | 材料 | 出品方（品牌；代表产品/项目） | 分类 |
 |---|---|---|---|
+| 2026-09-28 | [How we found 24 Android vulnerabilities using our open source AI security agent](https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/)<br>文章 · 厂商<br>摘要：介绍面向 Android 应用的智能体审计任务流：先区分移动端入口，再按入口类型检查指定漏洞类别，并用多次运行及人工复核处理发现；原文给出运行命令、公开任务流和两个已披露漏洞的代码分析。<br>收录理由：作者公开了移动端入口识别与漏洞类别检查的任务流改动，并以 OsmAnd 和 Wikipedia Android 的具体代码路径展示审计结果；这些可检查的步骤为已收录的模糊测试流程之外，增加了 AI 参与移动应用安全审计的实践。 | GitHub Security Lab | **主题** `构造方式` `安全与攻防`<br>**标签** `orchestration` `编排` |
 | 2026-09-27 | [Building an Agentic Software Factory](https://zachrattner.com/resources/building-an-agentic-software-factory)<br>文章 · 个人<br>摘要：介绍将现有开发流程转为编码 Agent 工作流的方法：把团队约定写入仓库规则和技能，将可重复步骤脚本化，以测试、日志和截图检查结果，并由人审查发布；文中给出仓库结构与发布检查报告示例。<br>收录理由：作者以 Yembo 的开发流程为背景，逐步说明技能拆分、命令权限清单、任务隔离及带证据的发布检查如何接入工程流水线；这些具体实践对应 AI 参与软件构造与人类发布责任的安排。 | Zach Rattner | **主题** `构造方式` `运行与问责`<br>**标签** `skills` `技能` `orchestration` `编排` `authorization` `身份与授权` |
 | 2026-09-25 | [A new, no-compromises database architecture for the agentic era](https://cloud.google.com/blog/products/databases/alloydbs-agentic-database-architecture)<br>文章 · 厂商<br>摘要：介绍 AlloyDB 面向智能体查询的架构：以只读微虚拟机节点访问实时生产数据，并在计算和存储路径上与主集群隔离；文章给出并发索引查询与扩容测试的设置和结果。<br>收录理由：原文具体说明 Agent 突发查询如何改变数据库计算、存储与生产负载的隔离方式，并提供节点扩容测试；它对应应用内部数据架构及智能体访问生产数据的隔离控制。 | Google Cloud | **主题** `应用内部` `安全与攻防`<br>**标签** `MCP` `sandbox` `沙箱` |
+| 2026-09-25 | [Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer](https://arxiv.org/abs/2609.31587)<br>论文 · 学界<br>摘要：提出以原始测试检验自然语言代码描述的回译基准，并用其优化描述提示词；随后在两个模型家族、十个代码仓的议题修复任务中比较压缩文档、检索上下文与仅给议题的条件，报告源码可见时文档未提高修复结果。代码、数据和运行记录由作者公开。<br>收录理由：论文将编码 Agent 的文档上下文转为可执行测试判据，并用源码可见与不可见条件检验其对议题修复的作用边界；公开的基准、脚本和运行记录为开发过程中的上下文设计提供了可核查的实证证据。 | Daffodil International University; University of Hawai‘i at Mānoa | **主题** `构造方式`<br>**标签** `context-engineering` `上下文工程` `benchmark` `基准评测` `empirical-study` `实证测量` |
+| 2026-09-25 | [MetaPermit: Scalable and Auditable Access Control for AI Agents via LLM-Inferred Meta-Attributes](https://arxiv.org/abs/2609.31039)<br>论文 · 产学合作<br>摘要：提出工具调用授权框架：模型从用户意图、执行上下文和拟议调用推断元属性，固定策略据此允许或拒绝；论文在 AgentDojo 与 AgentDyn 的七组任务及五类注入方式上比较授权一致性、任务完成和攻击结果，并讨论属性推断错误的限制。<br>收录理由：论文给出属性推断、策略判定与执行闸门的分层机制及逐调用审计依据，并用公开基准考察间接提示注入下的授权决策；它对应智能体工具使用时的安全控制和运行问责。 | Paderborn University; Huawei Hilbert Research Center (Dresden); Technical University of Munich; Huawei Technologies Ltd.; Shanghai Jiao Tong University | **主题** `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` `empirical-study` `实证测量` |
 | 2026-09-24 | [Control the Harness, Control the Cost: Routing and Governing AI Coding Agents in the Enterprise](https://arxiv.org/abs/2609.28919)<br>论文 · 产学合作<br>摘要：提出面向编码 Agent 的缓存感知模型路由方法，在会话开始、旁路任务和子智能体启动时选择模型；用公开会话数据和合成任务模拟企业席位成本，并列出方法与适用限制。<br>收录理由：论文把提示缓存、子智能体和模型选择纳入编码 Agent 的运行架构及企业成本决策，并公开路由规则、成本模型和模拟设定；这些具体机制对应开发工具构造与软件采购治理。 | Accenture Responsible AI; Accenture Americas Advanced AI Practice; Harvard Extension School, Harvard University | **主题** `构造方式` `商业与组织`<br>**标签** `orchestration` `编排` `pricing` `定价` `buy-vs-build` `买还是自建` |
 | 2026-09-24 | [AI-powered fuzzing with the GitHub Security Lab Taskflow Agent](https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/)<br>文章 · 厂商<br>摘要：介绍面向 C/C++ 项目的智能体模糊测试流程：自动生成测试入口与 harness，运行 AFL++，按覆盖率反馈调整输入和 harness，并对崩溃去重、复现及生成待人工审查的报告；配套实现已公开。<br>收录理由：原文给出驱动脚本、分阶段任务流、MCP 执行工具和 SQLite 状态库的分工，并说明覆盖率循环与崩溃分诊规则；这些具体实现呈现 AI 如何进入软件安全测试流程。 | GitHub Security Lab | **主题** `构造方式` `安全与攻防`<br>**标签** `orchestration` `编排` `MCP` |
 | 2026-09-24 | [When chat is the wrong UI](https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/)<br>文章 · 厂商<br>摘要：以 GitHub Copilot app 的 Canvas 为例，说明可由智能体生成并在应用内运行交互界面；人和智能体可通过共享状态双向操作，文中展示游戏、本地包管理及开发工作流界面的实例。<br>收录理由：文章具体描述 Canvas 作为带服务端能力的共享界面，允许用户操作控件、智能体调用界面能力并持续修改工作流；它呈现了 AI 开发工具从聊天窗口扩展到可交互软件界面的机制。 | GitHub | **主题** `界面与接入` `构造方式`<br>**标签** `tool-interface` `工具接口` `orchestration` `编排` |
@@ -213,7 +216,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。168 条里实填 78 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。171 条里实填 78 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -225,23 +228,23 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（65） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（25）
+`论文`（67） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（26）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（27） ｜ `厂商`（86） ｜ `产学合作`（20） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（10）
+`学界`（28） ｜ `厂商`（87） ｜ `产学合作`（21） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（10）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，168 条里有 68 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，171 条里有 70 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（25 条）
 - `应用内部`（22 条）
-- `构造方式`（81 条）
-- `安全与攻防`（36 条）
-- `运行与问责`（28 条）
+- `构造方式`（83 条）
+- `安全与攻防`（38 条）
+- `运行与问责`（29 条）
 - `协议与生态`（32 条）
 - `商业与组织`（15 条）
 
@@ -257,7 +260,7 @@ rg '商业与组织' index.tsv
 | `registry` | `注册表` | 3 |
 | `tool-interface` | `工具接口` | 37 |
 | `payments` | `支付` | 4 |
-| `context-engineering` | `上下文工程` | 13 |
+| `context-engineering` | `上下文工程` | 14 |
 | `ontology` | `本体` | 6 |
 | `RAG` | `检索增强` | 9 |
 | `skills` | `技能` | 7 |
@@ -267,12 +270,12 @@ rg '商业与组织' index.tsv
 | `observability` | `可观测` | 6 |
 | `computer-use` | `计算机操作` | 3 |
 | `decision-model` | `决策模型` | 2 |
-| `orchestration` | `编排` | 37 |
-| `authorization` | `身份与授权` | 9 |
+| `orchestration` | `编排` | 38 |
+| `authorization` | `身份与授权` | 10 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 13 |
-| `empirical-study` | `实证测量` | 18 |
+| `benchmark` | `基准评测` | 14 |
+| `empirical-study` | `实证测量` | 20 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |
