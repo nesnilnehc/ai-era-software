@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，184 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，186 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／184 条有与当前出处一致的抓取记录，其余 44 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／186 条有与当前出处一致的抓取记录，其余 46 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：182／184 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：184／186 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -43,6 +43,7 @@ rg '商业与组织' index.tsv
 | 2026-10-01 | [Data Agent Kit is now GA: Bring Google Data Cloud to any coding agent](https://cloud.google.com/blog/topics/developers-practitioners/data-agent-kit-is-now-ga-bring-google-data-cloud-to-any-coding-agent/)<br>文章 · 厂商<br>摘要：介绍 Data Agent Kit 将编码 Agent 接入 Google Cloud 数据产品的工作流：MCP 工具提供目录、查询、任务日志和资源操作，技能指导图结构、表结构及数据管道构建；文中说明 IDE 上下文传递、图关系创建前的人工批准和 IAM 权限边界，配套插件与技能仓库公开。<br>收录理由：原文给出 Agent 从可信表目录检索、生成并核查 BigQuery 图关系、编排 dbt/Dataform 与 Airflow 流水线以及审查失败任务的具体步骤；公开插件和技能实现使数据工程工作流中的界面接入、构造和权限安排可检查。 | Google Cloud | **主题** `界面与接入` `构造方式` `运行与问责`<br>**标签** `MCP` `skills` `技能` `authorization` `身份与授权` |
 | 2026-10-01 | [Dynamic workflows in Copilot CLI and the Copilot app](https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/)<br>文章 · 厂商<br>摘要：介绍 Copilot 动态工作流：以扩展中的程序定义自动步骤、智能体参与时机与结果传递，支持顺序或并行执行、结构化输出、人工检查点和暂停恢复；官方文档另列出子智能体权限继承及运行限额。<br>收录理由：原文将开发任务中的多智能体协作固定为可复用的代码流程，并给出发布检查、代码审查等实例；工作流阶段、人工复核与权限规则对应 AI 参与软件构造及运行治理的具体机制。 | GitHub | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `authorization` `身份与授权` |
 | 2026-10-01 | [GitHub Copilot can now interact with desktop apps with computer use](https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/)<br>文章 · 厂商<br>摘要：介绍 Copilot CLI 与桌面应用公开预览的计算机操作能力：通过辅助功能树或截图读取窗口，执行点击、输入、滚动和跨应用操作；官方文档说明默认关闭、逐应用授权、企业禁用设置及 macOS 系统权限。<br>收录理由：原文与配套文档给出智能体访问无 API 桌面软件的操作通道及应用授权边界，呈现 AI 接入现有软件界面的新方式和相应权限控制。 | GitHub | **主题** `界面与接入` `安全与攻防`<br>**标签** `computer-use` `计算机操作` `authorization` `身份与授权` |
+| 2026-10-01 | [Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)<br>论文 · 学界<br>摘要：在 TUA-Bench、ALE-CLI 与 Terminal-Bench 4 上比较五种模型与四种可配置 harness，以及两组厂商原生配对，共 66 种配置；论文分别报告任务分数、成本和匹配轨迹分析，作者公开适配器、评测代码及 6,204 条计分轨迹。<br>收录理由：原文将模型、执行框架和任务组合一同作为评测单位，并公开跨三种任务集的配置、成本核算与运行轨迹；相较目录已有的 harness 组件消融与单任务重复运行研究，增加了跨模型和框架配对变化的可检查证据。 | Nanyang Technological University | **主题** `构造方式`<br>**标签** `orchestration` `编排` `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-09-30 | [Towards Efficient HPC Systems for Agents: Challenges and Opportunities](https://arxiv.org/abs/2609.38723)<br>论文 · 学界<br>摘要：分析哈佛 FASRC 集群 2026 年 7 月 7 日至 8 月 1 日的调度日志及登录节点进程采样，按智能体进程后代区分操作来源，统计作业提交、资源消耗、命令频率与重试行为，并讨论调度、存储、记忆和安全方面的系统接口。<br>收录理由：论文用真实集群遥测记录编码智能体如何改变作业提交和文件操作负载，并指出现有调度及共享存储接口的压力；其测量方法和数据对应 AI 开发工具运行环境及治理方式的变化。 | Harvard University; Harvard FAS Research Computing | **主题** `构造方式` `运行与问责`<br>**标签** `empirical-study` `实证测量` `observability` `可观测` |
 | 2026-09-29 | [WitnessGym: Benchmarking Coding Agents on the Construction of Bug Witnesses](https://arxiv.org/abs/2609.36635)<br>论文 · 学界<br>摘要：提出以缺陷注入构造编码 Agent 缺陷验证任务的方法：在真实 Java 项目的测试可达路径植入缺陷，用构造阶段的可执行见证保留有效案例，再评估 Agent 能否独立生成触发故障的输入和测试程序；论文报告 1,300 个案例及四种 Agent 框架的实验。<br>收录理由：论文将安全审计发现的验证要求转为可执行的缺陷见证，并公开构造工具、适配器、测试及案例数据；这些可核查的工程材料呈现 AI 参与缺陷复现与测试时的验证机制。 | University of California, San Diego; Purdue University; National University of Singapore | **主题** `构造方式` `安全与攻防`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-09-29 | [Can Agents Design Libraries for Agents?](https://arxiv.org/abs/2609.36730)<br>论文 · 产学合作<br>摘要：提出两阶段 LibraryDesignBench：设计 Agent 根据功能规格实现库，再由三个使用方 Agent 借助该库完成程序任务，以正确性和代码简洁度评分；实验覆盖四种语言、15 项库设计任务和 242 个经专家验证的编程问题，配套仓公开运行框架与任务配置。<br>收录理由：论文将 AI 编写的库交给后续 Agent 实际使用，并与无库及现有库条件比较，检验接口设计对后续开发的影响；公开的任务、评分规则和运行代码为 AI 参与软件架构构造提供了可检查的证据。 | University of Wisconsin–Madison; Massachusetts Institute of Technology; Snorkel AI; Stanford University | **主题** `构造方式`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
@@ -76,6 +77,7 @@ rg '商业与组织' index.tsv
 | 2026-09-18 → 2026-09-23 | [agent-chaperone](https://github.com/agent-chaperone/agent-chaperone)<br>文档 · 个人<br>摘要：提供 MCP 代理和客户端 Hook，在工具调用执行前及结果交给智能体前进行筛查，并将概率判断、策略阈值和审计记录写入本地日志；仓库附有公开基准和人工标注集的评测结果。<br>收录理由：项目在 Agent 与工具之间加入可配置筛查、运行日志和评测机制，呈现智能体软件的安全控制如何进入实际开发与运行流程。 | agent-chaperone | **主题** `安全与攻防` `运行与问责`<br>**标签** `MCP` `observability` `可观测` |
 | 2026-09-18 | [Changing the game: Using agentic AI to secure infrastructure code](https://cloud.google.com/blog/topics/systems/using-ai-agents-to-secure-google-infrastructure/)<br>文章 · 厂商<br>摘要：介绍在代码提交前使用智能体扫描安全问题，结合局部威胁模型、调用图和结构化规则做分层验证；夜间再扫描跨变更问题，并由修复 Agent 提交补丁供人工审查。<br>收录理由：原文给出 Google 将扫描、结构化验证、修复建议和人工审查接入代码变更流程的具体步骤，呈现 AI 如何改变基础设施代码的开发与安全检查。 | Google Cloud | **主题** `构造方式` `安全与攻防`<br>**标签** `orchestration` `编排` `context-engineering` `上下文工程` |
 | 2026-09-17 | [Plugin4Shell - Zero Click RCE Vulnerability found in top 4 most popular coding agents, millions of agents affected](https://www.air.security/blog-posts/plugin4shell)<br>文章 · 厂商<br>摘要：披露编码 Agent 安装插件时的 Git 提交固定校验问题：恶意仓库可让同名分支或 FETCH_HEAD 分支覆盖指定提交的解析结果；文章给出两种触发路径及安装后核对实际 HEAD 的修复检查。<br>收录理由：原文列出插件仓库控制、后台更新、Git 引用解析和缺失的提交核对如何组成攻击链，并给出客户端校验条件；它具体呈现 AI 开发工具的插件分发与执行安全边界。 | AIR Security | **主题** `安全与攻防` `构造方式`<br>**标签** `plugins` `插件` |
+| 2026-09-17 | [Localizing Post-Wire Semantic Changes in MCP Agent Frameworks](https://arxiv.org/abs/2610.00182)<br>论文 · 个人<br>摘要：以 18 个设计夹具对四种固定版本的 Python Agent 集成做差分测试，追踪 MCP 工具结果在应用接口和模型输入中的结构化值、错误状态及富内容表示；论文报告 13 组独立的夹具与任务差异，并提供捕获记录和确定性分析复现包。<br>收录理由：原文把 MCP 消息到 Agent 框架下游接口的语义保持转为可执行的消费者契约，并区分运行失败、未观察到结果及字段变化；公开的测试夹具、记录和重建程序为协议接入后的兼容性验证提供具体证据。 | Aditi Patodiya (independent researcher) | **主题** `协议与生态` `构造方式`<br>**标签** `MCP` `tool-interface` `工具接口` `empirical-study` `实证测量` |
 | 2026-09-16 | [Characterizing Network Centralization and Observability in the Remote MCP Ecosystem](https://arxiv.org/abs/2609.19100)<br>论文 · 学界<br>摘要：通过目录元数据、被动合规信号和实时漏洞分析研究远程 MCP 生态的网络结构与可观测性。<br>收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。 | University of Calgary | **主题** `协议与生态` `运行与问责`<br>**标签** `MCP` `empirical-study` `实证测量` |
 | 2026-09-16 | [Why We Post-Trained Our Own Reasoning Model (Koa)](https://www.salesforce.com/news/stories/why-we-post-trained-our-own-reasoning-model/)<br>文章 · 厂商<br>摘要：Salesforce 介绍为企业工作训练 Koa 推理模型的原因、后训练流程及其与通用模型的区别。<br>收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。 | Salesforce（Koa） | **主题** `构造方式`<br>**标签** `tool-interface` `工具接口` |
 | 2026-09-16 → 2026-09-23 | [Migrating the GitHub Copilot runtime to Rust, using Copilot](https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/)<br>文章 · 厂商<br>摘要：记录使用 Copilot 将共享智能体运行时从 TypeScript 分批迁移至 Rust 的过程，说明临时互操作层、SDK 接口、渐进发布与测试安排，并给出拉取请求和会话日志数据。<br>收录理由：文章以已落地的运行时迁移为对象，展示编码 Agent 如何参与跨组件改写、并行协作和验证，以及共享 Agent 运行时的构造方式；其迁移步骤和日志数据提供了具体工程证据。 | GitHub | **主题** `构造方式`<br>**标签** `orchestration` `编排` `empirical-study` `实证测量` |
@@ -229,7 +231,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。184 条里实填 79 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。186 条里实填 79 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -241,24 +243,24 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（76） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（30）
+`论文`（78） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（30）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（33） ｜ `厂商`（92） ｜ `产学合作`（24） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（10）
+`学界`（34） ｜ `厂商`（92） ｜ `产学合作`（24） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（11）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，184 条里有 79 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，186 条里有 80 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（27 条）
 - `应用内部`（22 条）
-- `构造方式`（93 条）
+- `构造方式`（95 条）
 - `安全与攻防`（42 条）
 - `运行与问责`（36 条）
-- `协议与生态`（32 条）
+- `协议与生态`（33 条）
 - `商业与组织`（15 条）
 
 `安全与攻防` 与 `运行与问责` 的分界：材料谈的是**怎么被攻破、怎么防住**（威胁、漏洞、越权、隔离、安全普查），还是**跑起来之后谁管、按什么规矩管、出事谁负责**（法规、风险框架、可观测、管控面、责任边界）。
@@ -267,11 +269,11 @@ rg '商业与组织' index.tsv
 
 | 英文标签 | 中文别名 | 条目数 |
 |---|---|---:|
-| `MCP` | — | 33 |
+| `MCP` | — | 34 |
 | `A2A` | — | 3 |
 | `ACP` | — | 1 |
 | `registry` | `注册表` | 3 |
-| `tool-interface` | `工具接口` | 37 |
+| `tool-interface` | `工具接口` | 38 |
 | `payments` | `支付` | 4 |
 | `context-engineering` | `上下文工程` | 15 |
 | `ontology` | `本体` | 6 |
@@ -283,12 +285,12 @@ rg '商业与组织' index.tsv
 | `observability` | `可观测` | 9 |
 | `computer-use` | `计算机操作` | 4 |
 | `decision-model` | `决策模型` | 2 |
-| `orchestration` | `编排` | 40 |
+| `orchestration` | `编排` | 41 |
 | `authorization` | `身份与授权` | 14 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 20 |
-| `empirical-study` | `实证测量` | 29 |
+| `benchmark` | `基准评测` | 21 |
+| `empirical-study` | `实证测量` | 31 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |

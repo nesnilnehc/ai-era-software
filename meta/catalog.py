@@ -1243,6 +1243,20 @@ ITEMS = [
      "https://arxiv.org/abs/2609.38335",
      None, "提出覆盖 11 种语言、186 项完整代码仓生成任务的 E2E-SWE：智能体从自然语言规格和空工作区创建可安装项目，由独立容器中的隐藏测试验收；任务由工程师与模型共同构造，并通过静态检查和实际运行迭代校验，原仓公开任务与适配器。",
      "论文把从零构建软件的评测扩展到多语言任务，并公开逐任务规格、测试及运行适配器；相较同日的 Zero2Repo，其工程师参与构造及基于实际运行修订任务的流程提供了另一套可核查的任务生成与验收证据。"),
+    ("2026-10-01", "-", "Finding the Right Fit: Model-Harness Interactions across Agent Tasks",
+     "Nanyang Technological University",
+     "论文", "学界", ["构造方式"],
+     ["orchestration", "benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2610.00917",
+     None, "在 TUA-Bench、ALE-CLI 与 Terminal-Bench 4 上比较五种模型与四种可配置 harness，以及两组厂商原生配对，共 66 种配置；论文分别报告任务分数、成本和匹配轨迹分析，作者公开适配器、评测代码及 6,204 条计分轨迹。",
+     "原文将模型、执行框架和任务组合一同作为评测单位，并公开跨三种任务集的配置、成本核算与运行轨迹；相较目录已有的 harness 组件消融与单任务重复运行研究，增加了跨模型和框架配对变化的可检查证据。"),
+    ("2026-09-17", "-", "Localizing Post-Wire Semantic Changes in MCP Agent Frameworks",
+     "Aditi Patodiya (independent researcher)",
+     "论文", "个人", ["协议与生态", "构造方式"],
+     ["MCP", "tool-interface", "empirical-study"],
+     "https://arxiv.org/abs/2610.00182",
+     None, "以 18 个设计夹具对四种固定版本的 Python Agent 集成做差分测试，追踪 MCP 工具结果在应用接口和模型输入中的结构化值、错误状态及富内容表示；论文报告 13 组独立的夹具与任务差异，并提供捕获记录和确定性分析复现包。",
+     "原文把 MCP 消息到 Agent 框架下游接口的语义保持转为可执行的消费者契约，并区分运行失败、未观察到结果及字段变化；公开的测试夹具、记录和重建程序为协议接入后的兼容性验证提供具体证据。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
