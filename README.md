@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，192 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，198 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／192 条有与当前出处一致的抓取记录，其余 52 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／198 条有与当前出处一致的抓取记录，其余 58 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：190／192 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：196／198 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -40,7 +40,13 @@ rg '商业与组织' index.tsv
 
 | 日期 | 材料 | 出品方（品牌；代表产品/项目） | 分类 |
 |---|---|---|---|
+| 2026-10-07 | [Local sandboxing for GitHub Copilot now generally available](https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/)<br>文章 · 厂商<br>摘要：介绍 Copilot CLI、Copilot app 与 VS Code Agent Host 的本地工具执行沙箱：通过 MXC 将文件、网络和凭据访问策略映射到 Windows、macOS、Linux 的系统隔离机制；官方文档说明默认关闭、会话配置及企业强制策略。<br>收录理由：公告、官方文档和 MXC 原仓给出编码智能体在本机运行命令时的跨系统隔离架构、策略项目与企业不可覆盖的配置边界；这些具体机制对应 Agent 开发环境的构造和权限治理。 | GitHub | **主题** `构造方式` `安全与攻防` `运行与问责`<br>**标签** `sandbox` `沙箱` `authorization` `身份与授权` |
+| 2026-10-06 → 2026-10-07 | [Building Git infrastructure for agent-scale development](https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/)<br>文章 · 厂商<br>摘要：说明并行开发智能体给 GitHub 仓库读写带来的负载，列出提交量和推送量变化；文章描述将仓库持久存储与计算分离、把对象处理移出引用更新协调路径、以缓存工作节点服务读取的架构方向。<br>收录理由：原文以智能体密集提交和同仓并行写入为设计输入，具体说明引用更新、对象验证、读取缓存和审计控制如何安排；这些架构取舍呈现 AI 参与软件开发后代码托管基础设施的构造与运行变化。 | GitHub (Brian Celenza) | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `observability` `可观测` |
+| 2026-10-06 | [The EPIC Framework for Spec-Driven Development](https://arxiv.org/abs/2610.07534)<br>论文 · 学界<br>摘要：研究面向编码智能体的规范驱动开发：从 114 个开源仓库的规格与规划材料、现有模板和从业者访谈中整理出 10 个质量维度、40 项实践；论文说明仓库筛选、人工编码及实践核验方法，并提供框架网站。<br>收录理由：原文将编码智能体执行前的规格、计划和任务描述转为可逐项检查的质量实践，列出适用条件、依赖、可验证性及规格与实现规划的对应方式；它为目录已有的 Agent 开发流程材料增加规格质量的实证判据。 | Virginia Commonwealth University; Oregon State University; CodeDay | **主题** `构造方式`<br>**标签** `empirical-study` `实证测量` `context-engineering` `上下文工程` |
+| 2026-10-05 | [Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)<br>论文 · 厂商<br>摘要：介绍 Google 在提交前持续集成测试失败时运行的自动修复智能体：先过滤已有、偶发或过期故障，再生成并验证修复，经过后置检查后供开发者预览与应用；论文报告人工评估方法、部署期间的建议使用记录及访谈。<br>收录理由：原文给出测试失败通知、前后置弃权过滤、修复验证和人工采纳在代码审查与 IDE 中的衔接方式；生产使用记录提供编码智能体进入提交前外循环的具体工程和运行证据。 | Google | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `empirical-study` `实证测量` |
+| 2026-10-05 | [ReviewBench: An open benchmark for AI code review](https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/)<br>文章 · 厂商<br>摘要：介绍从 GitHub 拉取请求分布中选取 219 项、覆盖 19 种语言的代码审查基准；以人工、模型和静态分析构造并核验问题标注，按精确率、召回率、严重程度和类别评估审查智能体，公开任务、标准答案、评分文档和运行脚本。<br>收录理由：原文与项目原仓公开拉取请求清单、人工核验的审查问题、评判配置及本地运行入口；其多来源标注和线上实验对照为 AI 代码审查这一开发环节提供可检查的评测对象与方法。 | GitHub (Michelle Zhou; Alejandro Carderera de Diego) | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-10-03 | [Moving an engineering team to agent-driven delivery: six months of real numbers](https://www.techlifeadventures.com/post/case-study-ai-native-engineering)<br>文章 · 个人<br>摘要：作者记录在多代码仓使用编码 Agent 的六个月实践，说明任务路由、书面交接、团队共享的测试 Agent 包和定时检查；以 Git、PR 与会话记录比较个人工作量，并列出分割日期、计数规则和同期角色变化等限制。<br>收录理由：原文给出定时 Agent 误发内部简报、路由会话过长和虚构工单号进入发布记录的处置步骤，并说明团队如何修改发布权限、会话交接与事实核查规则；这些一手实践对应开发流程和运行问责的具体调整。 | Vinod Kurien Alex | **主题** `构造方式` `运行与问责` `商业与组织`<br>**标签** `orchestration` `编排` `skills` `技能` `empirical-study` `实证测量` |
+| 2026-10-03 | [APEX: Active Protection at Execution Boundaries for LLM Agents](https://arxiv.org/abs/2610.06966)<br>论文 · 学界<br>摘要：提出在智能体外部动作和输出边界检查任务授权的方法：运行前登记工具、MCP 服务与技能能力并编译授权契约，运行时以证据检查拟执行效果，并用探针识别未获任务认可的信息使用；论文在六组基准上与 13 种方法比较，公开实现、适配器和测试。<br>收录理由：原文给出跨工具、MCP 和技能调用的能力登记、契约解析、动作拦截与安全续行规则，公开代码中的防护模块和测试对应这些步骤；它为智能体执行时的提示注入防护与授权边界提供可检查的具体机制。 | Tsinghua University; Imperial College London; Nanjing University; The Chinese University of Hong Kong; University College London; A*STAR; University of British Columbia; Shenzhen University; The University of Hong Kong | **主题** `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` `MCP` `skills` `技能` |
 | 2026-10-02 | [My Coding Agents Moved Off My Laptop and Onto a Remote Server](https://spin.atomicobject.com/coding-agents-remote-server/)<br>文章 · 个人<br>摘要：记录作者将长期运行的编码 Agent 迁至远程服务器的工程实践：按客户划分虚拟机，在各虚拟机内用 Git worktree 隔离并行任务；通过私有网络、主机防火墙和逐机凭据限制跨项目访问，并用终端会话记录支持断线及重启后恢复。<br>收录理由：原文给出虚拟机克隆命令、网络准入测试与出站防火墙规则，并说明凭据分离、可中断的配置流程及项目结束时的撤销步骤；这些具体配置呈现编码 Agent 持续运行和多客户并行开发时的环境构造与权限边界。 | Rob Bell | **主题** `构造方式` `安全与攻防` `运行与问责`<br>**标签** `sandbox` `沙箱` `authorization` `身份与授权` `orchestration` `编排` |
 | 2026-10-02 | [Build anything: Supabase from code, and an MCP server for your app](https://supabase.com/blog/select-2026-build-anything)<br>文章 · 厂商<br>摘要：介绍面向编码 Agent 的后端开发流程：把数据库 schema 和项目配置写入代码仓，由差分工具生成迁移，并为每个工作目录启动独立本地实例；另说明应用自有 MCP 服务如何沿用用户登录及行级访问策略。<br>收录理由：原文列出声明式 schema、配置回拉、本地实例开关和 MCP 服务部署命令，具体呈现 Agent 在代码仓内修改与验证后端的方式，以及应用向用户 Agent 开放能力时的授权边界。 | Supabase (Wen Bo Xie; Lakshan Perera; Julien Goux; Andrew Valleteau; Rand Arete; Katerina Skroumpelou) | **主题** `构造方式` `界面与接入` `安全与攻防`<br>**标签** `MCP` `tool-interface` `工具接口` `authorization` `身份与授权` |
 | 2026-10-01 | [Data Agent Kit is now GA: Bring Google Data Cloud to any coding agent](https://cloud.google.com/blog/topics/developers-practitioners/data-agent-kit-is-now-ga-bring-google-data-cloud-to-any-coding-agent/)<br>文章 · 厂商<br>摘要：介绍 Data Agent Kit 将编码 Agent 接入 Google Cloud 数据产品的工作流：MCP 工具提供目录、查询、任务日志和资源操作，技能指导图结构、表结构及数据管道构建；文中说明 IDE 上下文传递、图关系创建前的人工批准和 IAM 权限边界，配套插件与技能仓库公开。<br>收录理由：原文给出 Agent 从可信表目录检索、生成并核查 BigQuery 图关系、编排 dbt/Dataform 与 Airflow 流水线以及审查失败任务的具体步骤；公开插件和技能实现使数据工程工作流中的界面接入、构造和权限安排可检查。 | Google Cloud | **主题** `界面与接入` `构造方式` `运行与问责`<br>**标签** `MCP` `skills` `技能` `authorization` `身份与授权` |
@@ -237,7 +243,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。192 条里实填 79 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。198 条里实填 80 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -249,23 +255,23 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（81） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（33）
+`论文`（84） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（36）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（37） ｜ `厂商`（93） ｜ `产学合作`（24） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（13）
+`学界`（39） ｜ `厂商`（97） ｜ `产学合作`（24） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（13）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，192 条里有 84 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，198 条里有 89 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（28 条）
 - `应用内部`（22 条）
-- `构造方式`（101 条）
-- `安全与攻防`（44 条）
-- `运行与问责`（39 条）
+- `构造方式`（106 条）
+- `安全与攻防`（46 条）
+- `运行与问责`（44 条）
 - `协议与生态`（33 条）
 - `商业与组织`（16 条）
 
@@ -275,28 +281,28 @@ rg '商业与组织' index.tsv
 
 | 英文标签 | 中文别名 | 条目数 |
 |---|---|---:|
-| `MCP` | — | 35 |
+| `MCP` | — | 36 |
 | `A2A` | — | 3 |
 | `ACP` | — | 1 |
 | `registry` | `注册表` | 3 |
 | `tool-interface` | `工具接口` | 39 |
 | `payments` | `支付` | 4 |
-| `context-engineering` | `上下文工程` | 16 |
+| `context-engineering` | `上下文工程` | 17 |
 | `ontology` | `本体` | 6 |
 | `RAG` | `检索增强` | 9 |
-| `skills` | `技能` | 10 |
+| `skills` | `技能` | 11 |
 | `plugins` | `插件` | 1 |
 | `memory` | `记忆` | 3 |
-| `sandbox` | `沙箱` | 8 |
-| `observability` | `可观测` | 9 |
+| `sandbox` | `沙箱` | 9 |
+| `observability` | `可观测` | 10 |
 | `computer-use` | `计算机操作` | 4 |
 | `decision-model` | `决策模型` | 2 |
-| `orchestration` | `编排` | 45 |
-| `authorization` | `身份与授权` | 16 |
+| `orchestration` | `编排` | 47 |
+| `authorization` | `身份与授权` | 18 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 22 |
-| `empirical-study` | `实证测量` | 35 |
+| `benchmark` | `基准评测` | 23 |
+| `empirical-study` | `实证测量` | 38 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |
