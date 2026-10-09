@@ -1341,6 +1341,20 @@ ITEMS = [
      "https://arxiv.org/abs/2610.06966",
      None, "提出在智能体外部动作和输出边界检查任务授权的方法：运行前登记工具、MCP 服务与技能能力并编译授权契约，运行时以证据检查拟执行效果，并用探针识别未获任务认可的信息使用；论文在六组基准上与 13 种方法比较，公开实现、适配器和测试。",
      "原文给出跨工具、MCP 和技能调用的能力登记、契约解析、动作拦截与安全续行规则，公开代码中的防护模块和测试对应这些步骤；它为智能体执行时的提示注入防护与授权边界提供可检查的具体机制。"),
+    ("2026-10-08", "-", "Launching an opt-in vulnerability-finding service for open-source software",
+     "Anthropic",
+     "文章", "厂商", ["构造方式", "安全与攻防", "运行与问责"],
+     ["authorization", "sandbox"],
+     "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+     None, "介绍供开源项目自愿加入的周期性漏洞扫描服务：维护者以项目配置、构建文件和可选威胁模型登记；服务在隔离虚拟机内构建项目，断网扫描后将未经人工复核的模型生成报告、复现步骤和可选补丁发送给项目联系人。",
+     "原文与登记仓库给出项目准入、隔离构建、离线扫描、报告交付及人工核验责任的具体规则；这些安排呈现 AI 漏洞发现进入开源项目维护流程时的安全作业方式和治理边界。"),
+    ("2026-10-07", "-", "When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks",
+     "Nanjing University; Central University of Finance and Economics; University of Illinois at Urbana-Champaign",
+     "论文", "学界", ["构造方式", "运行与问责"],
+     ["orchestration", "empirical-study"],
+     "https://arxiv.org/abs/2610.10263",
+     None, "对 Codex、Claude Code 和 Kimi Code 在 354 项任务上的动态并行开关进行配对比较，共记录 2,124 次运行；论文统计任务结果与资源消耗，人工分析并行轨迹中的协调失误，作者仓库公开运行记录、标注和分析材料。",
+     "原文将智能体运行时决定何时委派子任务作为独立工程变量，分析任务编排、共享状态和结果合并中的具体失误；公开的并行与串行配对轨迹为长任务开发流程中的动态并行提供可核查证据。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
