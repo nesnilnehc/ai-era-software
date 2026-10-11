@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，208 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，211 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／208 条有与当前出处一致的抓取记录，其余 68 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／211 条有与当前出处一致的抓取记录，其余 71 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：206／208 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：209／211 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -45,6 +45,8 @@ rg '商业与组织' index.tsv
 | 2026-10-08 | [One Skill Too Many: How Co-Installed Skills Conflict in Coding Agents](https://arxiv.org/abs/2610.11647)<br>论文 · 学界<br>摘要：研究编码智能体同时安装相似技能时的选择与执行：从仓库快照筛选技能对，对 312 对进行跨模型运行，并按任务完成与技能专属核心功能分别评分；作者仓库公开案例、逐次结果、分析脚本及首次读取时的保护实验。<br>收录理由：论文将技能选用与原技能规则是否落实分开测量，展示任务完成仍可掩盖技能功能丢失；公开的技能对、运行记录和首次读取保护实现，为编码智能体的扩展配置与执行问责提供可检查证据。 | University of New South Wales; Griffith University; Nanyang Technological University; University of Wollongong | **主题** `构造方式` `运行与问责`<br>**标签** `skills` `技能` `empirical-study` `实证测量` |
 | 2026-10-08 | [Cadence: Strategic Guidance for Coding Agents](https://arxiv.org/abs/2610.12269)<br>论文 · 学界<br>摘要：提出按编码智能体执行状态调整检查频率的运行时监测框架，并以建议和替换两级干预处理执行偏差；论文在 SWE-bench Lite 的 300 项任务上比较两种编码智能体，作者仓库公开实现、评测流程和实验结果包。<br>收录理由：原文给出检查调度随干预级别变化的规则和两种干预路径，公开实现及逐实验结果可核对；该机制具体呈现编码智能体执行过程中的编排、监测与纠偏方式。 | Singapore Management University; University College London | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `observability` `可观测` `empirical-study` `实证测量` |
 | 2026-10-08 | [How we cut a browser agent's cost 76x and made it 5x faster by keeping its cache intact](https://asana.com/inside-asana/cut-browsers-agent-cost)<br>文章 · 厂商<br>摘要：记录 Asana 浏览器智能体的请求历史与截图管理改动：为最新工具结果设置缓存标记，将逐步删除截图改为成批裁剪，并扩大历史预算；原文说明四种模型、六种策略与两档预算的 144 次运行、令牌计费和参考答案判分方法。<br>收录理由：原文给出历史前缀变化导致缓存失效的具体机制、截图裁剪规则及多条件测量方式；这些可核查的配置和数据说明浏览器智能体内部上下文管理及运行成本如何随软件实现改变。 | Asana (Frank Hidalgo) | **主题** `应用内部` `构造方式` `运行与问责`<br>**标签** `computer-use` `计算机操作` `context-engineering` `上下文工程` `empirical-study` `实证测量` |
+| 2026-10-08 | [Implementing the Spec Growth Engine: Preventing Spec-Code Divergence, and Growing the Spec with Agents](https://arxiv.org/abs/2610.11725)<br>论文 · 学界<br>摘要：实现以规格节点和代码归属组成的开发机制：确定性校验器核对依赖、导入关系、测试证据及变更门槛；意图、规格和编码智能体按轮次扩展项目，论文和原仓说明人工决策、豁免与运行模式。<br>收录理由：原文与原仓给出规格图与实际代码导入图的漂移检查、按测试记录授予已验证状态及分级变更门槛的实现；这些规则具体呈现编码智能体参与开发时，规格、代码和人工授权如何在构造与运行中衔接。 | Hochschule Offenburg (Hartwig Grabowski) | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` |
+| 2026-10-08 | [Who Pays the Review Cost? Triage, Fairness, and Accountability in AI-authored Pull Requests](https://arxiv.org/abs/2610.11179)<br>论文 · 学界<br>摘要：对 31 个国家的 239 名有代码审查经验者开展混合方法问卷，调查 AI 编写的拉取请求在审查入口、延期处理、新人参与和责任归属上的判断；原文说明招募、筛选与分析方法，补充材料提供问卷和分析脚本。<br>收录理由：论文把 AI 生成补丁进入项目审查队列后的解释、验证和维护责任作为调查对象，记录受访者提出的范围控制、证据、响应及合并后所有权条件；这些可核对的问卷与结果补充了开发流程中的审查治理和组织分工证据。 | University of Saskatchewan | **主题** `构造方式` `运行与问责` `商业与组织`<br>**标签** `empirical-study` `实证测量` |
 | 2026-10-07 | [Local sandboxing for GitHub Copilot now generally available](https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/)<br>文章 · 厂商<br>摘要：介绍 Copilot CLI、Copilot app 与 VS Code Agent Host 的本地工具执行沙箱：通过 MXC 将文件、网络和凭据访问策略映射到 Windows、macOS、Linux 的系统隔离机制；官方文档说明默认关闭、会话配置及企业强制策略。<br>收录理由：公告、官方文档和 MXC 原仓给出编码智能体在本机运行命令时的跨系统隔离架构、策略项目与企业不可覆盖的配置边界；这些具体机制对应 Agent 开发环境的构造和权限治理。 | GitHub | **主题** `构造方式` `安全与攻防` `运行与问责`<br>**标签** `sandbox` `沙箱` `authorization` `身份与授权` |
 | 2026-10-07 | [When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks](https://arxiv.org/abs/2610.10263)<br>论文 · 学界<br>摘要：对 Codex、Claude Code 和 Kimi Code 在 354 项任务上的动态并行开关进行配对比较，共记录 2,124 次运行；论文统计任务结果与资源消耗，人工分析并行轨迹中的协调失误，作者仓库公开运行记录、标注和分析材料。<br>收录理由：原文将智能体运行时决定何时委派子任务作为独立工程变量，分析任务编排、共享状态和结果合并中的具体失误；公开的并行与串行配对轨迹为长任务开发流程中的动态并行提供可核查证据。 | Nanjing University; Central University of Finance and Economics; University of Illinois at Urbana-Champaign | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `empirical-study` `实证测量` |
 | 2026-10-07 | [Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking](https://arxiv.org/abs/2610.10628)<br>论文 · 产学合作<br>摘要：提出由协调、访谈、模拟利益相关者、生成和修订智能体组成的需求规格编写流程，比较无反馈、自我修订与人工反馈三种方式；作者公开框架代码和项目描述与人工需求规格配对的数据集。<br>收录理由：原文将需求征集到规格生成与修订串成可执行的多智能体流程，公开代码与配对数据可检查其任务和实现；这为目录中的编码阶段研究增加需求工程阶段的具体构造方式。 | Siemens AG; Technical University of Munich | **主题** `构造方式`<br>**标签** `orchestration` `编排` `benchmark` `基准评测` `empirical-study` `实证测量` |
@@ -71,6 +73,7 @@ rg '商业与组织' index.tsv
 | 2026-09-29 → 2026-10-01 | [Zero2Repo: Can Coding Agents Build Repositories from Scratch?](https://arxiv.org/abs/2609.38269)<br>论文 · 产学合作<br>摘要：提出从产品需求和接口契约出发生成完整代码仓的评测：用固定版本开源项目制作规格、可复现环境和隐藏验收测试，在隔离容器中评估智能体提交；论文报告首批 11 项、四种语言任务，配套仓公开任务与运行工具。<br>收录理由：原文要求智能体自行完成目录、依赖、构建和实现，并在提交后由独立容器执行隐藏测试；这与已有的局部修复评测及库接口设计评测相比，增加了完整软件仓库交付的可检查任务和验收流程。 | Gradient Data; McGill University; Carnegie Mellon University; University of Southern California; Queen’s University; MIT; University College London; University of California, San Diego; independent researchers | **主题** `构造方式`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-09-29 | [E2E-SWE: Benchmarking LLMs on Building Working Codebases from Scratch](https://arxiv.org/abs/2609.38335)<br>论文 · 厂商<br>摘要：提出覆盖 11 种语言、186 项完整代码仓生成任务的 E2E-SWE：智能体从自然语言规格和空工作区创建可安装项目，由独立容器中的隐藏测试验收；任务由工程师与模型共同构造，并通过静态检查和实际运行迭代校验，原仓公开任务与适配器。<br>收录理由：论文把从零构建软件的评测扩展到多语言任务，并公开逐任务规格、测试及运行适配器；相较同日的 Zero2Repo，其工程师参与构造及基于实际运行修订任务的流程提供了另一套可核查的任务生成与验收证据。 | Meta Superintelligence Labs | **主题** `构造方式`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-09-29 | [OpenCollab: A Multi-Agent Coding Framework with Programmable Collaboration and Controllable Runtime](https://arxiv.org/abs/2609.38345)<br>论文 · 产学合作<br>摘要：提出以角色、通信拓扑和共享运行时定义编码智能体协作，并通过事件记录核对实际交接与预设组织是否一致；项目原仓公开团队配置、工作流运行器、可观测数据结构和测试。<br>收录理由：原文与原仓给出声明协作关系、执行交接和记录每次运行的具体机制；其对实际协作行为的核对，使多智能体开发流程的构造与运行状态可检查。 | Shanghai Jiao Tong University; University of Cambridge; Nanyang Technological University; The University of Hong Kong; Imperial College London; Peking University; Tencent | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `observability` `可观测` |
+| 2026-09-29 | [AgentBug-Smith: Automatically Reproducing Real-World Harness Bugs in Agentic Systems](https://arxiv.org/abs/2609.37864)<br>论文 · 产学合作<br>摘要：提出从智能体框架项目的已合并缺陷中自动构建可执行复现任务的方法，并发布 200 项 harness 缺陷实例；作者仓库提供环境构建、故障测试、评测脚本和运行记录，数据包包含逐例配置、补丁与日志。<br>收录理由：原文将工具接口、上下文、编排等智能体框架缺陷转成补丁前失败、补丁后通过的开发任务；公开的逐例环境和复现记录，使 AI 软件运行框架的缺陷修复与评测过程可检查。 | The University of Chicago; Fudan University; TensorBlock, Inc.; Tsinghua University; University of Illinois Urbana-Champaign | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-09-28 | [How we found 24 Android vulnerabilities using our open source AI security agent](https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/)<br>文章 · 厂商<br>摘要：介绍面向 Android 应用的智能体审计任务流：先区分移动端入口，再按入口类型检查指定漏洞类别，并用多次运行及人工复核处理发现；原文给出运行命令、公开任务流和两个已披露漏洞的代码分析。<br>收录理由：作者公开了移动端入口识别与漏洞类别检查的任务流改动，并以 OsmAnd 和 Wikipedia Android 的具体代码路径展示审计结果；这些可检查的步骤为已收录的模糊测试流程之外，增加了 AI 参与移动应用安全审计的实践。 | GitHub Security Lab | **主题** `构造方式` `安全与攻防`<br>**标签** `orchestration` `编排` |
 | 2026-09-28 | [NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring](https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/)<br>文章 · 厂商<br>摘要：介绍由 OpenShell 智能体沙箱与 BlueField-4 上的 Sentry 组成的分层安全参考架构：运行时按文件、网络、进程和凭据策略限制访问，独立硬件层关联智能体交互、策略决策与工具访问记录。<br>收录理由：原文明确划分应用、运行时和基础设施三层，并说明策略验证、带外监测与模型访问路径上的控制点；配套 OpenShell 原仓公开了沙箱及策略实现，呈现智能体运行安全和审计架构的具体变化。 | NVIDIA | **主题** `安全与攻防` `运行与问责`<br>**标签** `sandbox` `沙箱` `authorization` `身份与授权` `observability` `可观测` |
 | 2026-09-27 | [Building an Agentic Software Factory](https://zachrattner.com/resources/building-an-agentic-software-factory)<br>文章 · 个人<br>摘要：介绍将现有开发流程转为编码 Agent 工作流的方法：把团队约定写入仓库规则和技能，将可重复步骤脚本化，以测试、日志和截图检查结果，并由人审查发布；文中给出仓库结构与发布检查报告示例。<br>收录理由：作者以 Yembo 的开发流程为背景，逐步说明技能拆分、命令权限清单、任务隔离及带证据的发布检查如何接入工程流水线；这些具体实践对应 AI 参与软件构造与人类发布责任的安排。 | Zach Rattner | **主题** `构造方式` `运行与问责`<br>**标签** `skills` `技能` `orchestration` `编排` `authorization` `身份与授权` |
@@ -253,7 +256,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。208 条里实填 80 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。211 条里实填 80 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -265,25 +268,25 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（91） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（39）
+`论文`（94） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（39）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（42） ｜ `厂商`（101） ｜ `产学合作`（27） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（13）
+`学界`（44） ｜ `厂商`（101） ｜ `产学合作`（28） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（13）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，208 条里有 97 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，211 条里有 100 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（28 条）
 - `应用内部`（23 条）
-- `构造方式`（115 条）
+- `构造方式`（118 条）
 - `安全与攻防`（49 条）
-- `运行与问责`（51 条）
+- `运行与问责`（54 条）
 - `协议与生态`（33 条）
-- `商业与组织`（16 条）
+- `商业与组织`（17 条）
 
 `安全与攻防` 与 `运行与问责` 的分界：材料谈的是**怎么被攻破、怎么防住**（威胁、漏洞、越权、隔离、安全普查），还是**跑起来之后谁管、按什么规矩管、出事谁负责**（法规、风险框架、可观测、管控面、责任边界）。
 
@@ -307,12 +310,12 @@ rg '商业与组织' index.tsv
 | `observability` | `可观测` | 13 |
 | `computer-use` | `计算机操作` | 6 |
 | `decision-model` | `决策模型` | 2 |
-| `orchestration` | `编排` | 51 |
+| `orchestration` | `编排` | 52 |
 | `authorization` | `身份与授权` | 20 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 25 |
-| `empirical-study` | `实证测量` | 45 |
+| `benchmark` | `基准评测` | 26 |
+| `empirical-study` | `实证测量` | 47 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |
