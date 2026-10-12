@@ -1432,6 +1432,13 @@ ITEMS = [
      "https://arxiv.org/abs/2610.11179",
      None, "对 31 个国家的 239 名有代码审查经验者开展混合方法问卷，调查 AI 编写的拉取请求在审查入口、延期处理、新人参与和责任归属上的判断；原文说明招募、筛选与分析方法，补充材料提供问卷和分析脚本。",
      "论文把 AI 生成补丁进入项目审查队列后的解释、验证和维护责任作为调查对象，记录受访者提出的范围控制、证据、响应及合并后所有权条件；这些可核对的问卷与结果补充了开发流程中的审查治理和组织分工证据。"),
+    ("2026-10-05", "-", "Correct Code, Broken Contributions? SWE-CC: Benchmarking Repository Policy Compliance for Coding Agents",
+     "Singapore Management University; Singapore University of Technology and Design",
+     "论文", "学界", ["构造方式", "运行与问责"],
+     ["benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2610.06193",
+     None, "从 12 个开源仓库的贡献文档整理 823 条可检查规则，编制确定性判定器，对基于 SWE-bench Verified 的 500 项贡献任务同时检查编码智能体的执行轨迹和最终提交；原仓公开任务、规则、判定代码及 8,000 次运行的判定结果。",
+     "论文将仓库的测试流程、代码规范、提交及拉取请求要求转为逐项规则，并把执行过程违规与最终补丁合规分开评估；公开判定器和结果为 AI 参与开源开发时的项目规则遵循提供可检查证据。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
