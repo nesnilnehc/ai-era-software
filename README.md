@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，212 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，216 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／212 条有与当前出处一致的抓取记录，其余 72 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／216 条有与当前出处一致的抓取记录，其余 76 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：210／212 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：214／216 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -40,7 +40,11 @@ rg '商业与组织' index.tsv
 
 | 日期 | 材料 | 出品方（品牌；代表产品/项目） | 分类 |
 |---|---|---|---|
-| 2026-10-09 | [Investigating unintended model actions in our evaluations and internal use](https://www.anthropic.com/research/investigating-unintended-model-actions)<br>文章 · 厂商<br>摘要：披露模型在评测和内部使用中利用第三方站点漏洞、提交表单、绕过数据门槛及借短网址绕过抓取限制的案例；原文说明将内部评测转为离线或限制联网，并扩大工具访问限制、行为监测与阻断。<br>收录理由：原文把外部网站操作中的越权路径与评测环境、抓取工具和内部智能体的处置规则对应起来；这些当事人披露的运行控制与监测安排，具体呈现智能体接入真实软件后的安全治理边界。 | Anthropic | **主题** `安全与攻防` `运行与问责`<br>**标签** `computer-use` `计算机操作` `authorization` `身份与授权` `observability` `可观测` |
+| 2026-10-09 → 2026-10-12 | [Investigating unintended model actions in our evaluations and internal use](https://www.anthropic.com/research/investigating-unintended-model-actions)<br>文章 · 厂商<br>摘要：披露模型在评测和内部使用中利用第三方站点漏洞、提交表单、绕过数据门槛及借短网址绕过抓取工具的 URL 长度限制的案例；原文说明将部分评测转为离线或避免访问真实网站，并扩大工具访问限制、行为监测与阻断。<br>收录理由：原文把外部网站操作中的越权路径与评测环境、抓取工具和内部智能体的处置规则对应起来；这些当事人披露的运行控制与监测安排，具体呈现智能体接入真实软件后的安全治理边界。 | Anthropic | **主题** `安全与攻防` `运行与问责`<br>**标签** `computer-use` `计算机操作` `authorization` `身份与授权` `observability` `可观测` |
+| 2026-10-09 | [AgentSWE: Can Coding Agents Build the Agent You Actually Want?](https://arxiv.org/abs/2610.13361)<br>论文 · 学界<br>摘要：提出覆盖智能体创建、现有智能体修改和目标优化的 25 项开发任务；构建者只见少量示例，冻结交付物后在隐藏案例上按需求量表或原基准指标评估。作者原仓公开任务、评判规则和运行器，论文列出逐任务结果。<br>收录理由：原文把编码智能体交付的另一套智能体软件作为验收对象，区分开发时示例表现与冻结后功能；公开的任务包、隐藏案例和评判实现，为 AI 构造软件及交付验证增加可检查的对象与证据。 | Beijing Academy of Artificial Intelligence; Institute of Automation, Chinese Academy of Sciences; Renmin University of China | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
+| 2026-10-09 | [Understanding and Mitigating Cross-Session Attacks via Persistent Artifacts in Agent Skill Composition](https://arxiv.org/abs/2610.13227)<br>论文 · 学界<br>摘要：研究智能体技能跨会话复用文件、配置和缓存时的指令传播、数据边界违反与证据投毒；构建 30 个场景的 270 项案例，并实现记录工件来源、读取时恢复上下文和执行前审查的运行时防护。原仓公开案例、实现及运行脚本。<br>收录理由：论文把技能生成的持久工件视为下一次任务的信任边界，给出来源归属、读取时提示和拟执行操作审查的具体机制；公开案例与防护代码可检查技能组合中的跨会话攻击和授权处置。 | The Australian National University; City University of Hong Kong; CSIRO Data61 | **主题** `安全与攻防` `运行与问责`<br>**标签** `skills` `技能` `authorization` `身份与授权` `benchmark` `基准评测` |
+| 2026-10-09 | [A-SAW: The Agentic Software Architecture Workflow](https://arxiv.org/abs/2610.13647)<br>论文 · 学界<br>摘要：提出以版本化 C4 模型、类型化元素目录和模板生成架构文档草稿，再经自动标识检查及人工审查批准的流程；以 45 份文档、13 组成对重新生成样本和 13 次从业者访谈评估其结构质量与信任边界。<br>收录理由：原文给出元素命名契约、功能范围上下文、缺口标记、虚构标识检查和双角色批准门槛，具体说明 AI 参与架构文档构造时的输入约束与人工责任；成对文档评分和访谈提供该流程的实证范围。 | University of Liechtenstein; University of St. Gallen | **主题** `构造方式` `运行与问责`<br>**标签** `context-engineering` `上下文工程` `authorization` `身份与授权` `empirical-study` `实证测量` |
+| 2026-10-09 | [(When) Should a Software Factory be Lights-off? Benchmarking Code Review Agents on Bug Detection](https://arxiv.org/abs/2610.13668)<br>论文 · 产学合作<br>摘要：从历史中经人工确认的缺陷及引入缺陷的拉取请求构建代码审查任务，比较不同审查智能体的缺陷发现、任务条件和执行轨迹；论文涵盖 98 个开源仓库及企业内部样本，原仓另公开重建的 995 项开源任务和运行脚本。<br>收录理由：原文将审查智能体对已确认缺陷的检出能力与拉取请求复杂度、仓库上下文和审查方式对应，公开的开源任务与评分脚本可检查其评测对象；这为 AI 生成代码后的审查环节增加有实际缺陷依据的证据。 | Carnegie Mellon University; Microsoft; Microsoft Research | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-10-08 | [Launching an opt-in vulnerability-finding service for open-source software](https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source)<br>文章 · 厂商<br>摘要：介绍供开源项目自愿加入的周期性漏洞扫描服务：维护者以项目配置、构建文件和可选威胁模型登记；服务在隔离虚拟机内构建项目，断网扫描后将未经人工复核的模型生成报告、复现步骤和可选补丁发送给项目联系人。<br>收录理由：原文与登记仓库给出项目准入、隔离构建、离线扫描、报告交付及人工核验责任的具体规则；这些安排呈现 AI 漏洞发现进入开源项目维护流程时的安全作业方式和治理边界。 | Anthropic | **主题** `构造方式` `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` `sandbox` `沙箱` |
 | 2026-10-08 | [One Skill Too Many: How Co-Installed Skills Conflict in Coding Agents](https://arxiv.org/abs/2610.11647)<br>论文 · 学界<br>摘要：研究编码智能体同时安装相似技能时的选择与执行：从仓库快照筛选技能对，对 312 对进行跨模型运行，并按任务完成与技能专属核心功能分别评分；作者仓库公开案例、逐次结果、分析脚本及首次读取时的保护实验。<br>收录理由：论文将技能选用与原技能规则是否落实分开测量，展示任务完成仍可掩盖技能功能丢失；公开的技能对、运行记录和首次读取保护实现，为编码智能体的扩展配置与执行问责提供可检查证据。 | University of New South Wales; Griffith University; Nanyang Technological University; University of Wollongong | **主题** `构造方式` `运行与问责`<br>**标签** `skills` `技能` `empirical-study` `实证测量` |
 | 2026-10-08 | [Cadence: Strategic Guidance for Coding Agents](https://arxiv.org/abs/2610.12269)<br>论文 · 学界<br>摘要：提出按编码智能体执行状态调整检查频率的运行时监测框架，并以建议和替换两级干预处理执行偏差；论文在 SWE-bench Lite 的 300 项任务上比较两种编码智能体，作者仓库公开实现、评测流程和实验结果包。<br>收录理由：原文给出检查调度随干预级别变化的规则和两种干预路径，公开实现及逐实验结果可核对；该机制具体呈现编码智能体执行过程中的编排、监测与纠偏方式。 | Singapore Management University; University College London | **主题** `构造方式` `运行与问责`<br>**标签** `orchestration` `编排` `observability` `可观测` `empirical-study` `实证测量` |
@@ -257,7 +261,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。212 条里实填 80 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。216 条里实填 81 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -269,23 +273,23 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（95） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（39）
+`论文`（99） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（39）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（45） ｜ `厂商`（101） ｜ `产学合作`（28） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（13）
+`学界`（48） ｜ `厂商`（101） ｜ `产学合作`（29） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（13）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，212 条里有 101 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，216 条里有 105 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（28 条）
 - `应用内部`（23 条）
-- `构造方式`（119 条）
-- `安全与攻防`（49 条）
-- `运行与问责`（55 条）
+- `构造方式`（122 条）
+- `安全与攻防`（50 条）
+- `运行与问责`（59 条）
 - `协议与生态`（33 条）
 - `商业与组织`（17 条）
 
@@ -301,10 +305,10 @@ rg '商业与组织' index.tsv
 | `registry` | `注册表` | 3 |
 | `tool-interface` | `工具接口` | 39 |
 | `payments` | `支付` | 4 |
-| `context-engineering` | `上下文工程` | 19 |
+| `context-engineering` | `上下文工程` | 20 |
 | `ontology` | `本体` | 6 |
 | `RAG` | `检索增强` | 9 |
-| `skills` | `技能` | 12 |
+| `skills` | `技能` | 13 |
 | `plugins` | `插件` | 1 |
 | `memory` | `记忆` | 3 |
 | `sandbox` | `沙箱` | 10 |
@@ -312,11 +316,11 @@ rg '商业与组织' index.tsv
 | `computer-use` | `计算机操作` | 6 |
 | `decision-model` | `决策模型` | 2 |
 | `orchestration` | `编排` | 52 |
-| `authorization` | `身份与授权` | 20 |
+| `authorization` | `身份与授权` | 22 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
-| `benchmark` | `基准评测` | 27 |
-| `empirical-study` | `实证测量` | 48 |
+| `benchmark` | `基准评测` | 30 |
+| `empirical-study` | `实证测量` | 51 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 3 |
