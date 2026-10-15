@@ -1,6 +1,6 @@
 # 每日采集、核实与更新
 
-日常任务由 Codex 桌面应用中的项目自动化运行，不依赖 GitHub Actions 或单独的 OpenAI API key。自动化绑定本地项目 `ai-era-software`，每天北京时间 09:17 执行。任务定义保存在 Codex 应用中；此说明记录其仓库侧约定。
+日常任务由 Codex 桌面应用中的心跳自动化运行，不依赖 GitHub Actions 或单独的 OpenAI API key。自动化绑定现有本地会话，每天北京时间 09:17 在同一会话中继续，并在本地仓库 `ai-era-software` 工作。任务定义保存在 Codex 应用中；此说明记录其仓库侧约定。
 
 ## 更新规则
 
