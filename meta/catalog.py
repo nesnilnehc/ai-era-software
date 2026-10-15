@@ -1488,6 +1488,20 @@ ITEMS = [
      "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/",
      None, "说明 Copilot CLI、VS Code 和 Copilot app 可在启动时强制刷新企业托管设置，无法确认当前策略时停止运行；含 sandbox 键的策略还可要求最低客户端版本，旧版客户端需更新后才能继续使用。",
      "原文明确区分首次获取策略与后续启动的刷新要求，并给出缓存不能满足新鲜度要求、验证失败即停止及沙箱版本门槛；这些执行规则补充了目录已有的本地沙箱机制，具体呈现企业策略如何约束编码智能体运行。"),
+    ("2026-10-12", "-", "When Agent Evaluation Becomes Unreliable: An Empirical Study of Oracle Failures and Configuration-Dependent Measurement in an LLM Agent Benchmark",
+     "Nanjing University of Science and Technology (Junjie Chen)",
+     "论文", "学界", ["构造方式", "运行与问责"],
+     ["benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2610.16067",
+     None, "审计智能体基准的评分软件，使用五项状态完整性不变量、三项已知答案检查和故障注入检测评判器缺陷；以记录的工具调用重放修正一次评测的终态标签，并比较策略文档、工具描述及错误文本等配置对运行轨迹的影响。作者公开审计代码、冻结记录和离线分析入口。",
+     "论文将智能体评测中的任务执行器和结果判定器本身作为软件质量检查对象，具体展示评分函数改变环境状态时如何造成错误标签，以及如何用重放记录与已知答案检查定位；公开实现和记录使运行评测的证据与边界可核对。"),
+    ("2026-10-09", "-", "Cortex: Measurement-Gated Evolution and Pruning of Coding-Agent Skills and Rules",
+     "Samuele Giampieri (independent researcher)",
+     "论文", "个人", ["构造方式", "运行与问责"],
+     ["skills", "context-engineering", "empirical-study"],
+     "https://arxiv.org/abs/2610.14216",
+     None, "提出从开发会话保存可重放任务和人工纠正，逐项生成、测试与删除编码智能体技能或规则的流程；在隔离仓库副本中重复运行有无候选文本的任务，并用确定性判分决定保留。作者原仓公开工具、实验仓、导出数据和结果重算脚本。",
+     "原文与原仓给出技能和规则被加载的记录、成对重复运行的准入阈值，以及移除已有规则前的测量步骤；这些可检查的实现把编码智能体项目指令的增删纳入开发流程和运行验证，补充目录现有的技能冲突测量。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
