@@ -1538,6 +1538,14 @@ ITEMS = [
      "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/",
      None, "说明把默认分支的代码扫描告警交给 Copilot 后，由其跨文件提出修复、重新运行 CodeQL 并迭代，再创建供人工审查的草稿拉取请求；原文列出分层启用、最多 25 项告警合并处理及计费方式；配套文档说明自定义查询、扩展查询集及第三方告警的修复不能由该流程确认。",
      "原文把安全告警、智能体修改、扫描复验和人工合并审查连接成明确工作流，并界定适用分支、授权入口与成本边界；它具体呈现安全修复流程和责任分工的变化，不以厂商发布宣告证明修复质量优越。"),
+
+    ("2026-10-11", "-", "A Decade in a Day: Synthesizing Agent-Native Interfaces from Human-Oriented Software Evolution",
+     "Independent Researcher; LIGHTSPEED",
+     "论文", "厂商", ["界面与接入", "构造方式"],
+     ["tool-interface", "headless", "benchmark"],
+     "https://arxiv.org/abs/2610.15765",
+     None, "用固定任务、智能体和产物判定器比较桌面软件版本，提出能力发现、原子命令合成及目标级命令扩展流程；命令通过保存后回读与原子序列状态比较核查。原仓公开生成和验证代码，DeskIF-Bench 提供任务与正反产物检查；论文成功率采用 pass@3，未在此独立复现。",
+     "材料将面向智能体的接口构造拆为能力普查、可观察命令及复合命令验证，公开相应实现与产物检查样例；相较既有工具接口比较和企业能力开放材料，新增从现有桌面软件合成接口并核验持久化效果的具体机制。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
