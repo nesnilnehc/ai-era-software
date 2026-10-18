@@ -10,7 +10,7 @@
 
 ## 怎么用
 
-- **要数据**：[`index.tsv`](index.tsv)，227 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
+- **要数据**：[`index.tsv`](index.tsv)，231 条 × 12 列，制表符分隔。列为 首发日期／最后更新／标题／出品方／体裁／出品方类型／主题／标签／出处／摘要／收录理由／出品方品牌与代表产品/项目；主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。
 
 - **要翻看**：本页下方的[清单表](#清单按发布时间倒序)，按首发时间倒序。
 
@@ -27,9 +27,9 @@ rg 'MCP' index.tsv
 rg '商业与组织' index.tsv
 ```
 
-**抓取记录最近更新：2026-09-23**——140／227 条有与当前出处一致的抓取记录，其余 87 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
+**抓取记录最近更新：2026-09-23**——140／231 条有与当前出处一致的抓取记录，其余 91 条只给链接。各条的实际抓取日期见 [`meta/fetched.tsv`](meta/fetched.tsv)。
 
-**内容摘要：225／227 条已核实补齐**——摘要只概括原文事实，不含评价。
+**内容摘要：229／231 条已核实补齐**——摘要只概括原文事实，不含评价。
 
 以下条目暂不提供摘要：
 
@@ -40,12 +40,16 @@ rg '商业与组织' index.tsv
 
 | 日期 | 材料 | 出品方（品牌；代表产品/项目） | 分类 |
 |---|---|---|---|
+| 2026-10-17 | [How employment is changing at Anthropic](https://www.anthropic.com/research/employment-at-anthropic)<br>报告 · 厂商<br>摘要：结合内部用工、工具使用、产出与沟通记录及 17 次访谈，研究智能体采用后的岗位结构、注意力瓶颈和管理智能体的工作变化；采用非随机，产出与质量代理指标不等同业务价值。原站标注 10 月 16 日，本目录按最早可用网页快照记 10 月 17 日。<br>收录理由：报告给出员工采用工具前后比较、会话工时和任务分类的测量口径，记录软件组织在智能体密集运行下的工作重分配与监督成本；补充既有团队成本模拟以外的单一企业观察证据，不推导普遍因果效果。 | Anthropic (Nathan Wilmers; Regina Catipon; Maxim Massenkoff; Peter McCrory) | **主题** `商业与组织` `构造方式`<br>**标签** `empirical-study` `实证测量` |
 | 2026-10-15 | [Agentic autofix for code scanning alerts general availability](https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/)<br>文章 · 厂商<br>摘要：说明把默认分支的代码扫描告警交给 Copilot 后，由其跨文件提出修复、重新运行 CodeQL 并迭代，再创建供人工审查的草稿拉取请求；原文列出分层启用、最多 25 项告警合并处理及计费方式；配套文档说明自定义查询、扩展查询集及第三方告警的修复不能由该流程确认。<br>收录理由：原文把安全告警、智能体修改、扫描复验和人工合并审查连接成明确工作流，并界定适用分支、授权入口与成本边界；它具体呈现安全修复流程和责任分工的变化，不以厂商发布宣告证明修复质量优越。 | GitHub | **主题** `构造方式` `安全与攻防` `运行与问责`<br>**标签** `orchestration` `编排` `authorization` `身份与授权` |
+| 2026-10-15 | [AI Scan for pull requests generally available](https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/)<br>文章 · 厂商<br>摘要：说明在启用代码扫描与 AI Scan 的 PR 中补充 CodeQL 未覆盖的语言和框架；结果标记为 AI 建议，可附修复建议，但不会使扫描检查失败，也不能通过规则集阻止合并，且排除 fork 与 Dependabot PR。<br>收录理由：原文明确定义 AI 安全发现与确定性合并门禁的不同效力、适用 PR 和启用边界；相较已有自动修复流程，它补充检测建议进入研发治理时不能承担阻断职责的具体规则。 | GitHub | **主题** `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` |
+| 2026-10-15 | [CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests](https://arxiv.org/abs/2610.21914)<br>论文 · 产学合作<br>摘要：对 246 个仓库的 465 项 PR 使用四个审查智能体和一个修复智能体，分析 CodeHealth 与 token 成本的关联；公开采样清单、逐 PR 结果和分析代码，并披露预注册时间更正及工具输出限制修订。文件大小调整后的关联变化属于探索分析，不证明重构的因果收益。<br>收录理由：研究把代码维护性与智能体审查修复的计量成本联系起来，提供输入输出 token 汇总、PR 规模及文件大小区分的可检查方法；相较既有混合团队成本模拟，新增真实仓库 PR 上的观察数据和测量流程。 | Lund University; CodeScene AB | **主题** `构造方式` `商业与组织`<br>**标签** `empirical-study` `实证测量` |
 | 2026-10-14 | [What Should a Software Team Spend on Agents? Simulation-Based Cost Optimization of Mixed AI-Human Teams](https://arxiv.org/abs/2610.20394)<br>论文 · 学界<br>摘要：以离散时间随机模型模拟八类智能体角色与人类开发者的分工，纳入缺陷、技术债、监督成本及发布冻结；在 432 组假设情景中用蒙特卡洛模拟和演化搜索比较成本。作者公开模型、配置、分析代码与测试，结论属于模拟而非真实团队因果测量。<br>收录理由：论文将人力、智能体调用与逃逸缺陷成本放入同一团队配置和发布周期优化问题；公开的状态转移、情景参数及测试，使 AI 参与软件研发后的组织与预算取舍可检查，区别于目录已有的单次调用路由成本分析。 | University of Passau (Steffen Herbold) | **主题** `商业与组织` `构造方式`<br>**标签** `orchestration` `编排` `pricing` `定价` `buy-vs-build` `买还是自建` |
 | 2026-10-14 | [Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents](https://arxiv.org/abs/2610.20344)<br>论文 · 学界<br>摘要：让模型依据开发文档和接口骨架构建编码智能体框架，再冻结产物并在独立容器中用模拟模型检验请求、文件、退出码和命令输出；正向对照排除功能未执行导致的空洞通过。原仓公开 53 个计分案例及 41 个对照，论文完整 328 项测试并未全部公开。<br>收录理由：论文将智能体框架本身作为交付物，公开权限、会话和工具行为的外部观察与对照判定实现；这些机制补充已有下游任务成功率评测，使框架功能是否真正执行及边界是否生效可以单独检查。 | Institute of Computing Technology, Chinese Academy of Sciences; Tsinghua University; Peking University; Southeast University | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `authorization` `身份与授权` `empirical-study` `实证测量` |
 | 2026-10-13 | [Enterprise managed settings enforcement updates](https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/)<br>文章 · 厂商<br>摘要：说明 Copilot CLI、VS Code 和 Copilot app 可在启动时强制刷新企业托管设置，无法确认当前策略时停止运行；含 sandbox 键的策略还可要求最低客户端版本，旧版客户端需更新后才能继续使用。<br>收录理由：原文明确区分首次获取策略与后续启动的刷新要求，并给出缓存不能满足新鲜度要求、验证失败即停止及沙箱版本门槛；这些执行规则补充了目录已有的本地沙箱机制，具体呈现企业策略如何约束编码智能体运行。 | GitHub | **主题** `安全与攻防` `运行与问责`<br>**标签** `authorization` `身份与授权` `sandbox` `沙箱` |
 | 2026-10-13 | [SWEPatchTest: Evaluating Software Tests Beyond Reproduction](https://arxiv.org/abs/2610.18004)<br>论文 · 产学合作<br>摘要：提出同时检查缺陷复现、接受正确补丁和拒绝错误补丁的测试生成评测；作者发布 619 项任务，数据页面展示仓库基线、问题、参考补丁、正负候选补丁和测试字段。论文说明联合验证指标、筛选流程及以官方测试判定补丁标签的局限。<br>收录理由：原文把编码智能体生成的测试放到同一问题的多种正负补丁上检验，公开任务和候选补丁可用于检查测试是否过拟合单一参考修复；这补充了目录现有覆盖率导向测试生成材料的验收对象与判定机制。 | Baidu Inc.; Nanjing University; The Chinese University of Hong Kong | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-10-13 | [SolBehave: Evaluating the Behavioural Correctness of LLM-Generated Smart Contracts](https://arxiv.org/abs/2610.18745)<br>论文 · 学界<br>摘要：提出用差分模糊测试、历史交易回放和 DCR 图引导的合成调用序列比较生成合约与原合约的行为；论文报告 250 个合约、七种模型的实验，作者原仓提供序列生成、回放和结果汇总实现，生成数据另列于 Hugging Face。<br>收录理由：原文与实现把生成代码的验收从编译结果扩展到有状态调用序列，并在原合约上验证合成调用；这为目录已有测试生成与补丁验证材料增加了智能合约状态转换及行为差分的具体检查机制。 | University of Bologna; University of Copenhagen | **主题** `构造方式`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
+| 2026-10-13 → 2026-10-15 | [Redesigning source control at Anthropic](https://www.anthropic.com/engineering/redesigning-source-control)<br>文章 · 厂商<br>摘要：介绍面向大规模在线智能体与 CI 作业的 Scion 源代码管理：服务端记录 changeset、按需计算派生索引，以节点和区域分层缓存支持稀疏及虚拟检出；原文说明特殊单仓负载，并认为 Git 对多数仓库仍合适。<br>收录理由：文章公开智能体密集写入和检出如何改变版本控制的数据结构、客户端职责及缓存故障域；相比既有编码工具材料，新增研发基础设施适应智能体规模的具体架构实践，不把厂商性能数字当普遍收益。 | Anthropic (Nick G. and the source control team) | **主题** `构造方式`<br>**标签** `orchestration` `编排` |
 | 2026-10-12 | [Client telemetry user attribution and configurable capture](https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture/)<br>文章 · 厂商<br>摘要：说明 GitHub Copilot 企业托管设置可分别控制 OpenTelemetry 中的用户身份、提示词、回答、工具参数、工具结果和策略详情采集；各内容类别默认关闭，托管值优先于本地设置与环境变量。<br>收录理由：原文列出智能体运行记录的六类采集开关、默认值与配置优先级，并说明部分数据可能包含代码、命令和路径；这些可核对的遥测规则具体规定企业如何观察 Copilot 活动及控制记录内容。 | GitHub | **主题** `运行与问责`<br>**标签** `observability` `可观测` `authorization` `身份与授权` |
 | 2026-10-12 | [When Agent Evaluation Becomes Unreliable: An Empirical Study of Oracle Failures and Configuration-Dependent Measurement in an LLM Agent Benchmark](https://arxiv.org/abs/2610.16067)<br>论文 · 学界<br>摘要：审计智能体基准的评分软件，使用五项状态完整性不变量、三项已知答案检查和故障注入检测评判器缺陷；以记录的工具调用重放修正一次评测的终态标签，并比较策略文档、工具描述及错误文本等配置对运行轨迹的影响。作者公开审计代码、冻结记录和离线分析入口。<br>收录理由：论文将智能体评测中的任务执行器和结果判定器本身作为软件质量检查对象，具体展示评分函数改变环境状态时如何造成错误标签，以及如何用重放记录与已知答案检查定位；公开实现和记录使运行评测的证据与边界可核对。 | Nanjing University of Science and Technology (Junjie Chen) | **主题** `构造方式` `运行与问责`<br>**标签** `benchmark` `基准评测` `empirical-study` `实证测量` |
 | 2026-10-11 | [A Decade in a Day: Synthesizing Agent-Native Interfaces from Human-Oriented Software Evolution](https://arxiv.org/abs/2610.15765)<br>论文 · 厂商<br>摘要：用固定任务、智能体和产物判定器比较桌面软件版本，提出能力发现、原子命令合成及目标级命令扩展流程；命令通过保存后回读与原子序列状态比较核查。原仓公开生成和验证代码，DeskIF-Bench 提供任务与正反产物检查；论文成功率采用 pass@3，未在此独立复现。<br>收录理由：材料将面向智能体的接口构造拆为能力普查、可观察命令及复合命令验证，公开相应实现与产物检查样例；相较既有工具接口比较和企业能力开放材料，新增从现有桌面软件合成接口并核验持久化效果的具体机制。 | Independent Researcher; LIGHTSPEED | **主题** `界面与接入` `构造方式`<br>**标签** `tool-interface` `工具接口` `headless` `无头化` `benchmark` `基准评测` |
@@ -272,7 +276,7 @@ rg '商业与组织' index.tsv
 
 **首发**是原文第一次出现的日子：论文取 arXiv v1 的投稿日，代码仓取仓库创建日，网页取互联网档案馆最早快照——快照是**下界**，只能证明该 URL 至少此时已存在。
 
-**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。227 条里实填 81 条。
+**最后更新**默认是 `-`，**只有实际采集到明确信号才填日期**：论文有修订版的取修订日，代码仓取最后推送。未修订的论文、一次性的文章与公告都不拿首发日回填——那是推断，不是采集。231 条里实填 82 条。
 
 **出品方**按原文署名填写，arXiv 取正文首页的机构（HTML 作者块或 PDF 第 1 页）；原文未署机构时写明并附作者名。为读者识别来源，能由出处核实且有帮助时，另按「出品方（品牌；代表产品/项目）」显示；品牌与出品方同名时省去重复品牌。无关或无法核实的条目留空，不从标题猜关联。
 
@@ -284,25 +288,25 @@ rg '商业与组织' index.tsv
 
 **体裁**：6 选一，互斥。
 
-`论文`（107） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（4） ｜ `文章`（42）
+`论文`（108） ｜ `规范`（15） ｜ `文档`（53） ｜ `清单`（6） ｜ `报告`（5） ｜ `文章`（44）
 
 `论文` 发在 arXiv、会议、期刊上的｜`规范` 约束他人的规范文本，协议规范、风险框架、监管文件、行业基线、API 政策｜`文档` 出品方自家的说明，开发者文档、官网说明页、产品页、定价页｜`清单` 第三方汇编的清单、时间线、评分表｜`报告` 有方法有数据的调研或评估出版物｜`文章` 单篇观点、公告、工程博客。
 
 **出品方类型**：8 选一，互斥。
 
-`学界`（52） ｜ `厂商`（105） ｜ `产学合作`（31） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（14）
+`学界`（52） ｜ `厂商`（108） ｜ `产学合作`（32） ｜ `标准组织`（12） ｜ `分析机构`（3） ｜ `投资机构`（2） ｜ `社区与非营利`（8） ｜ `个人`（14）
 
 先看有没有混：同时含大学院所与公司归 `产学合作`，只含其一归 `学界` 或 `厂商`。标准化机构与协议项目归 `标准组织`，非营利组织与独立研究组织归 `社区与非营利`，个人署名或原文未署机构归 `个人`。
 
-**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，227 条里有 114 条是这样，同一条出现在两个区不是重复收录。
+**主题**：什么在被重构，分 7 个区，每条至少一个。**可以多挂，不互斥**——一条材料同时谈两件事就挂两个区，231 条里有 117 条是这样，同一条出现在两个区不是重复收录。
 
 - `界面与接入`（29 条）
 - `应用内部`（23 条）
-- `构造方式`（131 条）
-- `安全与攻防`（52 条）
-- `运行与问责`（67 条）
+- `构造方式`（134 条）
+- `安全与攻防`（53 条）
+- `运行与问责`（68 条）
 - `协议与生态`（33 条）
-- `商业与组织`（18 条）
+- `商业与组织`（20 条）
 
 `安全与攻防` 与 `运行与问责` 的分界：材料谈的是**怎么被攻破、怎么防住**（威胁、漏洞、越权、隔离、安全普查），还是**跑起来之后谁管、按什么规矩管、出事谁负责**（法规、风险框架、可观测、管控面、责任边界）。
 
@@ -326,12 +330,12 @@ rg '商业与组织' index.tsv
 | `observability` | `可观测` | 14 |
 | `computer-use` | `计算机操作` | 6 |
 | `decision-model` | `决策模型` | 2 |
-| `orchestration` | `编排` | 55 |
-| `authorization` | `身份与授权` | 26 |
+| `orchestration` | `编排` | 56 |
+| `authorization` | `身份与授权` | 27 |
 | `regulation` | `法规` | 5 |
 | `risk-framework` | `风险框架` | 10 |
 | `benchmark` | `基准评测` | 36 |
-| `empirical-study` | `实证测量` | 57 |
+| `empirical-study` | `实证测量` | 59 |
 | `survey` | `综述` | 6 |
 | `curated-list` | `资源清单` | 5 |
 | `pricing` | `定价` | 4 |

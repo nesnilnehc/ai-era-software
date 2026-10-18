@@ -1546,6 +1546,30 @@ ITEMS = [
      "https://arxiv.org/abs/2610.15765",
      None, "用固定任务、智能体和产物判定器比较桌面软件版本，提出能力发现、原子命令合成及目标级命令扩展流程；命令通过保存后回读与原子序列状态比较核查。原仓公开生成和验证代码，DeskIF-Bench 提供任务与正反产物检查；论文成功率采用 pass@3，未在此独立复现。",
      "材料将面向智能体的接口构造拆为能力普查、可观察命令及复合命令验证，公开相应实现与产物检查样例；相较既有工具接口比较和企业能力开放材料，新增从现有桌面软件合成接口并核验持久化效果的具体机制。"),
+
+    ("2026-10-13", "2026-10-15", "Redesigning source control at Anthropic",
+     "Anthropic (Nick G. and the source control team)",
+     "文章", "厂商", ["构造方式"], ["orchestration"],
+     "https://www.anthropic.com/engineering/redesigning-source-control",
+     None, "介绍面向大规模在线智能体与 CI 作业的 Scion 源代码管理：服务端记录 changeset、按需计算派生索引，以节点和区域分层缓存支持稀疏及虚拟检出；原文说明特殊单仓负载，并认为 Git 对多数仓库仍合适。",
+     "文章公开智能体密集写入和检出如何改变版本控制的数据结构、客户端职责及缓存故障域；相比既有编码工具材料，新增研发基础设施适应智能体规模的具体架构实践，不把厂商性能数字当普遍收益。"),
+    ("2026-10-15", "-", "AI Scan for pull requests generally available",
+     "GitHub", "文章", "厂商", ["安全与攻防", "运行与问责"], ["authorization"],
+     "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/",
+     None, "说明在启用代码扫描与 AI Scan 的 PR 中补充 CodeQL 未覆盖的语言和框架；结果标记为 AI 建议，可附修复建议，但不会使扫描检查失败，也不能通过规则集阻止合并，且排除 fork 与 Dependabot PR。",
+     "原文明确定义 AI 安全发现与确定性合并门禁的不同效力、适用 PR 和启用边界；相较已有自动修复流程，它补充检测建议进入研发治理时不能承担阻断职责的具体规则。"),
+    ("2026-10-17", "-", "How employment is changing at Anthropic",
+     "Anthropic (Nathan Wilmers; Regina Catipon; Maxim Massenkoff; Peter McCrory)",
+     "报告", "厂商", ["商业与组织", "构造方式"], ["empirical-study"],
+     "https://www.anthropic.com/research/employment-at-anthropic",
+     None, "结合内部用工、工具使用、产出与沟通记录及 17 次访谈，研究智能体采用后的岗位结构、注意力瓶颈和管理智能体的工作变化；采用非随机，产出与质量代理指标不等同业务价值。原站标注 10 月 16 日，本目录按最早可用网页快照记 10 月 17 日。",
+     "报告给出员工采用工具前后比较、会话工时和任务分类的测量口径，记录软件组织在智能体密集运行下的工作重分配与监督成本；补充既有团队成本模拟以外的单一企业观察证据，不推导普遍因果效果。"),
+
+    ("2026-10-15", "-", "CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests",
+     "Lund University; CodeScene AB", "论文", "产学合作", ["构造方式", "商业与组织"],
+     ["empirical-study"], "https://arxiv.org/abs/2610.21914",
+     None, "对 246 个仓库的 465 项 PR 使用四个审查智能体和一个修复智能体，分析 CodeHealth 与 token 成本的关联；公开采样清单、逐 PR 结果和分析代码，并披露预注册时间更正及工具输出限制修订。文件大小调整后的关联变化属于探索分析，不证明重构的因果收益。",
+     "研究把代码维护性与智能体审查修复的计量成本联系起来，提供输入输出 token 汇总、PR 规模及文件大小区分的可检查方法；相较既有混合团队成本模拟，新增真实仓库 PR 上的观察数据和测量流程。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
