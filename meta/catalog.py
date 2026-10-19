@@ -1570,6 +1570,12 @@ ITEMS = [
      ["empirical-study"], "https://arxiv.org/abs/2610.21914",
      None, "对 246 个仓库的 465 项 PR 使用四个审查智能体和一个修复智能体，分析 CodeHealth 与 token 成本的关联；公开采样清单、逐 PR 结果和分析代码，并披露预注册时间更正及工具输出限制修订。文件大小调整后的关联变化属于探索分析，不证明重构的因果收益。",
      "研究把代码维护性与智能体审查修复的计量成本联系起来，提供输入输出 token 汇总、PR 规模及文件大小区分的可检查方法；相较既有混合团队成本模拟，新增真实仓库 PR 上的观察数据和测量流程。"),
+    ("2026-10-15", "-", "FDE-Gym: The Last Mile of AI Delivery",
+     "DeepLethe; Tsinghua University; Shanghai Jiao Tong University; Beijing University of Posts and Telecommunications (core authors; additional contributors listed in paper)",
+     "论文", "产学合作", ["构造方式", "商业与组织"], ["empirical-study"],
+     "https://arxiv.org/abs/2610.22350", None,
+     "在模拟客户环境中把需求澄清、系统修改和业务指标改善联合评价；按不变系统与参考解归一化，并扣除利益相关方互动成本。论文含 20 个原任务及 75 个变体，公开运行框架和三个示例；其余资产受限，未报告人类基线。",
+     "相较仅验证补丁或接口完成的材料，新增客户交付中的隐含约束、互动成本和业务结果评分；公开框架及值班响应示例可检查重放、审批与事故扣分规则，不把模拟评分视为真实客户收益。"),
 ]
 
 # 无摘要条目的可审计原因；来源受限时不根据标题补写。
