@@ -9,15 +9,15 @@
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
     <item>
-      <title>[问题] AI 安全扫描建议，应怎样进入合并决策？</title>
+      <title>[问题] AI 提醒代码可能不安全：谁来查，没查完能合并吗？</title>
       <link>https://ai-era-software.nesnilnehc.top/#Q-0001</link>
-      <guid isPermaLink="false">urn:ai-era-software:question:Q-0001:b94b2ff2e06503674b545753</guid>
+      <guid isPermaLink="false">urn:ai-era-software:question:Q-0001:6b3d52a5735a7ac0e9eea707</guid>
       <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
       <description>问题实质修订日期：2026-10-22（仅精确到日；RSS 时间部分统一用 UTC 00:00 表示）。状态：待研究；类型：决策型。待研究问题，不代表已验证结论。
-研究价值：帮助区分 AI 发现与可执行门禁，设计人工复核和风险升级流程。
-已知：该公告描述了建议效力、启用条件与适用 PR 边界。
-未知：团队怎样处理未采纳建议、谁承担复核责任，以及这种流程的漏报与处置成本；公告没有提供实证答案。
-候选：A 仅提示提交者，由提交者自行判断并处理建议。；B 指定审查者确认建议及处置理由，但不据此自动阻断合并。；C 经复核达到明确风险阈值后，通过另行设计的执行机制阻止合并。</description>
+研究价值：示意：AI 检查一段准备合并的代码，提醒“可能不安全”，但不会拦合并。A 由开发者自己查；B 找指定的人再查；C 认定必须处理时先挡住合并。合并是把改动并入项目代码，不等于发布上线。
+已知：已核读 GitHub 原文：AI Scan 在代码合并请求（PR）中显示提醒。这些提醒不会让代码扫描检查失败，也不能直接设成“发现问题就不准合并”的规则。来自分叉副本（fork）的请求和 Dependabot 自动创建的请求不在扫描范围。启用代码扫描和 AI Scan 设置，且改动属于支持的语言或框架时，才会运行。官方还说明可能有误报，即看似有问题、实际没有问题。这里确认的是产品说明，没有测试 A/B/C。
+未知：还不知道：实际由谁跟进每条提醒，没采纳提醒时怎样说明理由，三种做法各会漏掉多少真问题、花多少检查时间、让合并多等多久。这些来源没有给出比较结果。
+候选：A 提交代码的人自己查，不新增自动拦合并的规则。；B 指定另一人再查，但不新增自动拦合并的规则。；C 审查者认定必须先处理，就加规则挡合并；处理好再放行。</description>
       <category>安全与攻防</category>
       <category>运行与问责</category>
     </item>
