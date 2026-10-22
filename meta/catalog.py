@@ -102,6 +102,12 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-10-14", "2026-10-15", "What Coding Agents Leave Unsaid: Measuring Task-State Gaps Between Execution and Reports",
+     "Tencent",
+     "论文", "厂商", ["构造方式", "运行与问责"],
+     ["benchmark", "observability", "empirical-study"],
+     "https://arxiv.org/abs/2610.20003",
+     "", "CTXGAP 用检查点对齐的问题比较编码智能体报告与完整执行上下文中的任务状态可恢复性。公开冻结评分、问题及脱敏文本，并区分缓存评分重算与新模型评测；完整上下文含未公开内容，公开文本不能复现该输入条件。", "相较已有轨迹观测工具与任务成功率评测，新增报告能否传达失败、风险和未完成状态的可检查测量方法；原仓提供类别权重、有效性筛选和失败覆盖记录，不把冻结数字重算视为独立重跑完整实验。"),
     ("2024-09-01", "2026-09-04", "llms.txt: helping language models use websites",
      "Answer.AI",
      "规范", "厂商", ["界面与接入", "协议与生态"],
