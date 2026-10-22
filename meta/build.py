@@ -119,7 +119,7 @@ def render_outputs():
     L.append(ADMISSION_RULE + "\n")
 
     L.append("## 怎么用\n")
-    L.append("- **要交互探索**：[AI 重构软件 · 知识地图]"
+    L.append("- **要交互探索**：[AI 重构软件 · 一手材料]"
              "(https://ai-era-software.nesnilnehc.top)，公开访问，无需登录。"
              "提供七主题导览、材料关系图（手机端为主题分支图）、搜索筛选和原文入口。\n")
     L.append("- **要数据**：[`index.tsv`](index.tsv)，%d 条 × %d 列，制表符分隔。列为 %s；"
