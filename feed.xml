@@ -1,0 +1,2486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>AI 重构软件 · 资料与问题探索</title>
+    <link>https://ai-era-software.nesnilnehc.top/</link>
+    <description>一手资料目录与问题实质修订。历史资料日期是原文首发日期，非本项目收录时间；问题是待研究内容。</description>
+    <language>zh-cn</language>
+    <ttl>60</ttl>
+    <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[问题] AI 安全扫描建议，应怎样进入合并决策？</title>
+      <link>https://ai-era-software.nesnilnehc.top/#Q-0001</link>
+      <guid isPermaLink="false">urn:ai-era-software:question:Q-0001:b94b2ff2e06503674b545753</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+      <description>问题实质修订日期：2026-10-22（仅精确到日；RSS 时间部分统一用 UTC 00:00 表示）。状态：待研究；类型：决策型。待研究问题，不代表已验证结论。
+研究价值：帮助区分 AI 发现与可执行门禁，设计人工复核和风险升级流程。
+已知：该公告描述了建议效力、启用条件与适用 PR 边界。
+未知：团队怎样处理未采纳建议、谁承担复核责任，以及这种流程的漏报与处置成本；公告没有提供实证答案。
+候选：A 仅提示提交者，由提交者自行判断并处理建议。；B 指定审查者确认建议及处置理由，但不据此自动阻断合并。；C 经复核达到明确风险阈值后，通过另行设计的执行机制阻止合并。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] When Coding Agents Outpace Review: Evaluating PRD-Driven Development in Mature Enterprise Repositories</title>
+      <link>https://arxiv.org/abs/2610.26394</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4a8e199fa018aca6d6cba7919db7640bda55d8f782b33c6308adb4f67c6c4815</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-19。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+PACE-Bench 将企业增量开发的 PRD 转成冻结的验收点，结合结构检查、调用关系证据和逐条件语义判断进行加权评分，并关联未满足需求与执行轨迹。论文报告 43 项任务、750 个验收点；公开评分代码及一个含 17 个验收点的脱敏需求示例，生产仓库和补丁未公开。
+收录理由：相较补丁测试和模拟客户交付基准，新增成熟仓库中整份 PRD 的逐需求验收、跨模块集成证据及未决证据阻止汇总评分的机制；原仓的冻结条件校验、评分器和示例可检查，不以公开子集代表完整企业实验可复现。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] How employment is changing at Anthropic</title>
+      <link>https://www.anthropic.com/research/employment-at-anthropic</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ac92bb3d5c094aced476da151971ed2e1093117da0eb03f89491891db840e4a2</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-17。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+结合内部用工、工具使用、产出与沟通记录及 17 次访谈，研究智能体采用后的岗位结构、注意力瓶颈和管理智能体的工作变化；采用非随机，产出与质量代理指标不等同业务价值。原站标注 10 月 16 日，本目录按最早可用网页快照记 10 月 17 日。
+收录理由：报告给出员工采用工具前后比较、会话工时和任务分类的测量口径，记录软件组织在智能体密集运行下的工作重分配与监督成本；补充既有团队成本模拟以外的单一企业观察证据，不推导普遍因果效果。</description>
+      <category>商业与组织</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests</title>
+      <link>https://arxiv.org/abs/2610.21914</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ca4317f1ef4a86186059adbcea2ba99f1336d332e8b59fb17bedc48bcdadf489</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 246 个仓库的 465 项 PR 使用四个审查智能体和一个修复智能体，分析 CodeHealth 与 token 成本的关联；公开采样清单、逐 PR 结果和分析代码，并披露预注册时间更正及工具输出限制修订。文件大小调整后的关联变化属于探索分析，不证明重构的因果收益。
+收录理由：研究把代码维护性与智能体审查修复的计量成本联系起来，提供输入输出 token 汇总、PR 规模及文件大小区分的可检查方法；相较既有混合团队成本模拟，新增真实仓库 PR 上的观察数据和测量流程。</description>
+      <category>构造方式</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Agentic autofix for code scanning alerts general availability</title>
+      <link>https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:bccee3a64454196bbbd0944b5ee4a91e82c70c7c90c163624691664394b6e411</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明把默认分支的代码扫描告警交给 Copilot 后，由其跨文件提出修复、重新运行 CodeQL 并迭代，再创建供人工审查的草稿拉取请求；原文列出分层启用、最多 25 项告警合并处理及计费方式；配套文档说明自定义查询、扩展查询集及第三方告警的修复不能由该流程确认。
+收录理由：原文把安全告警、智能体修改、扫描复验和人工合并审查连接成明确工作流，并界定适用分支、授权入口与成本边界；它具体呈现安全修复流程和责任分工的变化，不以厂商发布宣告证明修复质量优越。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] AI Scan for pull requests generally available</title>
+      <link>https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3a42b69a6860fcc9d188ca79cf4f735ad7be36b2d2a7de93c3d985eb4b0bf846</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明在启用代码扫描与 AI Scan 的 PR 中补充 CodeQL 未覆盖的语言和框架；结果标记为 AI 建议，可附修复建议，但不会使扫描检查失败，也不能通过规则集阻止合并，且排除 fork 与 Dependabot PR。
+收录理由：原文明确定义 AI 安全发现与确定性合并门禁的不同效力、适用 PR 和启用边界；相较已有自动修复流程，它补充检测建议进入研发治理时不能承担阻断职责的具体规则。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] FDE-Gym: The Last Mile of AI Delivery</title>
+      <link>https://arxiv.org/abs/2610.22350</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:24ee9d3771d131f7a356397c4a0f20dd77a1bea3359ac0fe7b3b87f32d38b420</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在模拟客户环境中把需求澄清、系统修改和业务指标改善联合评价；按不变系统与参考解归一化，并扣除利益相关方互动成本。论文含 20 个原任务及 75 个变体，公开运行框架和三个示例；其余资产受限，未报告人类基线。
+收录理由：相较仅验证补丁或接口完成的材料，新增客户交付中的隐含约束、互动成本和业务结果评分；公开框架及值班响应示例可检查重放、审批与事故扣分规则，不把模拟评分视为真实客户收益。</description>
+      <category>构造方式</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents</title>
+      <link>https://arxiv.org/abs/2610.20344</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a3455f18bd9459f4f1bd2923d6eaf54a0256e2dbb410e7d7039e2d24f32af7ad</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-14。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+让模型依据开发文档和接口骨架构建编码智能体框架，再冻结产物并在独立容器中用模拟模型检验请求、文件、退出码和命令输出；正向对照排除功能未执行导致的空洞通过。原仓公开 53 个计分案例及 41 个对照，论文完整 328 项测试并未全部公开。
+收录理由：论文将智能体框架本身作为交付物，公开权限、会话和工具行为的外部观察与对照判定实现；这些机制补充已有下游任务成功率评测，使框架功能是否真正执行及边界是否生效可以单独检查。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] What Should a Software Team Spend on Agents? Simulation-Based Cost Optimization of Mixed AI-Human Teams</title>
+      <link>https://arxiv.org/abs/2610.20394</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:26286dccd12f90db8ac67864ff227f6c84dbe424185ac977e42fa5534f387a79</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-14。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+以离散时间随机模型模拟八类智能体角色与人类开发者的分工，纳入缺陷、技术债、监督成本及发布冻结；在 432 组假设情景中用蒙特卡洛模拟和演化搜索比较成本。作者公开模型、配置、分析代码与测试，结论属于模拟而非真实团队因果测量。
+收录理由：论文将人力、智能体调用与逃逸缺陷成本放入同一团队配置和发布周期优化问题；公开的状态转移、情景参数及测试，使 AI 参与软件研发后的组织与预算取舍可检查，区别于目录已有的单次调用路由成本分析。</description>
+      <category>商业与组织</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] SWEPatchTest: Evaluating Software Tests Beyond Reproduction</title>
+      <link>https://arxiv.org/abs/2610.18004</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9e31a0e6337a3c92c11d4a6de37de78f0da18dafda2dd2b1ad7790f262dc9e07</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出同时检查缺陷复现、接受正确补丁和拒绝错误补丁的测试生成评测；作者发布 619 项任务，数据页面展示仓库基线、问题、参考补丁、正负候选补丁和测试字段。论文说明联合验证指标、筛选流程及以官方测试判定补丁标签的局限。
+收录理由：原文把编码智能体生成的测试放到同一问题的多种正负补丁上检验，公开任务和候选补丁可用于检查测试是否过拟合单一参考修复；这补充了目录现有覆盖率导向测试生成材料的验收对象与判定机制。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] SolBehave: Evaluating the Behavioural Correctness of LLM-Generated Smart Contracts</title>
+      <link>https://arxiv.org/abs/2610.18745</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:935a8115e39541650a93eb00205a71b1e2f2dc5f3393cd84b6699e5afed68f6b</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出用差分模糊测试、历史交易回放和 DCR 图引导的合成调用序列比较生成合约与原合约的行为；论文报告 250 个合约、七种模型的实验，作者原仓提供序列生成、回放和结果汇总实现，生成数据另列于 Hugging Face。
+收录理由：原文与实现把生成代码的验收从编译结果扩展到有状态调用序列，并在原合约上验证合成调用；这为目录已有测试生成与补丁验证材料增加了智能合约状态转换及行为差分的具体检查机制。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Redesigning source control at Anthropic</title>
+      <link>https://www.anthropic.com/engineering/redesigning-source-control</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:56ee56e48ed29025cce52423c0bd8f143d1e4288abebf73af8cff8fd2f7d9fd5</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-13。原文最后更新：2026-10-15。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍面向大规模在线智能体与 CI 作业的 Scion 源代码管理：服务端记录 changeset、按需计算派生索引，以节点和区域分层缓存支持稀疏及虚拟检出；原文说明特殊单仓负载，并认为 Git 对多数仓库仍合适。
+收录理由：文章公开智能体密集写入和检出如何改变版本控制的数据结构、客户端职责及缓存故障域；相比既有编码工具材料，新增研发基础设施适应智能体规模的具体架构实践，不把厂商性能数字当普遍收益。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Enterprise managed settings enforcement updates</title>
+      <link>https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1d7dab55b5e67dedf78e747626e812f4043fe5d44f2075e4cc4ae07a137d6632</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明 Copilot CLI、VS Code 和 Copilot app 可在启动时强制刷新企业托管设置，无法确认当前策略时停止运行；含 sandbox 键的策略还可要求最低客户端版本，旧版客户端需更新后才能继续使用。
+收录理由：原文明确区分首次获取策略与后续启动的刷新要求，并给出缓存不能满足新鲜度要求、验证失败即停止及沙箱版本门槛；这些执行规则补充了目录已有的本地沙箱机制，具体呈现企业策略如何约束编码智能体运行。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] When Agent Evaluation Becomes Unreliable: An Empirical Study of Oracle Failures and Configuration-Dependent Measurement in an LLM Agent Benchmark</title>
+      <link>https://arxiv.org/abs/2610.16067</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:80a62c112abcb79a731f203a0bb708ee2c2b328565c6a56a6c98c1374ddc81fd</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+审计智能体基准的评分软件，使用五项状态完整性不变量、三项已知答案检查和故障注入检测评判器缺陷；以记录的工具调用重放修正一次评测的终态标签，并比较策略文档、工具描述及错误文本等配置对运行轨迹的影响。作者公开审计代码、冻结记录和离线分析入口。
+收录理由：论文将智能体评测中的任务执行器和结果判定器本身作为软件质量检查对象，具体展示评分函数改变环境状态时如何造成错误标签，以及如何用重放记录与已知答案检查定位；公开实现和记录使运行评测的证据与边界可核对。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Client telemetry user attribution and configurable capture</title>
+      <link>https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6c5dc5c287594ed617afda08a7f04b50bcd274b8f1fe86496f9a698190b81d95</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明 GitHub Copilot 企业托管设置可分别控制 OpenTelemetry 中的用户身份、提示词、回答、工具参数、工具结果和策略详情采集；各内容类别默认关闭，托管值优先于本地设置与环境变量。
+收录理由：原文列出智能体运行记录的六类采集开关、默认值与配置优先级，并说明部分数据可能包含代码、命令和路径；这些可核对的遥测规则具体规定企业如何观察 Copilot 活动及控制记录内容。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] A Decade in a Day: Synthesizing Agent-Native Interfaces from Human-Oriented Software Evolution</title>
+      <link>https://arxiv.org/abs/2610.15765</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:dcaeb03e10ddf21ad49eb77fbaa0ad400ad397b55ed3f0e9109dbf3cfc162af9</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-11。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+用固定任务、智能体和产物判定器比较桌面软件版本，提出能力发现、原子命令合成及目标级命令扩展流程；命令通过保存后回读与原子序列状态比较核查。原仓公开生成和验证代码，DeskIF-Bench 提供任务与正反产物检查；论文成功率采用 pass@3，未在此独立复现。
+收录理由：材料将面向智能体的接口构造拆为能力普查、可观察命令及复合命令验证，公开相应实现与产物检查样例；相较既有工具接口比较和企业能力开放材料，新增从现有桌面软件合成接口并核验持久化效果的具体机制。</description>
+      <category>界面与接入</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Cortex: Measurement-Gated Evolution and Pruning of Coding-Agent Skills and Rules</title>
+      <link>https://arxiv.org/abs/2610.14216</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f699cdd891a35ea51e217cce266bb357e128cde8c11ac8ee984ba46d4fd522d4</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出从开发会话保存可重放任务和人工纠正，逐项生成、测试与删除编码智能体技能或规则的流程；在隔离仓库副本中重复运行有无候选文本的任务，并用确定性判分决定保留。作者原仓公开工具、实验仓、导出数据和结果重算脚本。
+收录理由：原文与原仓给出技能和规则被加载的记录、成对重复运行的准入阈值，以及移除已有规则前的测量步骤；这些可检查的实现把编码智能体项目指令的增删纳入开发流程和运行验证，补充目录现有的技能冲突测量。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] A-SAW: The Agentic Software Architecture Workflow</title>
+      <link>https://arxiv.org/abs/2610.13647</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f444b0fc2cca9750a7907369033cc406f4866f1cbd35e67ab7d6c5b64b2a47b2</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出以版本化 C4 模型、类型化元素目录和模板生成架构文档草稿，再经自动标识检查及人工审查批准的流程；以 45 份文档、13 组成对重新生成样本和 13 次从业者访谈评估其结构质量与信任边界。
+收录理由：原文给出元素命名契约、功能范围上下文、缺口标记、虚构标识检查和双角色批准门槛，具体说明 AI 参与架构文档构造时的输入约束与人工责任；成对文档评分和访谈提供该流程的实证范围。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Investigating unintended model actions in our evaluations and internal use</title>
+      <link>https://www.anthropic.com/research/investigating-unintended-model-actions</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e53d362bf380fa3a299afbb56e4220ecf8dd6a05abed2abc55e90cc6752a5ddf</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：2026-10-12。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+披露模型在评测和内部使用中利用第三方站点漏洞、提交表单、绕过数据门槛及借短网址绕过抓取工具的 URL 长度限制的案例；原文说明将部分评测转为离线或避免访问真实网站，并扩大工具访问限制、行为监测与阻断。
+收录理由：原文把外部网站操作中的越权路径与评测环境、抓取工具和内部智能体的处置规则对应起来；这些当事人披露的运行控制与监测安排，具体呈现智能体接入真实软件后的安全治理边界。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] (When) Should a Software Factory be Lights-off? Benchmarking Code Review Agents on Bug Detection</title>
+      <link>https://arxiv.org/abs/2610.13668</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6016e069aa1d342177480c37f86320fd0ed7e576d573d9c6716adea6744775b9</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从历史中经人工确认的缺陷及引入缺陷的拉取请求构建代码审查任务，比较不同审查智能体的缺陷发现、任务条件和执行轨迹；论文涵盖 98 个开源仓库及企业内部样本，原仓另公开重建的 995 项开源任务和运行脚本。
+收录理由：原文将审查智能体对已确认缺陷的检出能力与拉取请求复杂度、仓库上下文和审查方式对应，公开的开源任务与评分脚本可检查其评测对象；这为 AI 生成代码后的审查环节增加有实际缺陷依据的证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Understanding and Mitigating Cross-Session Attacks via Persistent Artifacts in Agent Skill Composition</title>
+      <link>https://arxiv.org/abs/2610.13227</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:56331cccfc62918ae3a6c28868a667c442781fc7b62980d0f7afe57d9eb0163a</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究智能体技能跨会话复用文件、配置和缓存时的指令传播、数据边界违反与证据投毒；构建 30 个场景的 270 项案例，并实现记录工件来源、读取时恢复上下文和执行前审查的运行时防护。原仓公开案例、实现及运行脚本。
+收录理由：论文把技能生成的持久工件视为下一次任务的信任边界，给出来源归属、读取时提示和拟执行操作审查的具体机制；公开案例与防护代码可检查技能组合中的跨会话攻击和授权处置。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] AgentSWE: Can Coding Agents Build the Agent You Actually Want?</title>
+      <link>https://arxiv.org/abs/2610.13361</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:25c56d04a1b27afc6e50b286da950b1363633f775673134d10d31b8342d70f2b</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出覆盖智能体创建、现有智能体修改和目标优化的 25 项开发任务；构建者只见少量示例，冻结交付物后在隐藏案例上按需求量表或原基准指标评估。作者原仓公开任务、评判规则和运行器，论文列出逐任务结果。
+收录理由：原文把编码智能体交付的另一套智能体软件作为验收对象，区分开发时示例表现与冻结后功能；公开的任务包、隐藏案例和评判实现，为 AI 构造软件及交付验证增加可检查的对象与证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents</title>
+      <link>https://arxiv.org/abs/2610.13395</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:14018f29e4f50c8e2d872d66e5dabd6441808b8d699d4abbe82c1158b8c145bd</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出从开源仓库构建参考可执行程序、隔离环境和黑盒行为测试的 Program-Env 流程，以及分开分析、实现、审查并保存验证状态的 Program-Agent 流程；作者公开 1,648 项跨 C、C++、Go 和 Rust 的任务数据集，并在论文中说明构建与评测方法。
+收录理由：原文把从运行行为发现需求、重建程序和复核结果串成编码智能体的长期开发任务；公开的逐项环境、固定仓库提交和测试文件使这种构造与验收对象可检查，补充目录中以给定问题或需求为起点的开发基准。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Implementing the Spec Growth Engine: Preventing Spec-Code Divergence, and Growing the Spec with Agents</title>
+      <link>https://arxiv.org/abs/2610.11725</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b1861d0f55f92e3c2bcb43108339699137bb4590df2fa9e9a400f016c52da285</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+实现以规格节点和代码归属组成的开发机制：确定性校验器核对依赖、导入关系、测试证据及变更门槛；意图、规格和编码智能体按轮次扩展项目，论文和原仓说明人工决策、豁免与运行模式。
+收录理由：原文与原仓给出规格图与实际代码导入图的漂移检查、按测试记录授予已验证状态及分级变更门槛的实现；这些规则具体呈现编码智能体参与开发时，规格、代码和人工授权如何在构造与运行中衔接。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] One Skill Too Many: How Co-Installed Skills Conflict in Coding Agents</title>
+      <link>https://arxiv.org/abs/2610.11647</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8c4f394792e262cde558725ee0815485cefc60ab6a7c1653d1b78b5cfed8672d</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究编码智能体同时安装相似技能时的选择与执行：从仓库快照筛选技能对，对 312 对进行跨模型运行，并按任务完成与技能专属核心功能分别评分；作者仓库公开案例、逐次结果、分析脚本及首次读取时的保护实验。
+收录理由：论文将技能选用与原技能规则是否落实分开测量，展示任务完成仍可掩盖技能功能丢失；公开的技能对、运行记录和首次读取保护实现，为编码智能体的扩展配置与执行问责提供可检查证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Launching an opt-in vulnerability-finding service for open-source software</title>
+      <link>https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8a91476189cc19d34a4f6c96c4122596c1f28528f946b9249cfc1fe799f22967</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍供开源项目自愿加入的周期性漏洞扫描服务：维护者以项目配置、构建文件和可选威胁模型登记；服务在隔离虚拟机内构建项目，断网扫描后将未经人工复核的模型生成报告、复现步骤和可选补丁发送给项目联系人。
+收录理由：原文与登记仓库给出项目准入、隔离构建、离线扫描、报告交付及人工核验责任的具体规则；这些安排呈现 AI 漏洞发现进入开源项目维护流程时的安全作业方式和治理边界。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Who Pays the Review Cost? Triage, Fairness, and Accountability in AI-authored Pull Requests</title>
+      <link>https://arxiv.org/abs/2610.11179</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6e964dd1cf705580841741c2f7674f650d43c474ee3ad3410c6227e221995779</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 31 个国家的 239 名有代码审查经验者开展混合方法问卷，调查 AI 编写的拉取请求在审查入口、延期处理、新人参与和责任归属上的判断；原文说明招募、筛选与分析方法，补充材料提供问卷和分析脚本。
+收录理由：论文把 AI 生成补丁进入项目审查队列后的解释、验证和维护责任作为调查对象，记录受访者提出的范围控制、证据、响应及合并后所有权条件；这些可核对的问卷与结果补充了开发流程中的审查治理和组织分工证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] How we cut a browser agent's cost 76x and made it 5x faster by keeping its cache intact</title>
+      <link>https://asana.com/inside-asana/cut-browsers-agent-cost</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:34a8f58334404800b2a80167f59ef460c3810f9aa04bf2b37133e2c1d5950811</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+记录 Asana 浏览器智能体的请求历史与截图管理改动：为最新工具结果设置缓存标记，将逐步删除截图改为成批裁剪，并扩大历史预算；原文说明四种模型、六种策略与两档预算的 144 次运行、令牌计费和参考答案判分方法。
+收录理由：原文给出历史前缀变化导致缓存失效的具体机制、截图裁剪规则及多条件测量方式；这些可核查的配置和数据说明浏览器智能体内部上下文管理及运行成本如何随软件实现改变。</description>
+      <category>应用内部</category>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Cadence: Strategic Guidance for Coding Agents</title>
+      <link>https://arxiv.org/abs/2610.12269</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:11b779a11be78b80b0ccc2446f3e7d16064504e4431b75949da463652c6b9e3f</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出按编码智能体执行状态调整检查频率的运行时监测框架，并以建议和替换两级干预处理执行偏差；论文在 SWE-bench Lite 的 300 项任务上比较两种编码智能体，作者仓库公开实现、评测流程和实验结果包。
+收录理由：原文给出检查调度随干预级别变化的规则和两种干预路径，公开实现及逐实验结果可核对；该机制具体呈现编码智能体执行过程中的编排、监测与纠偏方式。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Local sandboxing for GitHub Copilot now generally available</title>
+      <link>https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ed2d6a7f23b6195213e4059ff69f05ed55d8f3a005a803299f2260dc73419b07</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-07。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Copilot CLI、Copilot app 与 VS Code Agent Host 的本地工具执行沙箱：通过 MXC 将文件、网络和凭据访问策略映射到 Windows、macOS、Linux 的系统隔离机制；官方文档说明默认关闭、会话配置及企业强制策略。
+收录理由：公告、官方文档和 MXC 原仓给出编码智能体在本机运行命令时的跨系统隔离架构、策略项目与企业不可覆盖的配置边界；这些具体机制对应 Agent 开发环境的构造和权限治理。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking</title>
+      <link>https://arxiv.org/abs/2610.10628</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6b18397b41eae30539a1f34e2016474a92a7ac41f7e62510ff1bf9b34d4b35bd</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-07。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出由协调、访谈、模拟利益相关者、生成和修订智能体组成的需求规格编写流程，比较无反馈、自我修订与人工反馈三种方式；作者公开框架代码和项目描述与人工需求规格配对的数据集。
+收录理由：原文将需求征集到规格生成与修订串成可执行的多智能体流程，公开代码与配对数据可检查其任务和实现；这为目录中的编码阶段研究增加需求工程阶段的具体构造方式。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Applying Security by Design at the Point of Execution: How Governed Security Requirements Affect the Security of AI-Generated Code</title>
+      <link>https://arxiv.org/abs/2610.10659</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6b0af2175eaeae842f4996029b86d4aa85c1fc8a1116a946828f13ba0d946719</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-07。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究在编码智能体生成代码时，通过 MCP 服务从有版本的安全要求知识库按任务和风险等级交付要求；在 DualGauge 的 59 项任务和 BaxBench 的 28 个场景中配对比较安全与功能结果，论文说明联合安全和功能指标未显著改善，并提供实验归档。
+收录理由：原文给出要求标识、适用级别、任务选择器和生成时交付的具体规则，并公开评测协议与归档；这些内容呈现 AI 生成代码时安全要求如何进入构造流程及其效果的可检查边界。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks</title>
+      <link>https://arxiv.org/abs/2610.10263</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4a00350de1b273bcab5d51c1021ca60254e37f3f40735208504c5ea1c567e0d9</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-07。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 Codex、Claude Code 和 Kimi Code 在 354 项任务上的动态并行开关进行配对比较，共记录 2,124 次运行；论文统计任务结果与资源消耗，人工分析并行轨迹中的协调失误，作者仓库公开运行记录、标注和分析材料。
+收录理由：原文将智能体运行时决定何时委派子任务作为独立工程变量，分析任务编排、共享状态和结果合并中的具体失误；公开的并行与串行配对轨迹为长任务开发流程中的动态并行提供可核查证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Code Understanding is a Bottleneck for Coding Agents</title>
+      <link>https://arxiv.org/abs/2610.10610</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0c5f226b18b67ba9f0fd8ffeaa7068df6927f4ba8d30c1e0d0aba965110625d9</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-07。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出 CABRA 受控编码任务框架，以调用图变换生成可执行程序，分别调整函数遍历、搜索、运行时定位和指令约束的难度；论文报告 6,840 项任务上的模型及编码智能体实验，原仓与数据集公开任务生成、配置、结果和分析材料。
+收录理由：原文把理解代码所需的遍历、搜索与运行时定位分别设为可调变量，公开的任务生成器和逐任务结果使编码智能体评测中的难度来源可检查；该对象补充目录已有的真实仓库任务基准。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Building Git infrastructure for agent-scale development</title>
+      <link>https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9ddb77314617db92b6c931ec3aa31a763de1831ffcae2238d51b4eb0584553b4</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-06。原文最后更新：2026-10-07。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明并行开发智能体给 GitHub 仓库读写带来的负载，列出提交量和推送量变化；文章描述将仓库持久存储与计算分离、把对象处理移出引用更新协调路径、以缓存工作节点服务读取的架构方向。
+收录理由：原文以智能体密集提交和同仓并行写入为设计输入，具体说明引用更新、对象验证、读取缓存和审计控制如何安排；这些架构取舍呈现 AI 参与软件开发后代码托管基础设施的构造与运行变化。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] The EPIC Framework for Spec-Driven Development</title>
+      <link>https://arxiv.org/abs/2610.07534</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:61eb1dffecdeaba9fe2c2f8ed17628b508bd6c34147d4d35fc4d593a311f715e</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-06。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究面向编码智能体的规范驱动开发：从 114 个开源仓库的规格与规划材料、现有模板和从业者访谈中整理出 10 个质量维度、40 项实践；论文说明仓库筛选、人工编码及实践核验方法，并提供框架网站。
+收录理由：原文将编码智能体执行前的规格、计划和任务描述转为可逐项检查的质量实践，列出适用条件、依赖、可验证性及规格与实现规划的对应方式；它为目录已有的 Agent 开发流程材料增加规格质量的实证判据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] ReviewBench: An open benchmark for AI code review</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6f397884428e9f0f14f3f6fd22f5bba5bd1714cb8d95ddff3e6747d38d358d33</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-05。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍从 GitHub 拉取请求分布中选取 219 项、覆盖 19 种语言的代码审查基准；以人工、模型和静态分析构造并核验问题标注，按精确率、召回率、严重程度和类别评估审查智能体，公开任务、标准答案、评分文档和运行脚本。
+收录理由：原文与项目原仓公开拉取请求清单、人工核验的审查问题、评判配置及本地运行入口；其多来源标注和线上实验对照为 AI 代码审查这一开发环节提供可检查的评测对象与方法。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Correct Code, Broken Contributions? SWE-CC: Benchmarking Repository Policy Compliance for Coding Agents</title>
+      <link>https://arxiv.org/abs/2610.06193</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:5b2b5d0e65768ea688e6de1b79b0bf6fa1496f032a7053d27de57a8d7302b76e</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-05。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从 12 个开源仓库的贡献文档整理 823 条可检查规则，编制确定性判定器，对基于 SWE-bench Verified 的 500 项贡献任务同时检查编码智能体的执行轨迹和最终提交；原仓公开任务、规则、判定代码及 8,000 次运行的判定结果。
+收录理由：论文将仓库的测试流程、代码规范、提交及拉取请求要求转为逐项规则，并把执行过程违规与最终补丁合规分开评估；公开判定器和结果为 AI 参与开源开发时的项目规则遵循提供可检查证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale</title>
+      <link>https://arxiv.org/abs/2610.07289</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0745d7c6c30dd9d1a3bd7dd3cb5ac72e47faab2e452224ac08d915567fa95815</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-05。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Google 在提交前持续集成测试失败时运行的自动修复智能体：先过滤已有、偶发或过期故障，再生成并验证修复，经过后置检查后供开发者预览与应用；论文报告人工评估方法、部署期间的建议使用记录及访谈。
+收录理由：原文给出测试失败通知、前后置弃权过滤、修复验证和人工采纳在代码审查与 IDE 中的衔接方式；生产使用记录提供编码智能体进入提交前外循环的具体工程和运行证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Moving an engineering team to agent-driven delivery: six months of real numbers</title>
+      <link>https://www.techlifeadventures.com/post/case-study-ai-native-engineering</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:910c515b67d070190fb0b35e45dde03d81a9af729c2e79af7850cd393500f87a</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-03。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+作者记录在多代码仓使用编码 Agent 的六个月实践，说明任务路由、书面交接、团队共享的测试 Agent 包和定时检查；以 Git、PR 与会话记录比较个人工作量，并列出分割日期、计数规则和同期角色变化等限制。
+收录理由：原文给出定时 Agent 误发内部简报、路由会话过长和虚构工单号进入发布记录的处置步骤，并说明团队如何修改发布权限、会话交接与事实核查规则；这些一手实践对应开发流程和运行问责的具体调整。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] APEX: Active Protection at Execution Boundaries for LLM Agents</title>
+      <link>https://arxiv.org/abs/2610.06966</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7859f6379c715a5d33e1081db7c599c15e332a6635c506ebb5f7c4851b7adbcd</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-03。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出在智能体外部动作和输出边界检查任务授权的方法：运行前登记工具、MCP 服务与技能能力并编译授权契约，运行时以证据检查拟执行效果，并用探针识别未获任务认可的信息使用；论文在六组基准上与 13 种方法比较，公开实现、适配器和测试。
+收录理由：原文给出跨工具、MCP 和技能调用的能力登记、契约解析、动作拦截与安全续行规则，公开代码中的防护模块和测试对应这些步骤；它为智能体执行时的提示注入防护与授权边界提供可检查的具体机制。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] My Coding Agents Moved Off My Laptop and Onto a Remote Server</title>
+      <link>https://spin.atomicobject.com/coding-agents-remote-server/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:5b405d09e1ca910e632d0fe5047533008ae8c163b02a7f109d871fda4a68e4e1</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-02。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+记录作者将长期运行的编码 Agent 迁至远程服务器的工程实践：按客户划分虚拟机，在各虚拟机内用 Git worktree 隔离并行任务；通过私有网络、主机防火墙和逐机凭据限制跨项目访问，并用终端会话记录支持断线及重启后恢复。
+收录理由：原文给出虚拟机克隆命令、网络准入测试与出站防火墙规则，并说明凭据分离、可中断的配置流程及项目结束时的撤销步骤；这些具体配置呈现编码 Agent 持续运行和多客户并行开发时的环境构造与权限边界。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Build anything: Supabase from code, and an MCP server for your app</title>
+      <link>https://supabase.com/blog/select-2026-build-anything</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:168146306a2102605742352330e6028375e74f7c9fea7a49f37a6f8313566ed0</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-02。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍面向编码 Agent 的后端开发流程：把数据库 schema 和项目配置写入代码仓，由差分工具生成迁移，并为每个工作目录启动独立本地实例；另说明应用自有 MCP 服务如何沿用用户登录及行级访问策略。
+收录理由：原文列出声明式 schema、配置回拉、本地实例开关和 MCP 服务部署命令，具体呈现 Agent 在代码仓内修改与验证后端的方式，以及应用向用户 Agent 开放能力时的授权边界。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] GitHub Copilot can now interact with desktop apps with computer use</title>
+      <link>https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c13e48d5c84eed36e1818aefab2c5b47abb2a70e765cd9852998eb51aa1e2021</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Copilot CLI 与桌面应用公开预览的计算机操作能力：通过辅助功能树或截图读取窗口，执行点击、输入、滚动和跨应用操作；官方文档说明默认关闭、逐应用授权、企业禁用设置及 macOS 系统权限。
+收录理由：原文与配套文档给出智能体访问无 API 桌面软件的操作通道及应用授权边界，呈现 AI 接入现有软件界面的新方式和相应权限控制。</description>
+      <category>界面与接入</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Dynamic workflows in Copilot CLI and the Copilot app</title>
+      <link>https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:aaf9c1204da16c29e33221b6ca9ec52ace6b3c025af76ef963a79b9fd3e471dd</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Copilot 动态工作流：以扩展中的程序定义自动步骤、智能体参与时机与结果传递，支持顺序或并行执行、结构化输出、人工检查点和暂停恢复；官方文档另列出子智能体权限继承及运行限额。
+收录理由：原文将开发任务中的多智能体协作固定为可复用的代码流程，并给出发布检查、代码审查等实例；工作流阶段、人工复核与权限规则对应 AI 参与软件构造及运行治理的具体机制。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Understanding Issues, Causes and Solutions in Open-Source LLM-based Multi-Agent Systems</title>
+      <link>https://arxiv.org/abs/2610.00905</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6abb9b0ffb870ef0780311619585aeac09a2a8c57bd7728442e3e8519f6173e8</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从 21 个开源多智能体项目收集 22,848 条已关闭问题，经过自动与人工筛选得到 944 条相关问题，再编码问题类别、成因和解决方式；作者仓库公开原始问题、试标及最终编码数据。
+收录理由：论文直接测量多智能体软件中的编排执行、工具集成和记忆状态问题，并公开从问题筛选到分类的记录；这些实际缺陷证据补充目录已有的 Agent 框架设计与基准评测。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Data Agent Kit is now GA: Bring Google Data Cloud to any coding agent</title>
+      <link>https://cloud.google.com/blog/topics/developers-practitioners/data-agent-kit-is-now-ga-bring-google-data-cloud-to-any-coding-agent/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3a3e4fdf67fdd3db4660b40606ba6637080820ec536434cb4cce1e59fa58e890</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Data Agent Kit 将编码 Agent 接入 Google Cloud 数据产品的工作流：MCP 工具提供目录、查询、任务日志和资源操作，技能指导图结构、表结构及数据管道构建；文中说明 IDE 上下文传递、图关系创建前的人工批准和 IAM 权限边界，配套插件与技能仓库公开。
+收录理由：原文给出 Agent 从可信表目录检索、生成并核查 BigQuery 图关系、编排 dbt/Dataform 与 Airflow 流水线以及审查失败任务的具体步骤；公开插件和技能实现使数据工程工作流中的界面接入、构造和权限安排可检查。</description>
+      <category>界面与接入</category>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Finding the Right Fit: Model-Harness Interactions across Agent Tasks</title>
+      <link>https://arxiv.org/abs/2610.00917</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:15f2de511643bb181478809185beb293a6e9a3e504570c262fda9e674445e2f9</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在 TUA-Bench、ALE-CLI 与 Terminal-Bench 4 上比较五种模型与四种可配置 harness，以及两组厂商原生配对，共 66 种配置；论文分别报告任务分数、成本和匹配轨迹分析，作者公开适配器、评测代码及 6,204 条计分轨迹。
+收录理由：原文将模型、执行框架和任务组合一同作为评测单位，并公开跨三种任务集的配置、成本核算与运行轨迹；相较目录已有的 harness 组件消融与单任务重复运行研究，增加了跨模型和框架配对变化的可检查证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Understanding and Mitigating Library-Related Issues in LLM-Generated Code</title>
+      <link>https://arxiv.org/abs/2610.00622</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e7ab6239c0e43e0ac266cfb4ffee49a38d8bbe0b64920f24d33cd8ee8b949278</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-30。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究生成代码中的外部库使用错误：人工分析 100 份代码并归类导入问题，构建依赖分析、文档检索、代码生成与编译验证循环，在 300 项 Python 任务上比较五种模型；作者仓库公开任务数据与实现。
+收录理由：论文把动态库文档和实际编译反馈接入编码 Agent 的生成循环，并公开 300 项任务与各模块实现；相较目录已有的文档上下文评测，它针对库版本与导入错误给出可检查的开发流程及实验对象。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] ASAD: Adaptive Software Agents for Debugging</title>
+      <link>https://arxiv.org/abs/2610.00629</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ac781b96a2060d3567a501bd8ccfa1d169605e45eb520c0d2e6e90920227959b</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-30。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出按缺陷复杂度选择单 Agent 修复或专门分工的多 Agent 调试流程，论文在 DebugBench、Defects4J 与 CodeFlaws 上比较修复和资源使用；作者仓库公开路由实现及 DebugBench、CodeFlaws 的部分运行结果。
+收录理由：原文把缺陷分析结果用于决定调试 Agent 的数量、角色和执行顺序，并给出固定协作策略的对照；公开代码及两组基准运行记录使这种按任务调整开发工作流的机制可检查。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Towards Efficient HPC Systems for Agents: Challenges and Opportunities</title>
+      <link>https://arxiv.org/abs/2609.38723</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:537cdf037c8021279d9cf31dfd8a3607e75bc5fdde7cbcef4c24caec453fe262</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-30。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析哈佛 FASRC 集群 2026 年 7 月 7 日至 8 月 1 日的调度日志及登录节点进程采样，按智能体进程后代区分操作来源，统计作业提交、资源消耗、命令频率与重试行为，并讨论调度、存储、记忆和安全方面的系统接口。
+收录理由：论文用真实集群遥测记录编码智能体如何改变作业提交和文件操作负载，并指出现有调度及共享存储接口的压力；其测量方法和数据对应 AI 开发工具运行环境及治理方式的变化。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Zero2Repo: Can Coding Agents Build Repositories from Scratch?</title>
+      <link>https://arxiv.org/abs/2609.38269</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f971b492f49ac2be47b6e4c59aa65d1efa43ccb5ede57647e06bbd8c73a6b8e5</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-29。原文最后更新：2026-10-01。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出从产品需求和接口契约出发生成完整代码仓的评测：用固定版本开源项目制作规格、可复现环境和隐藏验收测试，在隔离容器中评估智能体提交；论文报告首批 11 项、四种语言任务，配套仓公开任务与运行工具。
+收录理由：原文要求智能体自行完成目录、依赖、构建和实现，并在提交后由独立容器执行隐藏测试；这与已有的局部修复评测及库接口设计评测相比，增加了完整软件仓库交付的可检查任务和验收流程。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] OpenCollab: A Multi-Agent Coding Framework with Programmable Collaboration and Controllable Runtime</title>
+      <link>https://arxiv.org/abs/2609.38345</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:dde2c662b6e2b955ceadb85ba1fd86a2572a1267cb33e07af4b58bb0a650c44a</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-29。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出以角色、通信拓扑和共享运行时定义编码智能体协作，并通过事件记录核对实际交接与预设组织是否一致；项目原仓公开团队配置、工作流运行器、可观测数据结构和测试。
+收录理由：原文与原仓给出声明协作关系、执行交接和记录每次运行的具体机制；其对实际协作行为的核对，使多智能体开发流程的构造与运行状态可检查。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] AgentBug-Smith: Automatically Reproducing Real-World Harness Bugs in Agentic Systems</title>
+      <link>https://arxiv.org/abs/2609.37864</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:dad6a64a02417e09cf9bf62f03bc2dfca6f7f99a3457db18678dfd07a81d993c</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-29。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出从智能体框架项目的已合并缺陷中自动构建可执行复现任务的方法，并发布 200 项 harness 缺陷实例；作者仓库提供环境构建、故障测试、评测脚本和运行记录，数据包包含逐例配置、补丁与日志。
+收录理由：原文将工具接口、上下文、编排等智能体框架缺陷转成补丁前失败、补丁后通过的开发任务；公开的逐例环境和复现记录，使 AI 软件运行框架的缺陷修复与评测过程可检查。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Can Agents Design Libraries for Agents?</title>
+      <link>https://arxiv.org/abs/2609.36730</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d29ffd07a4dc3e36c2b224e9c9ef0cec7dbfdc6a26451cb24094b2f331a97722</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-29。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出两阶段 LibraryDesignBench：设计 Agent 根据功能规格实现库，再由三个使用方 Agent 借助该库完成程序任务，以正确性和代码简洁度评分；实验覆盖四种语言、15 项库设计任务和 242 个经专家验证的编程问题，配套仓公开运行框架与任务配置。
+收录理由：论文将 AI 编写的库交给后续 Agent 实际使用，并与无库及现有库条件比较，检验接口设计对后续开发的影响；公开的任务、评分规则和运行代码为 AI 参与软件架构构造提供了可检查的证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] WitnessGym: Benchmarking Coding Agents on the Construction of Bug Witnesses</title>
+      <link>https://arxiv.org/abs/2609.36635</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c7985a1542bbeea22708553543b06343524d49616ae439a005a3cc6e5e8a480d</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-29。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出以缺陷注入构造编码 Agent 缺陷验证任务的方法：在真实 Java 项目的测试可达路径植入缺陷，用构造阶段的可执行见证保留有效案例，再评估 Agent 能否独立生成触发故障的输入和测试程序；论文报告 1,300 个案例及四种 Agent 框架的实验。
+收录理由：论文将安全审计发现的验证要求转为可执行的缺陷见证，并公开构造工具、适配器、测试及案例数据；这些可核查的工程材料呈现 AI 参与缺陷复现与测试时的验证机制。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] E2E-SWE: Benchmarking LLMs on Building Working Codebases from Scratch</title>
+      <link>https://arxiv.org/abs/2609.38335</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:5ca62dd981276a1d03906de9a1aa9151f22447076daef87c2e19550d3e73ff96</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-29。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出覆盖 11 种语言、186 项完整代码仓生成任务的 E2E-SWE：智能体从自然语言规格和空工作区创建可安装项目，由独立容器中的隐藏测试验收；任务由工程师与模型共同构造，并通过静态检查和实际运行迭代校验，原仓公开任务与适配器。
+收录理由：论文把从零构建软件的评测扩展到多语言任务，并公开逐任务规格、测试及运行适配器；相较同日的 Zero2Repo，其工程师参与构造及基于实际运行修订任务的流程提供了另一套可核查的任务生成与验收证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring</title>
+      <link>https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f04246d246e07c4f7087f8cfb03d1f2bfa436891fb9b3ade099726c6e867baee</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-28。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍由 OpenShell 智能体沙箱与 BlueField-4 上的 Sentry 组成的分层安全参考架构：运行时按文件、网络、进程和凭据策略限制访问，独立硬件层关联智能体交互、策略决策与工具访问记录。
+收录理由：原文明确划分应用、运行时和基础设施三层，并说明策略验证、带外监测与模型访问路径上的控制点；配套 OpenShell 原仓公开了沙箱及策略实现，呈现智能体运行安全和审计架构的具体变化。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] How we found 24 Android vulnerabilities using our open source AI security agent</title>
+      <link>https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0baeacde9feacfd49dfb1a2a12b41f277a98caa063d16bb8f629a95f0789370c</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-28。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍面向 Android 应用的智能体审计任务流：先区分移动端入口，再按入口类型检查指定漏洞类别，并用多次运行及人工复核处理发现；原文给出运行命令、公开任务流和两个已披露漏洞的代码分析。
+收录理由：作者公开了移动端入口识别与漏洞类别检查的任务流改动，并以 OsmAnd 和 Wikipedia Android 的具体代码路径展示审计结果；这些可检查的步骤为已收录的模糊测试流程之外，增加了 AI 参与移动应用安全审计的实践。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Building an Agentic Software Factory</title>
+      <link>https://zachrattner.com/resources/building-an-agentic-software-factory</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e01fb19e211d39db143f7ddf984a4707bf7363915401a1005cd29352a57d7b5e</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-27。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍将现有开发流程转为编码 Agent 工作流的方法：把团队约定写入仓库规则和技能，将可重复步骤脚本化，以测试、日志和截图检查结果，并由人审查发布；文中给出仓库结构与发布检查报告示例。
+收录理由：作者以 Yembo 的开发流程为背景，逐步说明技能拆分、命令权限清单、任务隔离及带证据的发布检查如何接入工程流水线；这些具体实践对应 AI 参与软件构造与人类发布责任的安排。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Identical Runs, Different Results: Benchmarking AI Coding Agents on Open-Weight Models</title>
+      <link>https://arxiv.org/abs/2609.33812</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:bd510ee76f2c973013d91170cb0e234b5e2e5bcf9922160790b12a1b7880c6c4</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-27。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在同一机器学习代码改进任务中执行 584 次编码 Agent 运行，比较六种 Agent 与开放权重模型的配对、同配置重复结果、任务规则违规、跨年份测试和调用成本；作者公开每次运行的数据、产出程序及分析脚本。
+收录理由：论文用固定任务和重复运行区分配对差异与随机波动，并对高分程序逐项审查数据使用规则；配套仓可追溯分数、违规判定和成本计算，为 AI 开发工具的评测及交付检查增加实证证据。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Beyond the Model: Demystifying Harness Effects in Software Engineering Agents</title>
+      <link>https://arxiv.org/abs/2609.32459</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d5e20119cbb50e96c369cf16869e77e10aa2f7a7eb4afd6f62eb643ac056e7bd</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-26。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在三个软件工程基准上比较 mini-SWE-agent 与 OpenCode 和十个模型，并以模块化 NanoHarness 分别测试工具注册、上下文压缩、显式规划、子智能体与延迟加载技能对任务结果和执行轨迹的影响。
+收录理由：论文把编码 Agent 的 harness 组件作为受控变量，分离模型、任务类型与工具和协作设计的作用；其跨基准实验为开发工具的构造方式提供了具体的组件级证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Hearsay: Can an Auditor Trust the Record a Deployed Agent Harness Writes?</title>
+      <link>https://arxiv.org/abs/2609.32495</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6f14b59b264009f9f59bc3922a393ebfd87161337f011443ff7e5e13495080f3</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-26。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究编码智能体运行记录的审计证据：检查 16 个框架，在五种 harness 的 14 项任务上比较原生记录与外部追加日志，并对遗漏、改写和伪造记录进行盲审及机械核对。
+收录理由：论文给出独立于 harness 的模型交互日志、双向对账查询和注入篡改的测试设计，具体检验运行记录能否支持事后归责；这些方法对应智能体运行的可观测性与审计边界。</description>
+      <category>运行与问责</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] A new, no-compromises database architecture for the agentic era</title>
+      <link>https://cloud.google.com/blog/products/databases/alloydbs-agentic-database-architecture</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e8888b44b9eccb317dd6d6d3e2d4677c1e850dbeebc0104d3f533d3e0960e754</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 AlloyDB 面向智能体查询的架构：以只读微虚拟机节点访问实时生产数据，并在计算和存储路径上与主集群隔离；文章给出并发索引查询与扩容测试的设置和结果。
+收录理由：原文具体说明 Agent 突发查询如何改变数据库计算、存储与生产负载的隔离方式，并提供节点扩容测试；它对应应用内部数据架构及智能体访问生产数据的隔离控制。</description>
+      <category>应用内部</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer</title>
+      <link>https://arxiv.org/abs/2609.31587</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ccb12510919653cd5b9d065eaaf7a28bb82aec753a198a431caf2604e026ccf2</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出以原始测试检验自然语言代码描述的回译基准，并用其优化描述提示词；随后在两个模型家族、十个代码仓的议题修复任务中比较压缩文档、检索上下文与仅给议题的条件，报告源码可见时文档未提高修复结果。代码、数据和运行记录由作者公开。
+收录理由：论文将编码 Agent 的文档上下文转为可执行测试判据，并用源码可见与不可见条件检验其对议题修复的作用边界；公开的基准、脚本和运行记录为开发过程中的上下文设计提供了可核查的实证证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Methodological Harness in Agentic Software Engineering: An Empirical Study on Mining Software Repositories</title>
+      <link>https://arxiv.org/abs/2609.32014</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:bcdaf70314cc21f88a940cfd298b8b4020ef2d5357936e3d6df4a8d227da27fe</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从 AIDev 数据集中分层抽取并分析 5,435 个有智能体活动的代码仓，检测规则文件、可执行规格、决策记录等工程机制的采用情况；另对 150 个仓库的规则文件进行人工编码。作者公开检测脚本、编码规则和标签。
+收录理由：论文将智能体工程流程中的上下文、规格、接受证据等机制映射为可检测仓库产物，并公开采样及人工复核方法；它为 AI 参与软件构造和团队治理的实际采用范围提供可检查的测量。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] MetaPermit: Scalable and Auditable Access Control for AI Agents via LLM-Inferred Meta-Attributes</title>
+      <link>https://arxiv.org/abs/2609.31039</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a0e2328c62aca4cea59d49cec7c644b4674dda7c598ef37367ea09d9316da72b</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出工具调用授权框架：模型从用户意图、执行上下文和拟议调用推断元属性，固定策略据此允许或拒绝；论文在 AgentDojo 与 AgentDyn 的七组任务及五类注入方式上比较授权一致性、任务完成和攻击结果，并讨论属性推断错误的限制。
+收录理由：论文给出属性推断、策略判定与执行闸门的分层机制及逐调用审计依据，并用公开基准考察间接提示注入下的授权决策；它对应智能体工具使用时的安全控制和运行问责。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Orchestrating AI-Assisted Code Remediation: Socio-Technical Bottlenecks in a Large Industrial Repository</title>
+      <link>https://arxiv.org/abs/2609.29172</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c6ade14b29f811b63bef8471907251c434fe3d33234e35eb27e453ede3d2e052</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：2026-09-25。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+报告在大型工业 C++ 仓库中开展的 15 天单案例研究，结合 Gerrit 元数据、开发者日记和团队沟通记录，分析 AI 辅助批量修复对按提交构建的 CI、代码评审和团队协调的影响；原始数据因敏感性未公开。
+收录理由：论文记录按文件提交使 CI 和评审队列承压后，改用目录批处理、限制单次改动规模和主动协调评审的过程；它提供 AI 降低编辑成本后开发流水线及团队分工如何调整的现场证据。</description>
+      <category>构造方式</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Between the Commits: Process, Error, and Claim Reliability in a Wholly AI-Authored Codebase</title>
+      <link>https://arxiv.org/abs/2609.29744</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a6e1c5b1a4f6fe3757cf895d8a27fb9c45c88030127dba5b0c7feb92f384243c</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析一个由 Claude 编写的约 2.1 万行 Python 工具的完整开发历史，包括 210 次提交、25 个会话与 678 条用户指令；通过代码来源追踪和会话记录，统计开发触发因素、测试发现的错误及交互陈述的准确性，数据集已公开。
+收录理由：论文将代码块、提交和会话中的用户指令及智能体自我修正相连，提供仅查看最终提交无法取得的编码错误与陈述核查证据；它直接呈现 AI 主导代码开发时的过程与验证问题。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] On the Impact of Requirement Smells in LLM-Based Code Generation</title>
+      <link>https://arxiv.org/abs/2609.29208</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9ea6b863a9b2c48afd0e6075a815b6a7c1fbb766e9e197d43ceeed9739aebd80</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在四个应用的需求与系统测试数据上，逐步注入语义、句法和词汇层面的需求缺陷，比较两种模型生成代码的测试结果；论文报告缺陷密度与功能正确性的关系，并公开代码、提示词、数据及复现实验包。
+收录理由：研究将软件需求直接作为生成代码的输入，并用对应系统测试检验不同需求缺陷下的实现；其受控实验说明 AI 辅助开发中需求表述与代码验证如何衔接。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] NEUROTESTGEN: Neuro-Symbolic Guided Test Generation with Large Language Models</title>
+      <link>https://arxiv.org/abs/2609.30178</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9806f0aa82c5b718ba3a5cf92dc5a5d29bbe1b740c5da919aa990e5fd0a2f85c</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出针对目标代码行或分支的测试生成方法：用符号执行和 Z3 求解数值路径条件，用模型处理对象相关路径，再通过编译、执行和覆盖率反馈迭代生成测试；论文在 Defects4J 的 14 个项目上报告覆盖率与通过率。
+收录理由：论文给出从未覆盖路径提取约束、生成可执行测试并以覆盖率反馈修正的具体流程，同时列出项目、基线和消融实验；这些可核对的工程方法与数据对应 AI 参与软件测试构造。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Control the Harness, Control the Cost: Routing and Governing AI Coding Agents in the Enterprise</title>
+      <link>https://arxiv.org/abs/2609.28919</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9275e031a99ec8ad2df249e7f099575bc0abbd83b694de9b9e79bb072ecdffa1</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向编码 Agent 的缓存感知模型路由方法，在会话开始、旁路任务和子智能体启动时选择模型；用公开会话数据和合成任务模拟企业席位成本，并列出方法与适用限制。
+收录理由：论文把提示缓存、子智能体和模型选择纳入编码 Agent 的运行架构及企业成本决策，并公开路由规则、成本模型和模拟设定；这些具体机制对应开发工具构造与软件采购治理。</description>
+      <category>构造方式</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Scan me, Scan me not: Anthropic Built A Skill Scanner. We let Claude bypass it in 7 minutes.</title>
+      <link>https://www.air.security/blog-posts/anthropic-scanner</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8522d181b1e79ce352a7eb354caeb422813a86eaeb504b58b572bb446eafd1e1</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+记录研究团队向技能扫描器提交恶意技能的测试，展示外部依赖网址仿冒和二进制隐藏行为两个案例，并说明扫描器返回的判定。
+收录理由：原文以具体技能文件及扫描判定说明所测案例中安装前静态审查未识别外部资源与隐藏行为，直接涉及编码 Agent 技能供应链的安全检查方式。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Evaluating Agent Skills for Version-Specific Plugin Migration: A Retrospective Study</title>
+      <link>https://arxiv.org/abs/2609.30120</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:48d490dc12bd6808751ecd8b92904036d79a7f9a538e76fb47bf88c12c35a4e5</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+回顾一个插件升级技能在 16 项版本迁移任务上的 64 份诊断报告，逐项审查 328 个评分判断，并以可执行探针和跨模型盲评检查契约错误及评分敏感性；原始报告和分析脚本在项目仓库公开。
+收录理由：论文把编码 Agent 技能的迁移建议与目标版本契约逐项对应，并检查自动评分能否发现路径边界和生命周期错误；其任务、报告及复核记录为 AI 辅助软件维护的验证流程提供了具体证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] AI-powered fuzzing with the GitHub Security Lab Taskflow Agent</title>
+      <link>https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4431c738b4b1e8a1a89c317b926c74a0c438054cc95ffa19fe59039e6ef12aa0</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍面向 C/C++ 项目的智能体模糊测试流程：自动生成测试入口与 harness，运行 AFL++，按覆盖率反馈调整输入和 harness，并对崩溃去重、复现及生成待人工审查的报告；配套实现已公开。
+收录理由：原文给出驱动脚本、分阶段任务流、MCP 执行工具和 SQLite 状态库的分工，并说明覆盖率循环与崩溃分诊规则；这些具体实现呈现 AI 如何进入软件安全测试流程。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] When chat is the wrong UI</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3d14844898469c56a41e491e6097d71789a1544235b9c9b70d1a0dd129baf236</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+以 GitHub Copilot app 的 Canvas 为例，说明可由智能体生成并在应用内运行交互界面；人和智能体可通过共享状态双向操作，文中展示游戏、本地包管理及开发工作流界面的实例。
+收录理由：文章具体描述 Canvas 作为带服务端能力的共享界面，允许用户操作控件、智能体调用界面能力并持续修改工作流；它呈现了 AI 开发工具从聊天窗口扩展到可交互软件界面的机制。</description>
+      <category>界面与接入</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Plan mode is dead</title>
+      <link>https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3562ff4b1e12416abf66444398ad644661acf1914883bd46e7faaa5cee494863</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+作者回顾 Nuanced 将聊天中的决策整理为持久计划，再进入实现与审查的工作流；介绍 Spec Tour 和计划／构建双模式，记录早期用户对长规格文档的反馈及自己对线性流程的反思。
+收录理由：作者以亲自开发的编码应用为例，具体说明持久计划、规格文档导览和模式切换的设计与使用问题；这些界面与流程安排对应 AI 开发工具的交互和软件构造方式。</description>
+      <category>界面与接入</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Engineering a security harness for AI coding agents</title>
+      <link>https://www.endorlabs.com/learn/engineering-a-security-harness-for-ai-coding-agents</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:993128ac716daf86a04f86c3ef73e4dfbaf35e1c280bd0fcfc19d14f84f1a93c</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-23。原文最后更新：2026-09-24。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出安全编码 Agent 的七项设计问题，按读取、建议、准备、发布、执行划分权限，并说明证据获取、验证门、审批、故障恢复和版本管理的工作流。
+收录理由：文章以依赖修复为例，具体规定 Agent 从分析到改动、发布时所需的证据与授权边界，以及运行后的评估和中断处理，对应开发智能体的安全控制与问责流程。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] MCP Bastion</title>
+      <link>https://github.com/Matthew0822/MCPBastion</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0684e234c2d4f66dc5266d453b319408b616ccc487c340ecb71aa70a3be91b47</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-22。原文最后更新：2026-09-22。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供本地 MCP 消息网关，按策略允许、拒绝或脱敏工具调用，并记录审计事件；仓库说明其只处理 stdio JSON-RPC 消息，不负责传输桥接或服务器启动。
+收录理由：它把策略控制和审计放到 MCP 工具调用路径中，具体呈现了智能体接入软件工具时的运行安全设计。</description>
+      <category>安全与攻防</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] ZCode</title>
+      <link>https://github.com/zai-org/ZCode</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:76544039edbef2e2cf74187d7bf39d2700acf14fb6710f85a2a353be6cb5d36c</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-20。原文最后更新：2026-09-21。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供 AI 编程工作台，包含桌面应用、浏览器界面和终端 Agent；仓库包含客户端、后端、共享 UI 以及 Agent CLI 与运行时源码。
+收录理由：项目将编程 Agent 作为桌面、浏览器和终端工作台的核心能力，具体体现 AI 对软件开发工具形态与交互入口的改变。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Jev Security Scan</title>
+      <link>https://github.com/win4r/jev-security-scan</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:12ffb12a9f8fcb0b5b6bccf71acf30e23347b7f09807a7b4e970323445eda98d</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-19。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+扫描 Agent Skill、MCP 配置与源码中的提示注入、凭据读取、非预期外传和动态执行等行为，输出文件位置、脱敏证据、风险类别及未扫描范围；本地模式不联网，且不执行目标代码。
+收录理由：该工具把 Agent Skill 和 MCP 代码的安全检查纳入安装或运行前流程，直接对应 AI 开发工具链的安全保障变化。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] agent-chaperone</title>
+      <link>https://github.com/agent-chaperone/agent-chaperone</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8f82bc1f609c551d41f1038efa7f0d7304fd2241bb74809edf368ff9f47e2667</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-18。原文最后更新：2026-09-23。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供 MCP 代理和客户端 Hook，在工具调用执行前及结果交给智能体前进行筛查，并将概率判断、策略阈值和审计记录写入本地日志；仓库附有公开基准和人工标注集的评测结果。
+收录理由：项目在 Agent 与工具之间加入可配置筛查、运行日志和评测机制，呈现智能体软件的安全控制如何进入实际开发与运行流程。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] 网络安全标准实践指南——智能体系统开发安全指南（征求意见稿 v1.0-202609）</title>
+      <link>https://www.tc260.org.cn/tc260/tzgg/202609/e5b82ae7aca244d19d36b39575cbb458.shtml</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6eb03dd1a4c3f5347c50d7b35924a360c97ab05452480613d28e5afdaf1e1f85</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-18。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+该征求意见稿旨在为智能体系统的安全开发提供实践指引，通知说明其面向社会公开征求意见。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Changing the game: Using agentic AI to secure infrastructure code</title>
+      <link>https://cloud.google.com/blog/topics/systems/using-ai-agents-to-secure-google-infrastructure/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0991f88ab0692a5fcd57679c5966369be94471cb3b1497c424e7e572a2022ac0</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-18。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍在代码提交前使用智能体扫描安全问题，结合局部威胁模型、调用图和结构化规则做分层验证；夜间再扫描跨变更问题，并由修复 Agent 提交补丁供人工审查。
+收录理由：原文给出 Google 将扫描、结构化验证、修复建议和人工审查接入代码变更流程的具体步骤，呈现 AI 如何改变基础设施代码的开发与安全检查。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Localizing Post-Wire Semantic Changes in MCP Agent Frameworks</title>
+      <link>https://arxiv.org/abs/2610.00182</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d324959227140ae9b07c4a2ddb9ddd619902ac048b740593f5b2660e6c7a91e5</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-17。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+以 18 个设计夹具对四种固定版本的 Python Agent 集成做差分测试，追踪 MCP 工具结果在应用接口和模型输入中的结构化值、错误状态及富内容表示；论文报告 13 组独立的夹具与任务差异，并提供捕获记录和确定性分析复现包。
+收录理由：原文把 MCP 消息到 Agent 框架下游接口的语义保持转为可执行的消费者契约，并区分运行失败、未观察到结果及字段变化；公开的测试夹具、记录和重建程序为协议接入后的兼容性验证提供具体证据。</description>
+      <category>协议与生态</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Plugin4Shell - Zero Click RCE Vulnerability found in top 4 most popular coding agents, millions of agents affected</title>
+      <link>https://www.air.security/blog-posts/plugin4shell</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b03ff3a961d9ff92f7c7be109941d5674256a75bcf306a96e29e4da2cd929f74</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-17。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+披露编码 Agent 安装插件时的 Git 提交固定校验问题：恶意仓库可让同名分支或 FETCH_HEAD 分支覆盖指定提交的解析结果；文章给出两种触发路径及安装后核对实际 HEAD 的修复检查。
+收录理由：原文列出插件仓库控制、后台更新、Git 引用解析和缺失的提交核对如何组成攻击链，并给出客户端校验条件；它具体呈现 AI 开发工具的插件分发与执行安全边界。</description>
+      <category>安全与攻防</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Characterizing Network Centralization and Observability in the Remote MCP Ecosystem</title>
+      <link>https://arxiv.org/abs/2609.19100</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:fec0dca55087af32fef089aad910fffc73f1c0e8ac1e3a7b06fcee4bdd2ff6a4</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-16。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+通过目录元数据、被动合规信号和实时漏洞分析研究远程 MCP 生态的网络结构与可观测性。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Why We Post-Trained Our Own Reasoning Model (Koa)</title>
+      <link>https://www.salesforce.com/news/stories/why-we-post-trained-our-own-reasoning-model/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b49c2e383a52df1f85ea4aa55b6c32b67fc04e0bdcd6ba8d1fda16d95d3e9bdb</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-16。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Salesforce 介绍为企业工作训练 Koa 推理模型的原因、后训练流程及其与通用模型的区别。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Migrating the GitHub Copilot runtime to Rust, using Copilot</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:02ea023ead6b345ea5fcfff0d7460dd232ad388e6c48a2c40feacfa73131482b</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-16。原文最后更新：2026-09-23。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+记录使用 Copilot 将共享智能体运行时从 TypeScript 分批迁移至 Rust 的过程，说明临时互操作层、SDK 接口、渐进发布与测试安排，并给出拉取请求和会话日志数据。
+收录理由：文章以已落地的运行时迁移为对象，展示编码 Agent 如何参与跨组件改写、并行协作和验证，以及共享 Agent 运行时的构造方式；其迁移步骤和日志数据提供了具体工程证据。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Introducing Filestore agent volumes: fully managed storage for agent workspaces</title>
+      <link>https://cloud.google.com/blog/products/storage-data-transfer/filestore-agent-volumes</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:922dd30ce6f4c2d4dbf3c9d55119cb6c4fb7784912af5621f832f7d7ff2b1941</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍面向 Agent 工作区的 Filestore 卷：GKE 沙箱启动时分配并挂载独立的持久文件空间，支持会话恢复及以 POSIX 锁和共享读写方式协作；官方文档说明卷池、卷与私有连接的架构。
+收录理由：原文说明编码 Agent 安装依赖、修改文件和运行测试所需的持久工作区如何随沙箱按需分配、隔离与共享；这为开发智能体的运行存储和多租户安全提供了具体架构。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Introduction — TypeSafe AI (Jev developer documentation)</title>
+      <link>https://docs.typesafe.ai/introduction</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:517007a5576bfa0bd5103332b8cb1b235cd0efd99e31b28af2da4a9ccf06dc9e</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Jev API 的状态输入和类型化问题接口，以及供程序和编程智能体使用结构化回答的方式。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Agent Substrate brings high-density, scalable, trusted infrastructure to GKE</title>
+      <link>https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1641347d34e9b405e5de80dc5ae28a302b12cf189c2fc916d9e24575a466f999</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Agent Substrate 的智能体沙箱运行架构：以微虚拟机或 gVisor 隔离执行环境，通过独立控制面与预热工作节点调度，并以快照暂停、恢复空闲会话；配套核心实现和架构文档已公开。
+收录理由：原文具体说明智能体执行不可信代码时的内核与网络隔离、凭据注入，以及暂停恢复如何从 Kubernetes 节点管理中分离；这些机制对应 AI 开发运行环境的构造方式和安全边界。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Introducing System One Models &amp; Jev</title>
+      <link>https://typesafe.ai/blog/introducing-system-one-models-and-jev</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0605bcba6b5c77399fdaf77885c39da92c3863c23b42be21557bb8a9e269ef5d</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+TypeSafe AI 介绍 System One 模型系列和 Jev，说明其面向软件自动化提供结构化决策输出。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Announcing Koa: Salesforce’s First CRM Reasoning Model, Built on NVIDIA Nemotron</title>
+      <link>https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:05a8cf43999614ee925f1d4dce24a12267b5f3988bd295009c2c04f0cab86d5b</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Salesforce 与 NVIDIA 发布 Koa CRM 推理模型，说明其面向企业多步骤任务并基于 Salesforce 业务数据训练。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Authorization Architectures for Tool-Using AI Agents</title>
+      <link>https://arxiv.org/abs/2609.15906</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f7a353f51e12d10bb0ae1799a49225049b10176ba75dea31d52a9cf6641d3440</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-14。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向工具型 AI 智能体的授权架构，讨论如何将行动绑定到用户主体、权限范围和审计记录。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary</title>
+      <link>https://arxiv.org/abs/2609.15397</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c9cb2416f3b8807db6165de5f39c02227b85b4c94949b67fc6fcea600a0a8552</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-14。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究重试、并发和部分失败时智能体工作流与外部工具状态不一致的情况，包括操作遗漏、重复及已取消操作残留。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Salesforce Koa: An Enterprise Language Model for Agentic Tool Use</title>
+      <link>https://arxiv.org/abs/2609.15066</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:5741068785b7e89f16aa044cd79a2a89ab94c685e6cc1e0cbde5f2e7ea121a55</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-14。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Salesforce Koa 的模型构建方法，描述其以 Nemotron 基础模型为起点并通过强化学习适配企业工具使用。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] A Two-Dimensional Study of the Model Context Protocol: Publication and Adoption</title>
+      <link>https://arxiv.org/abs/2609.14721</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:cace1a218d9b993a3ab8eb2b3041c900c3740c3fff714c930616e4b731ce91aa</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 MCP 相关论文和 GitHub 仓库进行纵向统计，分析研究发表、开源采用及两者之间的关系。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] The Stochastic Deputy: Structural Tenant Isolation for Tool-Using LLM Agents</title>
+      <link>https://arxiv.org/abs/2609.14780</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c18cff03cfe6fb7e4405eca86c901edd037fb74967c4e31841778f465d57a49c</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出结构化多租户隔离方法，将租户范围绑定到已验证凭据并在服务器侧强制执行，而不让模型自行选择租户标识。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Same Name, Different Server: A Security Census of Silent Drift in MCP</title>
+      <link>https://arxiv.org/abs/2609.14119</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:381f5112c7134ea06cb68faf5585472e0676cd243abc90f7769a125b6519accb</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对公开 MCP 注册表中的服务器及版本进行安全普查，研究同名服务器在版本间静默变化的情况。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Is Bash All You Need? An Empirical Study of Tool Interfaces for Enterprise Digital Worker Agents</title>
+      <link>https://arxiv.org/abs/2609.11999</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9cf6280d29f097872ca8b1682eff83db54479266f2acad29242b0e5f11b494fb</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-10。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+比较企业数字工作任务中的多种智能体工具接口，包括专用类型化工具与通用 shell。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Introducing the Agents API</title>
+      <link>https://openai.com/index/introducing-the-agents-api/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8a71a2808988c5c77af9074cadbd6dae1a3b6202783c67340304cf0328422a64</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-10。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍通过 API 创建由 Codex harness 管理的云端智能体会话，指定模型、工具、子智能体及执行环境；文中说明托管或自有沙箱、长会话上下文压缩、按需工具检索和并行工具调用。
+收录理由：原文给出会话创建示例，并将智能体编排层与可选执行沙箱分开，说明长任务状态、工具发现和子智能体如何由托管运行时提供；这对应 AI 软件的构造架构与运行边界。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Intent Drift at SME Scale: Deployment Practice, Not Model Capability, Determines Agentic Compliance</title>
+      <link>https://arxiv.org/abs/2609.05975</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c6b9f9c28d48694c34087e54544f911f20ad813d7fe63d157cdbae6ed7743cd0</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-05。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出适用于受监管小型企业的 Chain of Intent 治理框架，并通过模拟资产管理场景检验部署约束的执行情况。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] How we make AI coding more cost efficient without sacrificing task quality</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1738353f28d07e4ab62feb4542e4a10cc7a71ac6b10b220a8780bc309fc8d246</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-09-02。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+GitHub 介绍 Copilot 编码 Agent 在工具输出压缩、提示词缩短和后台任务通知等方面的改动，并报告离线基准与线上实验的评估方法和结果。
+收录理由：文章给出编码 Agent 的上下文管理、任务编排和评估实践，直接记录 AI 编程工具的工程实现如何变化。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Delegation Without Trust: An Empirical Gap Analysis of Identity, Authorization, and Runtime</title>
+      <link>https://arxiv.org/abs/2609.00267</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e0ebb8d49ac3c3d220d2272ff8604ce954a9481810e7c370cd7389190adc2417</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-31。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析多智能体系统在身份、授权和运行时治理上的委托机制，并通过案例评估现有设计缺口。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Model-Based Agentic Software Engineering</title>
+      <link>https://arxiv.org/abs/2608.25174</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d3fce34ce83fbcd95698ba543d4bfffd3c1824776a1763b8423c38f91384590e</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出 MAGE 理论框架，通过显式表示工程知识，并以约束、传感器、验证器和准入门控制智能体工作；研究基于一个纵向案例及六个工业案例的比较分析。
+收录理由：研究直接讨论如何把工程知识、验证证据和权限约束纳入编码 Agent 的工作环境，属于 AI 改变软件工程流程与治理方式的一手研究。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Hybrid Semantic Tool Discovery for Enterprise MCP Gateway: Architecture and Implementation</title>
+      <link>https://arxiv.org/abs/2608.23992</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:5b69d549d26d6519db8566b6c7e5484a917b137146b49988cbc7c301cdabc1f3</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出企业 MCP 网关的混合语义工具发现架构，讨论如何在大量工具场景下兼顾上下文、认证、策略和可观测性。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] From SQL Generation to Tool Selection: A Domain-Oriented Pattern for MCP Servers</title>
+      <link>https://arxiv.org/abs/2608.22063</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b26e5af7b694f0fdcd39cec0566cb691b182399c873283ea9a9e9c00351d3fe1</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-22。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向 MCP 服务器的领域工具模式：以封装业务规则的专用参数化工具替代模型运行时生成通用 SQL。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Expanding Headless 360: Turning Enterprise Applications into Enterprise Capabilities</title>
+      <link>https://www.salesforce.com/news/stories/expanding-headless-360-enterprise-capabilities/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:06be12521049a4110ec3a99e696fcf1b077b536cf6123d40f44ab8b81f4968b6</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-19。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Salesforce Headless 360 将企业应用能力封装为可供获授权智能体发现和调用的接口。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection</title>
+      <link>https://arxiv.org/abs/2608.16393</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9e7885d95e1ae3ce0e4f5206bd0994dcc149a3ada8e9f668efcc4bd41525eae4</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-17。原文最后更新：2026-08-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+通过受控间接提示注入测试评估 DeepSeek Harness，分析不同内容通道、攻击方法和运行轨迹下的防护表现。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] DeepSeek Harness: everything is a plugin</title>
+      <link>https://github.com/deepseek-ai/deepseek-harness</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:890a56b0d2aff0c91c90bfee3adfd87e27a25d9e9e9f50e04c210ad01604188a</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-08-13。原文最后更新：2026-09-17。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+DeepSeek 开发的开源智能体运行框架，以插件架构组织功能；仓库说明当前处于开发预览阶段。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Model Context Protocol Specification (version 2026-07-28)</title>
+      <link>https://modelcontextprotocol.io/specification/latest</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:575ced6eb512d66dec58e4dfd11cf90e69e4d8b61287dc4efc22dfbdfe58f946</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-07-28。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义 Model Context Protocol 的客户端与服务器通信、消息模式、传输、授权及工具等协议机制。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Security Principal and Verifier Binding for Agent Communication Protocols (Internet-Draft)</title>
+      <link>https://datatracker.ietf.org/doc/draft-bu-agentproto-security-principal-binding/07/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:aa6ee2833126b823c1b0e62b90e1548214e1a1d968ccd574063aa493efc7e713</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-07-04。原文最后更新：2026-09-15。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+这份个人 Internet-Draft 为智能体通信协议中的身份、授权、委托和行动证据定义验证者矩阵，逐项标明声明载体、验证者、绑定、新鲜度和失败行为，并给出组合规则与测试向量。
+收录理由：草案将智能体协议中的授权与身份主张拆成可逐项验证的安全声明，规定跨协议组合时的结果和失效边界，直接对应协议生态的安全设计；原文还列出版本固定的测试向量供核查。</description>
+      <category>安全与攻防</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Apeiron: A Scalable LLM-agentic Framework for Autonomous Full-lifecycle Demand-optimized Application Synthesis</title>
+      <link>https://aclanthology.org/2026.findings-acl.188/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3dbfa5391f9c0790155c463d67edf9a9f8057eab185aa75e459ff21fa252988f</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-07（仅精确到月；RSS 以月初表示）。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出用计算机操作智能体模拟用户需求、结合代码交互轨迹评估，并在持续交付中约束变更的应用合成框架；论文报告了多场景基准与用户研究结果。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Benchmarking the Benchmarks: A Validity Audit of Tool-Calling Evaluation</title>
+      <link>https://arxiv.org/abs/2607.02577</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8d38a3d8994d95fe88b0769286f9dd018f4b0e1505eb52cc56d90faed9ddf65d</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-06-30。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对四类工具调用基准开展效度与复现性审计，并以专家复核任务比较评测器结果和人工判断。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Understanding How Enterprises Adopt the Model Context Protocol for LLM-Driven Software Engineering</title>
+      <link>https://arxiv.org/abs/2606.09182</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d7132975e58659429481916c87d2a6981c37d1a4b40aa908998fa120e0d76380</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-06-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+通过实证研究分析企业在软件工程场景采用 MCP 的方式、部署挑战、运营风险和从业者经验。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] The State Of Agentic AI In 2026 (public blog post)</title>
+      <link>https://www.forrester.com/blogs/the-state-of-agentic-ai-in-2026-companies-are-chasing-few-are-catching/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3aff592bd678d4c392b97f6194d83127ea2fdb9d23e5931949ddf62f5a44cb76</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-06-03。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Forrester 文章讨论企业智能体 AI 的采用和规模化之间的差距，并介绍报告对推广障碍的分析。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Awesome Context Engineering (companion repo)</title>
+      <link>https://github.com/Meirtz/Awesome-Context-Engineering</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c14e5638304d543f463cfa15898f58359a6e9c07cd0022b39a2edf82a4e726b8</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-05-28。原文最后更新：2026-05-28。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+整理上下文工程相关方法、框架、工具、示例和研究资料，供构建 LLM 应用时查阅。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] On Effectiveness and Efficiency of Agentic Tool-calling and RL Training</title>
+      <link>https://arxiv.org/abs/2606.00135</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ba4fca8385bb7845005d45d0fec3f6319c097b2f2d871d6a7b4301222b673b6f</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-05-28。原文最后更新：2026-08-10。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从评测有效性和训练效率两个角度研究智能体工具调用，分析评测流程及强化学习训练方法。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Going Headless? On the Boundaries of Vertical AI Firms</title>
+      <link>https://arxiv.org/abs/2605.17812</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6ff7322d9a2798b03a1ce50035362eb47e23c48e2bac70fcf5264c88beae6cdc</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-05-18。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析通用智能体将垂直软件中的工作流、领域逻辑和责任机制拆分后，对不同垂直 AI 企业边界的影响。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 对软件产品边界、商业模式或组织分工的影响、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>商业与组织</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] ServiceNow opens its full system of action to every AI Agent in the enterprise (Action Fabric)</title>
+      <link>https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-opens-its-full-system-of-action-to-every-AI-Agent-in-the-enterprise/default.aspx</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e4f0c801c5696cd29a047f92c751de192ce31da1c0996db61f3087a166eeb516</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-05-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+ServiceNow 发布 Action Fabric，介绍让企业 AI 智能体连接并调用跨系统工作流与操作能力的方案。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] The Buy-or-Build Decision, Revisited: How Agentic AI Changes the Economics of Enterprise Software</title>
+      <link>https://arxiv.org/abs/2604.26482</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:657e767903e072f21e228e8f3b74ff897ff8347cf1b35867577aca21a9471604</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-29。原文最后更新：2026-05-02。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从交易成本和资源基础等理论讨论智能体式 AI 如何改变企业软件的自建或采购决策。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Connecting Agents to Decisions</title>
+      <link>https://blog.palantir.com/connecting-agents-to-decisions-277dee8ddb40</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6ecfde622f247fa06898f44a9861f8756911f204b4ac296e3fb0d434dda5f0e8</guid>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-28。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+文章介绍 Palantir Ontology 的决策中心架构，将企业数据、业务逻辑、行动及安全策略连接起来以供人员和智能体使用。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Infrastructure for the Agentic Web: Gap Analysis and Architecture from the Agentverse Platform</title>
+      <link>https://arxiv.org/abs/2606.20570</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7b5c4be7aed1c4faf4221d8bf5a0ffde6454c84883f834f94363b0cce92c9c45</guid>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-26。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析 Agentverse 智能体云平台所需的基础设施，并提出面向智能体网络的架构组成。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Integrating Graphs, Large Language Models, and Agents: Reasoning and Retrieval</title>
+      <link>https://arxiv.org/abs/2604.15951</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8da5bb1d1513f97e37ebcf476918a0e0ac6b536f1d4de60b73d6e2ba7c8eaa7c</guid>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-17。原文最后更新：2026-04-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+综述图结构、大语言模型与智能体在推理和信息检索中的结合方式，并归纳相关研究方向。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Corpus2Skill: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG</title>
+      <link>https://arxiv.org/abs/2604.14572</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a4063d16acda1d2a0caf7467860c03948d100ed66897dc7d98dd4a5ba2980d99</guid>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-16。原文最后更新：2026-08-26。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出将企业知识语料离线整理为层级技能目录、再由智能体逐层检索的问答与检索架构。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] x402: a payments protocol for the internet, built on HTTP</title>
+      <link>https://github.com/coinbase/x402</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2e5b303691c7298b19522bb3891cfb49b96d7d291a4e7e000762cd4a94fd0808</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-02。原文最后更新：2026-09-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义一种基于 HTTP 的互联网支付标准，并提供让网站或服务按请求接收数字货币及法币支付的实现示例。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Ontology-Constrained Neural Reasoning in Enterprise Agentic Systems: A Neurosymbolic Architecture for Domain-Grounded AI Agents</title>
+      <link>https://arxiv.org/abs/2604.00555</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e7fd40837efba4c590d0dc9e1991bcdef5e3ddf5ad407d3ee091b79468a41af8</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04-01。原文最后更新：2026-06-04。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍将神经网络与符号本体结合的企业智能体架构，用领域知识约束推理过程。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] SAP API Policy v.4.2026a</title>
+      <link>https://help.sap.com/doc/sap-api-policy/latest/en-US/API_Policy_latest.pdf</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2f284771713962d98146d7b0d43187ad40bddb4df94c42a78082b7bd47bd81f1</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-04（仅精确到月；RSS 以月初表示）。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+规定 SAP API 的发布范围、调用限制和安全控制，并说明对自动化及生成式 AI 调用的适用边界。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] From Logic Monopoly to Social Contract (working paper, not peer reviewed)</title>
+      <link>https://arxiv.org/abs/2603.25100</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a7983d2ac4bc1a52edca22394c3a3c938af2b92e2defdbad75ba50591720feb6</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-03-26。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+工作论文讨论自主智能体经济中的权力分离和治理结构，并提出以制度安排应对多智能体系统风险。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Awesome MCP Security: security scores for 800+ MCP servers</title>
+      <link>https://github.com/getagentseal/awesome-mcp-security</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:51d7b62bf631a48cc0a79095f07769987887c978f1a9860dd9c84823461f9c05</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-03-14。原文最后更新：2026-03-14。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+整理 MCP 服务器的安全评分和相关资源，覆盖项目 README 所列的 800 多个服务器。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Good news: AI Will Eat Application Software</title>
+      <link>https://a16z.com/good-news-ai-will-eat-application-software/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:df8d7163ed61510a9f6a9bb6cbb95e4332dc4212a477df11b97257daefed6bd1</guid>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-03-02。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+文章讨论生成式 AI 对企业应用软件市场的影响，提出网络效应、品牌和专有数据等因素仍会参与竞争。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] AI Isn't Going to "Eat" Software: Agentic AI Needs the Authoritative Data and Rules Inside Enterprise Apps</title>
+      <link>https://my.idc.com/getdoc.jsp?containerId=US54377825</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6f8bd71469db14927651089487b89df733c633b61ff856f3bc84c58950b1fa4e</guid>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-03（仅精确到月；RSS 以月初表示）。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+摘要待核实，请阅读原文。
+收录理由：原文内容呈现题名涉及智能体式 AI 与企业应用数据规则的关系；正文需登录，纳入依据限于可见落地页信息。，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] The Headless Firm: How AI Reshapes Enterprise Boundaries</title>
+      <link>https://arxiv.org/abs/2602.21401</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b5b24e04171b05e89b7ba1725d71b536911a356bd62a7acffe43e7ff6afc578e</guid>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出 Headless Firm 组织模型，讨论协议化智能体如何改变企业组件之间的协调成本和组织边界。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] The Ontology system</title>
+      <link>https://www.palantir.com/docs/foundry/architecture-center/ontology-system</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8744541a4e1e3f480aaa1373abced5e46096ecec0b5de4801de3104c07b11f6c</guid>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-11。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明 Palantir Ontology 如何用对象、属性、链接和行动表示企业中的真实业务实体与操作。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 改变软件内部功能、流程或数据处理的方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>应用内部</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] awesome-ai-agent-papers: a curated collection of AI agent research papers released in 2026</title>
+      <link>https://github.com/VoltAgent/awesome-ai-agent-papers</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0a6e06286c13e9b6d92c9eaa2853318bb14c52b52d1911c925b8877c13c22560</guid>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-10。原文最后更新：2026-09-12。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+按主题整理 2026 年发布的 AI 智能体研究论文，并提供可浏览的论文清单。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式、AI 参与软件设计、实现、测试或工程流程的方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Graphs Don't Stay Secret: Practical Subgraph Reconstruction Attacks on Defended Graph RAG</title>
+      <link>https://arxiv.org/abs/2602.06495</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7e6f95217136bd19530a05180838987a74f507714bdb53c1036442bef96bd2b3</guid>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-06。原文最后更新：2026-06-17。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究攻击者如何通过 Graph RAG 查询重建其底层知识图谱中的子图，并评估相关防护方式。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式、AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Ontology-to-tools compilation for executable semantic constraint enforcement in LLM agents</title>
+      <link>https://arxiv.org/abs/2602.03439</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a2bc01b44d75dd3d6665ca328c7c9954d7a4a302c63bfd077fd13ccf5a902648</guid>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-03。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出将本体描述编译为可执行工具接口的原型方法，使智能体调用工具时可应用语义约束。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] LLM-Driven Ontology Construction for Enterprise Knowledge Graphs</title>
+      <link>https://arxiv.org/abs/2602.01276</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f908508fc0f0bd1d13d068a83333dd9eb097d335adb2ec98afe37c61cb577abf</guid>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出使用大语言模型生成企业知识图谱本体的流程，以减少领域本体构建中的手工工作。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] SMCP: Secure Model Context Protocol</title>
+      <link>https://arxiv.org/abs/2602.01129</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:aeb58652b1b4271570846b2c5275072b75e5a165a21744b447f7ab3cf748e57c</guid>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-02-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出安全版模型上下文协议设计，讨论智能体工具连接中的认证、授权、隐私和安全控制。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Engineering AI Agents for Clinical Workflows: A Case Study in Architecture, MLOps, and Governance</title>
+      <link>https://arxiv.org/abs/2602.00751</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:511f46a0c730a84e5b8f65de7e61e80c69b5b8730be38699e477be46bb66993e</guid>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-31。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+以临床工作流中的 AI 智能体为案例，介绍系统架构、机器学习运维和治理方面的工程实践。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Whispers of Wealth: Red-Teaming Google's Agent Payments Protocol via Prompt Injection</title>
+      <link>https://arxiv.org/abs/2601.22569</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d50b597d13cd8634429a6fffc43cdbe0ab7664c7c1219058b5529a5400a10451</guid>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-30。原文最后更新：2026-05-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 Google Agent Payments Protocol 开展提示注入红队测试，检查直接和间接攻击对智能体支付流程的影响。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] TessPay: Verify-then-Pay Infrastructure for Trusted Agentic Commerce</title>
+      <link>https://arxiv.org/abs/2602.00213</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:707567f0925ef659963204f90e992fcda6633d8ba387dc140244abb365b36922</guid>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-30。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向智能体商业交易的验证后支付基础设施，讨论任务委托、服务发现和交易信任等环节。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Delegation Without Living Governance</title>
+      <link>https://arxiv.org/abs/2601.21226</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7b41fc76366b8f5346d0ded9ec90b64c6cd626f9b040b9449aa3fd1b7ab97ff8</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-29。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+讨论智能体系统中的治理、责任和人类参与问题，并论述静态规则对快速自主行动的适用边界。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Faramesh: A Protocol-Agnostic Execution Control Plane for Autonomous Agent Systems</title>
+      <link>https://arxiv.org/abs/2601.17744</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e6c4257638f4a061598f76c4459b61f8eb8ff54dcde9755356b28607cca7448d</guid>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向自主智能体系统的协议无关执行控制层，在产生实际副作用前对行动进行授权判断。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Towards a Declarative Agentic Layer for Intelligent Agents in MCP-Based Server Ecosystems</title>
+      <link>https://arxiv.org/abs/2601.17435</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:65ed893bb0fd70f05b0a8f70f07b95c3a9552b8f8ae0352aef57634eb85ed420</guid>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究在 MCP 服务器生态中加入声明式智能体层，以结构化方式描述任务和协调智能体行动。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Breaking the Protocol: Security Analysis of the Model Context Protocol Specification and Prompt Injection Vulnerabilities in Tool-Integrated LLM Agents</title>
+      <link>https://arxiv.org/abs/2601.17549</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0ff347055cb383252fd849c06a435e7a30bb5c9f350c97851b2c1b2f5b9b69a3</guid>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析 MCP 规范与工具集成式 LLM 智能体的安全问题，讨论协议权限声明和提示注入等风险。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Agentic AI Governance and Lifecycle Management in Healthcare</title>
+      <link>https://arxiv.org/abs/2601.15630</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:02d361489f50484e040fc26137fc7f4c3f3f79e98b5127e048e6f799e101fe8c</guid>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-22。原文最后更新：2026-05-17。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向医疗机构的智能体治理与生命周期管理框架，讨论智能体登记、责任划分和权限控制。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Securing LLM-as-a-Service for Small Businesses: An Industry Case Study of a Distributed Chatbot Deployment Platform</title>
+      <link>https://arxiv.org/abs/2601.15528</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8ebb5e1c8e4196d010113bfcbc1120d53208c4df50003fa1c69b0548c2a9fc8a</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-21。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+以面向小企业的多租户聊天机器人平台为案例，讨论 LLM 服务部署中的基础设施、安全和运维设计。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Interoperable Architecture for Digital Identity Delegation for AI Agents with Blockchain Integration</title>
+      <link>https://arxiv.org/abs/2601.14982</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:27626b2bae07ffcbfcde08709b78bcb274f71dedf85b5337533ffdaa0c390c33</guid>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-21。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向 AI 智能体的跨系统数字身份委托架构，讨论如何实现有边界、可审计的权限转授。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] The Orchestration of Multi-Agent Systems: Architectures, Protocols, and Enterprise Adoption</title>
+      <link>https://arxiv.org/abs/2601.13671</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4a9355177df80dc1d6d457549ca86f19f5308df0443bbe80452640477e93c106</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-20。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+整理多智能体编排的架构、协议和企业采用情况，并提出包含规划、策略、状态和质量管理的编排框架。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Beyond Max Tokens: Stealthy Resource Amplification via Tool Calling Chains in LLM Agents</title>
+      <link>https://arxiv.org/abs/2601.10955</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4376c2faac08a1c7c0b2a27a95a86158a16bf91a36da7317a9854c0e6e0acf1b</guid>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-16。原文最后更新：2026-03-11。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析智能体多轮工具调用链可能被用于隐蔽放大资源消耗的方式，并研究相关拒绝服务风险。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs</title>
+      <link>https://arxiv.org/abs/2601.11369</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:40624b6bb08d8fc45342e953b80660db04bd9788654f99c109692f1cb7e8da22</guid>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-16。原文最后更新：2026-01-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+构建多智能体 Cournot 市场实验框架，研究公共治理图如何影响智能体间的协同行为。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Structure and Diversity Aware Context Bubble Construction for Enterprise Retrieval Augmented Systems</title>
+      <link>https://arxiv.org/abs/2601.10681</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:156b27ce465d3b4240ae52b6ce2a7a2801e12da9230554fdec68d0eeef117f61</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-15。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出面向企业检索增强系统的上下文组装方法，利用结构信息和多样性约束构建连贯的检索内容。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Beyond Rule-Based Workflows: An Information-Flow-Orchestrated Multi-Agents Paradigm via Agent-to-Agent Communication from CORAL</title>
+      <link>https://arxiv.org/abs/2601.09883</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2b4da1dee7ff8a95a4a3a048b9f358afd83beed311f328ea0f0f11b3abde739b</guid>
+      <pubDate>Wed, 14 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-14。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出以信息流为核心的多智能体协作范式，讨论如何减少对预先枚举状态和路由规则的依赖。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] ACE-Router: Generalizing History-Aware Routing from MCP Tools to the Agent Web</title>
+      <link>https://arxiv.org/abs/2601.08276</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:020c4f6e75f7e38bbc5f077226af2b9b17dcb6aa08098bb4fbea23078998525e</guid>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-13。原文最后更新：2026-04-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出历史感知的智能体路由方法，使系统能够在大量 MCP 工具和服务中选择合适目标。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Towards Verifiably Safe Tool Use for LLM Agents</title>
+      <link>https://arxiv.org/abs/2601.08012</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7ca4fbbcd6051b623b660d1c4f263abc779c30e9ef638a275e5edd6fe23221c9</guid>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究如何形式化描述并验证 LLM 智能体的工具使用安全，重点讨论工具操作可能造成的数据泄露和记录修改等风险。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] MCP-ITP: An Automated Framework for Implicit Tool Poisoning in MCP</title>
+      <link>https://arxiv.org/abs/2601.07395</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:21a8549913f3ab12915aa4c41ece17c5d515d0acbc5e5abc0d53f3b261afcb0a</guid>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出自动化的 MCP 隐式工具投毒测试框架，研究注册阶段工具元数据中的恶意指令如何影响智能体。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Internal Representations as Indicators of Hallucinations in Agent Tool Selection</title>
+      <link>https://arxiv.org/abs/2601.05214</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7fee93d6726d38055210eea5c45b53e6ef0647f5eeef89355c471b1005bd72e0</guid>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-08。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究模型内部表示能否用于识别工具选择幻觉，包括错误工具、无效参数和绕过工具调用等情况。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Enhancing Model Context Protocol (MCP) with Context-Aware Server Collaboration</title>
+      <link>https://arxiv.org/abs/2601.11595</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:01e18fe51792f5128697f7f6b305fb40ab683e43f8a82c5eee7fee455e1070fb</guid>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-06。原文最后更新：2026-01-22。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出为 MCP 服务器协作增加共享上下文机制，使智能体可在多服务器任务中传递任务相关状态。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] MCP-SandboxScan: WASM-based Secure Execution and Runtime Analysis for MCP Tools</title>
+      <link>https://arxiv.org/abs/2601.01241</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c4e943ea0842de0f25a821825e495fc4d6baf9cebf4c4328ed5b005e43846d91</guid>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-01-03。原文最后更新：2026-06-22。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出基于 WebAssembly 的 MCP 工具安全执行与运行时分析框架，用于隔离工具并检查其行为。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Agent Skills: specification and documentation</title>
+      <link>https://github.com/agentskills/agentskills</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:48dbbdd8fd0d302995a78e829a00f132701eb7b8486d5cb9fbdaf1a3f8828a23</guid>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-12-16。原文最后更新：2026-08-09。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义 Agent Skills 开放规范，以包含 SKILL.md、脚本和资源的目录为单位，为智能体提供可复用能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] 2025: The State of Generative AI in the Enterprise (survey of 495 respondents)</title>
+      <link>https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d2115dba2489b57e208112c595b9674d05fdac437f26ca41270006ff0e839607</guid>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-12-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Menlo Ventures 基于 495 名受访者的调查报告，汇总企业生成式 AI 的采用、应用场景和支出情况。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] OWASP Top 10 for Agentic Applications for 2026</title>
+      <link>https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:015226f0bb8a6827ee4c70e9c9e32b4af90efc4c3be4d120474ff2b74551f0ec</guid>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-12-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+列出智能体应用的主要安全风险类别，并提供供开发团队和组织使用的风险说明与防护建议。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Securing the Model Context Protocol (MCP): Risks, Controls, and Governance</title>
+      <link>https://arxiv.org/abs/2511.20920</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:370a6e2bf3a155acfc6e64fb07862f5e3a7d745825de8895ff82c5e656b3a68a</guid>
+      <pubDate>Tue, 25 Nov 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-11-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+梳理 MCP 工具连接引入的安全威胁、相关控制措施和组织治理议题。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Computer use tool</title>
+      <link>https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:acf1524a1de88a96931377d05fb106039558655bff9d92f6a07cd9e84d4fbcf9</guid>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-11-21。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+说明如何向 Claude 提供屏幕截图、鼠标和键盘控制能力，使模型能够与桌面环境交互。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Technology Radar: Model Context Protocol (MCP) assessed as Trial</title>
+      <link>https://www.thoughtworks.com/radar/platforms/model-context-protocol-mcp</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a43346b6adc70735920b0af99f28d97094028888ee6876b29d01993a0997429c</guid>
+      <pubDate>Wed, 05 Nov 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-11-05。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Thoughtworks 技术雷达评估 MCP 的定位和适用场景，并将其列为 Trial 阶段技术。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Equipping agents for the real world with Agent Skills</title>
+      <link>https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2e50ab69ebea3b2c9412dd48bc4f7b1e0f238a0054a9dc30e3077848c2809267</guid>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-10-16。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Anthropic 如何用模块化技能说明、脚本和资源为智能体提供处理现实任务的专门流程。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] State of AI-assisted Software Development 2025</title>
+      <link>https://dora.dev/research/2025/dora-report/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0b0b9dbb2c9ad0e4e56c6c5a16317f078945c63b62a4819606ca6daab250ae7f</guid>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-09-28。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+DORA 的研究报告讨论 AI 辅助软件开发的使用情况，并呈现其调查结果及与软件交付、组织能力相关的分析。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] anthropics/skills: public repository for Agent Skills</title>
+      <link>https://github.com/anthropics/skills</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:82a901da1b9bedec6f38670bb587455ddbcbae1f72df25bcb5a6b8c95709a39b</guid>
+      <pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-09-22。原文最后更新：2026-09-10。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+收录 Anthropic 为 Claude 提供的技能示例，内容包括可重复使用的操作说明、脚本和配套资源。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Writing effective tools for agents — with agents</title>
+      <link>https://www.anthropic.com/engineering/writing-tools-for-agents</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1399aec680791f782180f8a776e7df2a1df1397560aaefb199b2f5acdeedb3d1</guid>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-09-11。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Anthropic 介绍借助智能体设计和优化智能体工具的实践，并讨论工具质量与评估方法。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] An Economy of AI Agents (NBER handbook chapter)</title>
+      <link>https://arxiv.org/abs/2509.01063</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:89a5928187bd71c641bbaf8fab1011d2ff87642bcbb19e90bba04972871dd01a</guid>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-09-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+经济学手册章节综述 AI 智能体与个人、市场及组织互动的研究进展和待研究问题。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] ACP Joins Forces with A2A Under the Linux Foundation</title>
+      <link>https://github.com/orgs/i-am-bee/discussions/5</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:99441fd0efb1c2145e3db1a76b2c399ef1b43a2fb12d5033c0ebfa6d3b1f8d92</guid>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-08-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+公告说明 ACP 项目将与 A2A 在 Linux Foundation 旗下协同，讨论协议项目整合安排。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] MCPVerse: An Expansive, Real-World Benchmark for Agentic Tool Use</title>
+      <link>https://arxiv.org/abs/2508.16260</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b07bf8dcd67edf15b2a93941576798b85b7303281ff61418ce1ec2896099c874</guid>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-08-22。原文最后更新：2025-10-11。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+构建包含 550 多个真实可执行工具的 MCPVerse 基准，用于评测智能体在现实工具环境中的使用能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] AGENTS.md: a simple, open format for guiding coding agents</title>
+      <link>https://github.com/agentsmd/agents.md</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:35be15729752ee589f2e949ce622950b23e2eb23529c38e6309038a1cafe1e0b</guid>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-08-19。原文最后更新：2026-09-10。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义一个用于向代码智能体提供项目背景和操作约定的开放文件格式，可在代码仓库中放置 AGENTS.md 指南。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Evolution of AI Agent Registry Solutions: Centralized, Enterprise, and Distributed Approaches</title>
+      <link>https://arxiv.org/abs/2508.03095</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:175756bbfb998f603db2f71077b555ce792e09d1db26490ce31ba879029db257</guid>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-08-05。原文最后更新：2025-10-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+比较集中式、企业内和分布式 AI 智能体注册表方案，讨论发现、能力协商与身份保障。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] A Survey of Context Engineering for Large Language Models</title>
+      <link>https://arxiv.org/abs/2507.13334</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4d499fd72623c9c36df896cc8dc143d449ec2a6fd10a94122ce35e534021f60f</guid>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-07-17。原文最后更新：2025-07-21。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对上下文工程进行综述和分类，讨论推理阶段如何选择、组织和优化提供给大语言模型的信息。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Qwen Code: an open-source AI coding agent that lives in your terminal</title>
+      <link>https://github.com/QwenLM/qwen-code</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1922d9d520f9ceba156c8955a8a60040d5e2afc0876ccc29f015a1849842ed78</guid>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-06-26。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供基于 Qwen 的开源终端编程智能体，可在命令行中理解项目并执行软件开发任务。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] AP2: Agent Payments Protocol — building a secure and interoperable future for AI-driven payments</title>
+      <link>https://github.com/google-agentic-commerce/AP2</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d00dc517dab25cdd7c42f0805e8c8cc0bd812856b5965d22796c5b3cfb2d79cd</guid>
+      <pubDate>Fri, 30 May 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-05-30。原文最后更新：2026-06-17。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+该仓库提供 Agent Payments Protocol 的代码示例与演示，用于展示智能体发起支付时的协议流程。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进、AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Fin AI Agent Pricing (per-outcome)</title>
+      <link>https://fin.ai/pricing</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b3b8c4b5801333cfc2cd085174de17a2c95bb066a12c01da3b09309fb42db80b</guid>
+      <pubDate>Thu, 22 May 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-05-22。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+列出 Intercom Fin 客服智能体按解决结果计费的价格和服务方案。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] Strands Agents: build an agent harness and control it end-to-end</title>
+      <link>https://github.com/strands-agents/harness-sdk</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:aee9f0d16c69308f63e7c00f28fda2127ecd8bf111e263e32286e49807cfe44a</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-05-14。原文最后更新：2026-09-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍一种以模型调用为中心的智能体开发框架，支持连接模型、工具和多个智能体来构建应用。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] From Glue-Code to Protocols: A Critical Analysis of A2A and MCP Integration</title>
+      <link>https://arxiv.org/abs/2505.03864</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d09ab8d87fb7eee6d3ec30308ccf82fa07b28ca830985ee4eb193273f5e30a2a</guid>
+      <pubDate>Tue, 06 May 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-05-06。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+分析 A2A 与 MCP 在多智能体系统中的分工、互补关系及组合时的集成问题。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Extend Atlassian into any AI assistant using MCP</title>
+      <link>https://www.atlassian.com/platform/remote-mcp-server</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8d6f5f3128e8e50808db1b75062151c81b0f991fccb6afd2961fed74c75909bd</guid>
+      <pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-05-01。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 Atlassian Remote MCP Server 如何将获授权的 Jira、Confluence 等数据和操作接入外部 AI 助手。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] NLWeb: reference implementation for a natural language interface to websites</title>
+      <link>https://github.com/nlweb-ai/NLWeb</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:eb4d6219cecb5d9535cb0445511b52395960546d45e8d8514a0928d45dbee2e4</guid>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-04-28。原文最后更新：2026-08-11。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供网站自然语言问答界面，将结构化网站内容转换为供用户和 AI 助手查询的接口，并支持 MCP。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Gemini CLI: an open-source AI agent that brings the power of Gemini directly into your terminal</title>
+      <link>https://github.com/google-gemini/gemini-cli</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:24684c1ecca249c03e58e0d0192c9742b89e48498c3a1fac970d4d5c34874232</guid>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-04-17。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Google 的开源终端 AI 智能体，为命令行提供 Gemini 模型驱动的交互式开发与工具操作能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Codex: lightweight coding agent that runs in your terminal</title>
+      <link>https://github.com/openai/codex</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8c3dc2a0187cafccea2a84cdfe601e19b505d4faad42c77c2b39a3214738e26a</guid>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-04-13。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+OpenAI 的本地终端编程智能体，可在代码仓库中协助理解和修改代码并执行开发任务。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Enterprise-Grade Security for the Model Context Protocol (MCP)</title>
+      <link>https://arxiv.org/abs/2504.08623</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8544bddb3af8b9effde90eac534c1d892bfe81fe7d2f3de31e25534686cb09e6</guid>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-04-11。原文最后更新：2025-05-02。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出 MCP 企业安全框架，梳理协议集成中的风险并汇总相应的控制和缓解策略。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] awesome-mcp-security</title>
+      <link>https://github.com/Puliczek/awesome-mcp-security</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a3aaa42d558f501094581cbb2eee3e511a5dc49b5304afde5a3825689c7aa357</guid>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-04-08。原文最后更新：2026-03-03。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+整理 MCP 安全相关的规范说明、论文、工具、视频和文章链接。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Agent Development Kit: an open-source, code-first Python toolkit for building agents</title>
+      <link>https://github.com/google/adk-python</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b6c275efa5018657e6bc4f41f61e53d721c44f94e66e95f2a5af9487baf79c8b</guid>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-04-01。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Google 的 Python 开发工具包，提供构建、组合和运行智能体所需的模型、工具、工作流与会话能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] A2A Protocol</title>
+      <link>https://a2a-protocol.org/latest/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6bbc56b925b57958439fc8d3eec3b48a042d23c061808942ec6365c349dcfa70</guid>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-03-25。原文最后更新：2026-09-16。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义 Agent2Agent 开放协议，使不同厂商的智能体能够发现彼此、交换任务并协作。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Playwright MCP server</title>
+      <link>https://github.com/microsoft/playwright-mcp</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ba31bde2dfc28f63582ffedfebd302c295c4fa8569b2cac0bae2351abfd01b4c</guid>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-03-21。原文最后更新：2026-09-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+将 Playwright 浏览器自动化能力封装为 MCP 工具，使智能体可通过结构化页面信息操作网页。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] OpenAI Agents SDK: a lightweight, powerful framework for multi-agent workflows</title>
+      <link>https://github.com/openai/openai-agents-python</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:82fcf33f253d184eb8a32cee0f9522cdccded8a2b00403f36f097d6749dbeec5</guid>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-03-11。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供构建智能体和多智能体工作流的 Python SDK，包含工具调用、交接、护栏、会话及追踪能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Claude Code: an agentic coding tool that lives in your terminal</title>
+      <link>https://github.com/anthropics/claude-code</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:13d96f6971fff698ebc53296b5f40ff14d755c304dc9f7e1b703b58e032f85a9</guid>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-02-22。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Anthropic 的终端编程智能体，可理解代码库、执行开发任务、解释代码并处理 Git 工作流。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Salesforce Agentforce Pricing (per-conversation)</title>
+      <link>https://www.salesforce.com/agentforce/pricing/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8c1f56fee1152dd051826b20de406fc4aa8b6657889733ab0cef3f484b77bb57</guid>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-02-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+列出 Salesforce Agentforce 的产品套餐和按对话计费选项，供客户了解智能体产品定价方式。
+收录理由：原文内容呈现AI 对软件产品边界、商业模式或组织分工的影响，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>商业与组织</category>
+    </item>
+    <item>
+      <title>[资料] MCP Registry: a community driven registry service for Model Context Protocol servers</title>
+      <link>https://github.com/modelcontextprotocol/registry</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0ab174b3cfd6fa55ca8847c4b71cbebcb8f84bad826ddf6e4dda3971de07e278</guid>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-02-05。原文最后更新：2026-09-16。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供 MCP 服务器注册服务，使 MCP 客户端能够发现和获取已发布服务器条目。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] UI-TARS: pioneering automated GUI interaction with native agents</title>
+      <link>https://github.com/bytedance/UI-TARS</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:98bfec035a0d0540291be57f7016719f8e335739520f997595f396b927aed5e4</guid>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-01-19。原文最后更新：2026-01-27。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍用于图形界面交互的视觉智能体模型与系统，使模型根据屏幕内容生成界面操作。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] Terminal-Bench: a benchmark for LLMs on complicated tasks in the terminal</title>
+      <link>https://github.com/harbor-framework/terminal-bench-1</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:88ca39f93cd3d5f266c90c4e7409a2049cd771c48adc0768ba4cf7992aa5d5e3</guid>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2025-01-17。原文最后更新：2026-07-11。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供面向终端环境的智能体任务基准，用于评测模型在命令行中操作工具、完成软件工程及系统任务的能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] smolagents: a barebones library for agents that think in code</title>
+      <link>https://github.com/huggingface/smolagents</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:cce197194374b868aaf4070c8a523203192ec07e76da7d1cbfb2cb5d47b884f0</guid>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-12-05。原文最后更新：2026-08-25。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供轻量级 Python 智能体框架，支持用代码生成行动或调用工具来执行任务。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Browserbase MCP server: allow LLMs to control a browser</title>
+      <link>https://github.com/browserbase/mcp-server-browserbase</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6ca1a8c40bcb09ea43f93792a8b86b4bae12d4649d2d8c5a90644ef6208fab12</guid>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-12-05。原文最后更新：2026-07-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+该仓库提供连接 LLM 与 Browserbase 浏览器会话的 MCP 服务器参考实现；仓库已归档，作者说明其不代表当前生产服务。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+    </item>
+    <item>
+      <title>[资料] awesome-mcp-servers: a collection of MCP servers</title>
+      <link>https://github.com/punkpeye/awesome-mcp-servers</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:61a57c93de29a25207803ffa9fb8df59013bc4e5c17db8039816b38a90e5e3e8</guid>
+      <pubDate>Sat, 30 Nov 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-11-30。原文最后更新：2026-09-15。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+按类别收集 MCP 服务器项目，为不同客户端和用途提供可浏览的服务器目录。
+收录理由：原文内容呈现AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] AgentKit: build multi-agent networks in TypeScript</title>
+      <link>https://github.com/inngest/agent-kit</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:3e65afaa547c49569b6e529e12b53757bd01f399365a20a8d40a69215c2dfa54</guid>
+      <pubDate>Mon, 18 Nov 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-11-18。原文最后更新：2026-04-29。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供 TypeScript 多智能体开发工具，用于定义智能体、任务工具及协作流程。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] llms.txt: helping language models use websites</title>
+      <link>https://github.com/AnswerDotAI/llms-txt</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2fbff6bb052484f6a8b1fb4bb8efbbe3b9c5cb3d2e47a2803298afeee498e015</guid>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-09-01。原文最后更新：2026-09-04。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提出一种网站侧的 Markdown 文件约定，用于向语言模型介绍网站内容结构、重要页面和访问提示。
+收录理由：原文内容呈现AI 接入软件能力或用户界面的具体方式、AI 系统与软件接口、协议或工具生态的演进，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>界面与接入</category>
+      <category>协议与生态</category>
+    </item>
+    <item>
+      <title>[资料] Implementation Timeline — EU Artificial Intelligence Act</title>
+      <link>https://artificialintelligenceact.eu/implementation-timeline/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0aa9d7ba294a35d920a96a2c949a2adc5b103e022e7a062507274e52f7d2d84e</guid>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-08-10。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+整理欧盟 AI Act 的适用义务和实施时间节点，按法规要求列出不同阶段的日期安排。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Mastra: the modern TypeScript framework for AI agents</title>
+      <link>https://github.com/mastra-ai/mastra</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c597b1a88f392da5207ae956e3bafe8a63a0a93814e3aef9c3e51a9521c75e05</guid>
+      <pubDate>Tue, 06 Aug 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-08-06。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+TypeScript 智能体开发平台，涵盖工作流、检索增强生成、记忆、评估及应用部署。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] 百炼文档（兼容 OpenAI 接口规范）</title>
+      <link>https://help.aliyun.com/zh/model-studio/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:adec4fab3e11747b8d618dea3f05d856336a373080aab8827f1e11b3d1f89c9c</guid>
+      <pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-07-16。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+阿里云百炼文档介绍模型服务平台、兼容 OpenAI 的 API，以及创建智能体和知识库问答应用的方法。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Pydantic AI: how Python does AI</title>
+      <link>https://github.com/pydantic/pydantic-ai</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e916d975160d16b985532c2db55c743eb128542dfe000f1664b026d3818217ac</guid>
+      <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-06-21。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供以 Python 类型系统为基础的智能体开发框架，支持模型连接、依赖注入、结构化输出和结果校验。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Semantic conventions for generative AI systems</title>
+      <link>https://opentelemetry.io/docs/specs/semconv/gen-ai/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e954ffff519c23f966fe42bec9eb4b8dfbe5b2d12d2902d1d4f4f760c1d4e84c</guid>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-06-20。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义生成式 AI 系统遥测数据的统一命名约定，涉及模型、请求、生成内容及相关使用指标。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] tau-bench: code and data for Tau-Bench</title>
+      <link>https://github.com/sierra-research/tau-bench</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:0336f717029b08315d85ceccf0a5bdc9007f6164b7a2244e801f32aa8ed09cc7</guid>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-06-06。原文最后更新：2026-03-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+通过航空与零售等场景中的工具、用户和环境交互任务，评测智能体在规则约束下完成多轮任务的能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Daytona: secure and elastic infrastructure for running AI-generated code</title>
+      <link>https://github.com/daytonaio/daytona</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2e3cb77637616fce84828d59d2ae354d2c975d21bb3beb23d12a19b94a2e3787</guid>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2024-02-06。原文最后更新：2026-07-24。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍运行 AI 生成代码的安全执行环境；仓库说明核心开发已迁至私有代码库，公开仓库自 2026 年 6 月起不再更新。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] ISO/IEC 42001:2023 — Information technology, Artificial intelligence, Management system</title>
+      <link>https://www.iso.org/standard/42001</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7ede95cb3d6e6423a151cc51dd8f2c831b3ab023c14b0d62ca7f7e3c52447874</guid>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-12-18。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+摘要待核实，请阅读原文。
+收录理由：原文内容呈现题名所示的 AI 管理体系标准涉及 AI 软件运行治理；当前未转述受限正文。，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] GAIA: a benchmark for General AI Assistants</title>
+      <link>https://arxiv.org/abs/2311.12983</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1c294c3f51d7bc1f650883e29ffb6a8705d8bc5846e9ae351f067513df1af6c5</guid>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-11-21。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+构建通用 AI 助手基准，使用需要推理、多模态理解、网页浏览和工具使用的问题评测系统能力。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Function calling</title>
+      <link>https://platform.openai.com/docs/guides/function-calling</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:ec4f8c98c74398550fe2eb555d58667486c3a9d059b93cc827350890ea1d1595</guid>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-11-06。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍 API 函数调用机制，使模型可选择应用预先定义的函数并以结构化参数请求外部系统执行。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] CrewAI: framework for orchestrating role-playing, autonomous AI agents</title>
+      <link>https://github.com/crewAIInc/crewAI</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:715b6bc81ab4b4ffcee5bb2150989321b00958a3da8b9307fbbd467d19cd4e11</guid>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-10-27。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供以角色、任务和工具组织多个智能体的框架，并支持定义更完整的协作流程。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Letta: platform for stateful agents with advanced memory</title>
+      <link>https://github.com/letta-ai/letta</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7fe841355559703a02eb6fcda1ab91ecc0afbad7b3f8825a106c4ae7d29ae14b</guid>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-10-11。原文最后更新：2026-09-10。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供构建有状态智能体的平台与框架，支持持久记忆、运行时状态和面向开发者的代理应用。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] SWE-bench: can language models resolve real-world GitHub issues?</title>
+      <link>https://github.com/SWE-bench/SWE-bench</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8ecd8d70a1c9805fa0b44075363b0a38d02beaa394ec4e26aff94f184a8160c5</guid>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-10-04。原文最后更新：2026-09-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+以真实 GitHub 问题和对应代码仓库为任务，构成评估语言模型定位问题、修改代码并通过测试能力的基准。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] AutoGen: a programming framework for agentic AI</title>
+      <link>https://github.com/microsoft/autogen</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d807807ac58742dd264bf1e90085cab2dcab2882313d506f74fcd17dca632abd</guid>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-08-18。原文最后更新：2026-04-15。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供构建多智能体应用的编程框架，包含消息通信、智能体协作和运行时组件。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] LangGraph: build resilient agents</title>
+      <link>https://github.com/langchain-ai/langgraph</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:642743ad9061795af98bf77460ef1f89a7fb0d9c89887f62161b116b06801865</guid>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-08-09。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供有状态智能体编排框架，支持持久化运行状态、检查点、人工介入和长时任务执行。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] 生成式人工智能服务管理暂行办法</title>
+      <link>https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:4d0c17a97aa7b94407b70c06afcbc6e562ee2e5dd37b1ea4b31716a625f93f94</guid>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-07-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+规定在中国境内向公众提供生成式人工智能服务时的适用范围、服务提供者义务、数据安全和内容管理要求。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Mem0: the memory layer for AI agents</title>
+      <link>https://github.com/mem0ai/mem0</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:cddc9a2d075a51037ba44e9147d87bac14f8ecee6231b07be5d63984cf63ee77</guid>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-06-20。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供面向智能体和生成式 AI 应用的持久记忆组件，用于保存并检索跨会话的用户与任务信息。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] AI SDK: the AI toolkit for TypeScript</title>
+      <link>https://github.com/vercel/ai</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:fdc98e4e70aebb2dde61b18e2b5f0c5c32a9624e4c09895d46a6b4963246176d</guid>
+      <pubDate>Tue, 23 May 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-05-23。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供 TypeScript SDK，用统一接口连接生成式模型，并构建文本生成、结构化输出和流式交互应用。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Gorilla: training and evaluating LLMs for function calls (Berkeley Function Calling Leaderboard)</title>
+      <link>https://github.com/ShishirPatil/gorilla</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:bdffd137d49f865fd5159c14fb2a406c794a9d72f9cc61887cc07a48cdf79d7a</guid>
+      <pubDate>Fri, 19 May 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-05-19。原文最后更新：2026-04-13。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+建立函数调用评测基准，覆盖多种参数结构、并行及多轮调用场景，用于测试模型选择和调用 API 的表现。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Langfuse: open source agent evals and observability</title>
+      <link>https://github.com/langfuse/langfuse</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a5d406dab37933d67579c1c918c0902379288f8ff41333f8bc5f56123c0e0c76</guid>
+      <pubDate>Thu, 18 May 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-05-18。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供开源的 LLM 应用观测与评估平台，用于记录模型调用轨迹、管理提示词并测试应用输出。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Zep: memory for AI agents</title>
+      <link>https://github.com/getzep/zep</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:7aa8183a5a0b9fb74f8ff59b38b0ca2e17dabf945e14f09b9b6f87ec98409586</guid>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-04-29。原文最后更新：2026-09-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+收录 Zep Cloud 的 SDK 示例与服务集成代码，展示如何在应用中调用其智能体记忆与上下文能力。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Dify: build agentic workflows and RAG pipelines with rich AI model and tool support</title>
+      <link>https://github.com/langgenius/dify</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:97dcab4759c83fdbf316e4dd1dbc5aed7f8c7b752701c0203ebe3b525cf02cc7</guid>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-04-12。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供可视化平台来构建和运行 AI 应用，支持智能体工作流、检索增强生成、模型及工具连接。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] E2B: open-source secure environment with real-world tools for AI agents</title>
+      <link>https://github.com/e2b-dev/E2B</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:85cfb8c26b1b5b7524e1dee4247eea4d9a1b7aff28cabf0cde2602b9c5759f86</guid>
+      <pubDate>Sat, 04 Mar 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-03-04。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供供 AI 智能体运行代码和工具的隔离云端沙箱环境及相关 SDK。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 软件或智能体的威胁、安全控制与防护机制，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>安全与攻防</category>
+    </item>
+    <item>
+      <title>[资料] Semantic Kernel: integrate cutting-edge LLM technology quickly and easily into your apps</title>
+      <link>https://github.com/microsoft/semantic-kernel</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:92c9b5cfe3d860148412d0a720a77375ad4f4783d3808ff9ebf2a088927703a3</guid>
+      <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2023-02-27。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供将生成式模型集成到应用中的开发框架；仓库现说明其后继项目为 Microsoft Agent Framework。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Phoenix: AI observability and evaluation</title>
+      <link>https://github.com/Arize-ai/phoenix</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:1db29eb9ab4f9cb8733fb063e5315c33f8d74dcf7145225995c9a30df820041b</guid>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2022-11-09。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供面向 LLM 应用的开源观测和评估工具，用于查看调用链路、分析模型行为及执行评测。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] LlamaIndex: the document processing platform for AI</title>
+      <link>https://github.com/run-llama/llama_index</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e7f1aab302e1f0371ea52ef1ba46fdfbcbba35eefcc4e9468ce0485482d04d72</guid>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2022-11-02。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供用于连接数据与 LLM 应用的框架，支持数据摄取、索引、检索以及基于数据构建智能体工作流。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] LangChain: the agent engineering platform</title>
+      <link>https://github.com/langchain-ai/langchain</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c5a32632e586ab2c7c9c6b0311eaac2477d26a3be132e9c5b7f260a30728c0b7</guid>
+      <pubDate>Mon, 17 Oct 2022 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2022-10-17。原文最后更新：2026-09-20。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供构建 LLM 应用与智能体的开发框架，包含模型、工具、数据连接和运行流程等集成组件。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Chroma: search infrastructure for AI</title>
+      <link>https://github.com/chroma-core/chroma</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:6f70aa6d92f7f311e170531d52054d99bd39243815044456ce1368d6607f5e5f</guid>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2022-10-05。原文最后更新：2026-09-18。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍用于 AI 应用的数据基础设施，提供向量、文档和元数据的存储、检索及相关查询接口。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] AI Risk Management Framework</title>
+      <link>https://www.nist.gov/itl/ai-risk-management-framework</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:54dbc154134259979e65e455810646dabddf7eb44b679999311fe1466eee4285</guid>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2021-08-12。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供组织级 AI 风险管理框架，按治理、识别、测量和管理等功能组织 AI 生命周期风险工作。
+收录理由：原文内容呈现AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] pgvector: open-source vector similarity search for Postgres</title>
+      <link>https://github.com/pgvector/pgvector</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c5f2c6c39c63757b4483eddc4446412b11de8d94c1d8d380398e19d4c6c6f4ea</guid>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2021-04-20。原文最后更新：2026-09-10。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+为 PostgreSQL 增加向量数据类型和相似度搜索能力，支持精确及近似近邻索引与多种距离度量。
+收录理由：原文内容呈现AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] Haystack: open-source AI orchestration framework for building context-engineered, production-ready LLM applications</title>
+      <link>https://github.com/deepset-ai/haystack</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:24347d54513baa04c136b04bf248cbdc94170d51b844d2d320e3a1ee7461055a</guid>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2019-11-14。原文最后更新：2026-09-19。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+提供构建检索增强生成和智能体应用的开源 Python 框架，以可组合组件和管线组织数据处理与模型调用。
+收录理由：原文内容呈现AI 参与软件设计、实现、测试或工程流程的方式、AI 改变软件内部功能、流程或数据处理的方式，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>构造方式</category>
+      <category>应用内部</category>
+    </item>
+    <item>
+      <title>[资料] SPIFFE: the Secure Production Identity Framework for Everyone</title>
+      <link>https://github.com/spiffe/spiffe</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b41ac08dd1a885d532d0a82c295bad4358005c9398a81785ed94b6c7189c2170</guid>
+      <pubDate>Mon, 07 Aug 2017 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2017-08-07。原文最后更新：2026-09-02。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+定义服务工作负载的身份标识及相互认证标准，使服务能够以可验证身份建立安全通信。
+收录理由：原文内容呈现AI 软件或智能体的威胁、安全控制与防护机制、AI 软件的运行治理、授权、监测或责任安排，与本仓记录 AI 如何改变软件开发的范围直接相关。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+  </channel>
+</rss>

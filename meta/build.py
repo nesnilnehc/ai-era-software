@@ -10,6 +10,7 @@ import sys
 import tempfile
 import json
 from questions import load_questions
+from rss import render_feed, FEED_URL
 import check
 from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
                      NO_REDISTRIBUTION, SUMMARY_GAPS, BRAND_CONTEXT, ARXIV_NOTE)
@@ -119,6 +120,8 @@ def render_outputs():
     L.append(SCOPE + "\n")
     L.append(OUT_OF_SCOPE + "\n")
     L.append(ADMISSION_RULE + "\n")
+
+    L.append("**RSS 订阅**：[资料与问题更新](%s)。历史资料日期采用原文首发日期，非本项目收录时间；日期与条目标识规则见 [维护说明](meta/QUESTIONS.md#rss-订阅)。\n" % FEED_URL)
 
     L.append("## 问题探索\n")
     L.append("[问题探索](https://ai-era-software.nesnilnehc.top/#questions)记录待研究疑点，"
@@ -281,11 +284,14 @@ def render_outputs():
              "done"]
     fetch_text = "\n".join(lines) + "\n"
 
+    questions_data = load_questions()
+    questions_data["topic_vocabulary"] = list(TOPICS)
     outputs = {
         "README.md": readme_text,
         "index.tsv": index_text,
         "fetch.sh": fetch_text,
-        "questions.json": json.dumps(load_questions(), ensure_ascii=False, indent=2) + "\n",
+        "questions.json": json.dumps(questions_data, ensure_ascii=False, indent=2) + "\n",
+        "feed.xml": render_feed(items, questions_data),
     }
     site_snapshot = "sites/ai-software-atlas/dist/questions.json"
     if os.path.isdir(os.path.join(ROOT, "sites/ai-software-atlas/dist")):
@@ -359,7 +365,7 @@ def main():
         die(bad)
     write_outputs(outputs)
 
-    print("生成完毕：%d 条；README.md、index.tsv、fetch.sh、questions.json（校验通过）" % len(items))
+    print("生成完毕：%d 条；README.md、index.tsv、fetch.sh、questions.json、feed.xml（校验通过）" % len(items))
     print("提示：", ARXIV_NOTE)
 
 

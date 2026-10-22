@@ -3,29 +3,143 @@
   "questions": [
     {
       "id": "Q-0001",
-      "title": "AI 安全扫描只给建议时，合并审查怎样承接风险？",
+      "title": "AI 安全扫描建议，应怎样进入合并决策？",
       "basis": "GitHub 的 AI Scan 公告将发现定义为建议，并明确其不能阻止合并；由此产生审查责任如何承接的待研究问题。",
       "sources": [
         {
-          "title": "AI Scan for pull requests generally available",
-          "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/",
+          "title": "GitHub 发布公告 · How it works",
+          "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/#how-it-works",
           "checked": "2026-10-22",
-          "evidence": "How it works 段明确：发现不会使扫描检查失败，不能通过 ruleset 阻止合并；不覆盖 fork 与 Dependabot PR。"
+          "evidence": "How it works 段明确：发现不会使扫描检查失败，不能通过 ruleset 阻止合并；不覆盖 fork 与 Dependabot PR。",
+          "id": "github-announcement"
+        },
+        {
+          "id": "github-docs-limitations",
+          "title": "GitHub 官方文档 · Limitations",
+          "url": "https://docs.github.com/en/enterprise-cloud@latest/code-security/concepts/code-scanning/ai-powered-security-detections#limitations",
+          "checked": "2026-10-22",
+          "evidence": "Limitations 说明 AI Scan 不能作为 ruleset 合并要求，排除 fork 和 Dependabot PR，且发现可能包含误报。核读只确认规则，不证明本项目候选方案效果。"
         }
       ],
       "value": "帮助区分 AI 发现与可执行门禁，设计人工复核和风险升级流程。",
       "known": "该公告描述了建议效力、启用条件与适用 PR 边界。",
       "unknown": "团队怎样处理未采纳建议、谁承担复核责任，以及这种流程的漏报与处置成本；公告没有提供实证答案。",
-      "next_step": "查阅配套官方配置文档；选公开仓库的审查规则与处置记录，分别核对责任、例外和结果，不能由产品公告推导效果。",
+      "next_step": "查阅配套官方配置文档；以公开仓库的审查规则和处置记录比较 A、B、C 的责任分配、误报处置、遗漏风险及等待成本，查明人工或工具如何执行门禁。允许按风险组合方案，不由公告推导效果。",
       "status": "待研究",
       "updated": "2026-10-22",
       "history": [
         {
           "date": "2026-10-22",
           "reason": "核读公开公告后建立问题；仅确认产品规则，未验证治理效果。"
+        },
+        {
+          "date": "2026-10-22",
+          "reason": "根据问题须带候选答案的要求，明确为决策型并收窄问法；提出 A/B/C 三种待评估责任与门禁方案。组合采用作为说明，不重复列为选项；这些不是公告已实现的流程或已验证的效果。"
+        },
+        {
+          "date": "2026-10-22",
+          "reason": "复用资料库主题并增加受控议题标签，区分主题、议题、问题类型和生命周期状态，供列表及详情筛选展示。"
+        },
+        {
+          "date": "2026-10-22",
+          "reason": "为来源分配稳定引用 ID，关联发现依据、已知事实、候选方案前提及待核目标；补记实际完成的文档核读，并明确尚无方案效果证据。"
         }
       ],
-      "merged_into": null
+      "merged_into": null,
+      "kind": "决策型",
+      "options": [
+        {
+          "id": "A",
+          "content": "仅提示提交者，由提交者自行判断并处理建议。",
+          "basis": "本项目提出的待评估方案；公告的建议性质提供讨论前提，未证明这种责任安排有效。",
+          "evidence_needed": "核对公开项目是否采用这种流程，提交者如何记录采纳或不采纳原因，遗漏风险及实际处置负担。",
+          "conditions": "可先研究低风险改动中是否适用；具体风险范围待查。",
+          "cost": "待测：提交者负担、建议被忽略的风险及后续返工成本。",
+          "basis_refs": [
+            "github-announcement"
+          ],
+          "evidence_refs": [],
+          "counter_refs": [],
+          "target_refs": [
+            "github-docs-limitations"
+          ]
+        },
+        {
+          "id": "B",
+          "content": "指定审查者确认建议及处置理由，但不据此自动阻断合并。",
+          "basis": "本项目提出的待评估方案；增加明确的复核责任，不能由公告推定 GitHub 已强制这种流程。",
+          "evidence_needed": "查验公开审查规则中的责任人、确认记录、例外处理，以及是否降低遗漏并增加等待时间。",
+          "conditions": "需有可承担复核责任的审查者；适用风险等级待查。",
+          "cost": "待测：人工复核时间、排队时间及重复审查成本。",
+          "basis_refs": [
+            "github-announcement"
+          ],
+          "evidence_refs": [],
+          "counter_refs": [],
+          "target_refs": [
+            "github-docs-limitations"
+          ]
+        },
+        {
+          "id": "C",
+          "content": "经复核达到明确风险阈值后，通过另行设计的执行机制阻止合并。",
+          "basis": "本项目提出的待评估方案，不是 AI Scan 原生功能：GitHub 公告明确其发现不能通过 ruleset 直接阻止合并。需另行设计人工或工具执行机制，尚未实现或验证。",
+          "evidence_needed": "核对可操作的风险阈值、复核与升级证据、人工或独立检查如何执行门禁，以及误阻断、绕过和紧急例外处理。",
+          "conditions": "需要明确阈值、负责人员及独立的执行机制；高风险改动是否适用待查。",
+          "cost": "待测：机制维护、误阻断、复核等待和例外治理成本。",
+          "basis_refs": [
+            "github-announcement",
+            "github-docs-limitations"
+          ],
+          "evidence_refs": [],
+          "counter_refs": [],
+          "target_refs": [
+            "github-docs-limitations"
+          ]
+        }
+      ],
+      "topics": [
+        "安全与攻防",
+        "运行与问责"
+      ],
+      "tags": [
+        "human-review",
+        "merge-gate"
+      ],
+      "basis_refs": [
+        "github-announcement"
+      ],
+      "known_refs": [
+        "github-announcement",
+        "github-docs-limitations"
+      ],
+      "next_step_refs": [
+        "github-docs-limitations"
+      ],
+      "checks": [
+        {
+          "id": "V-001",
+          "date": "2026-10-22",
+          "result": "核读公告 How it works 和官方文档 Limitations，确认 AI Scan 的建议不能直接作为 ruleset 合并门禁；此项为文档核读，未实现或实证验证 A/B/C 方案。",
+          "source_refs": [
+            "github-announcement",
+            "github-docs-limitations"
+          ]
+        }
+      ]
     }
+  ],
+  "tag_vocabulary": {
+    "human-review": "人工复核",
+    "merge-gate": "合并门禁"
+  },
+  "topic_vocabulary": [
+    "界面与接入",
+    "应用内部",
+    "构造方式",
+    "安全与攻防",
+    "运行与问责",
+    "协议与生态",
+    "商业与组织"
   ]
 }
