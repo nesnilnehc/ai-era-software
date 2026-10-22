@@ -119,6 +119,9 @@ def render_outputs():
     L.append(ADMISSION_RULE + "\n")
 
     L.append("## 怎么用\n")
+    L.append("- **要交互探索**：[AI 重构软件 · 知识地图]"
+             "(https://ai-era-software.nesnilnehc.top)，公开访问，无需登录。"
+             "提供七主题导览、材料关系图（手机端为主题分支图）、搜索筛选和原文入口。\n")
     L.append("- **要数据**：[`index.tsv`](index.tsv)，%d 条 × %d 列，制表符分隔。列为 %s；"
              "主题与标签列内用 `|` 分隔多值，标签同时含英文正名与中文别名，两种写法都能 grep。\n"
              % (len(items), len(TSV_COLUMNS), "／".join(TSV_COLUMNS)))
@@ -127,6 +130,15 @@ def render_outputs():
              "（已在 .gitignore 里）。取不到的会逐条报出来。\n")
     L.append("- **要加条目**：改 [`meta/catalog.py`](meta/catalog.py)；**要改判据**：改 "
              "[`meta/policy.py`](meta/policy.py)。完成后跑 `python3 meta/build.py`。\n")
+    L.append("**网站如何自动同步**：网站在打开时、重新回到前台时，以及打开期间每 5 分钟，"
+             "读取本仓 `main` 分支的 [`index.tsv`]"
+             "(https://github.com/nesnilnehc/ai-era-software/blob/main/index.tsv)。"
+             "修改材料后，运行 `python3 meta/build.py`，将生成的目录随源数据一起提交并推送到 "
+             "`main`，网站即可在下次读取时更新，无需重新发布网站；GitHub 缓存可能带来短暂延迟。"
+             "未推送的本地改动不会同步。首次读取失败时显示随站点发布的目录快照，"
+             "后续同步失败时保留上次成功读取的数据，页面会提示同步状态。"
+             "网站关闭时不运行后台同步任务，下次打开再读取最新目录；"
+             "自动同步只更新展示数据，不会自动新增或改写仓库材料。\n")
     L.append("[清单](#清单按发布时间倒序) · [分类口径](#怎么分类) · "
              "[原文副本](#关于原文副本) · [添加条目](#怎么加一条) · [许可](#许可)\n")
     L.append("常用检索：\n\n```sh\nrg 'MCP' index.tsv\nrg '商业与组织' index.tsv\n```\n")
