@@ -8,6 +8,8 @@ import os
 import csv
 import sys
 import tempfile
+import json
+from questions import load_questions
 import check
 from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
                      NO_REDISTRIBUTION, SUMMARY_GAPS, BRAND_CONTEXT, ARXIV_NOTE)
@@ -117,6 +119,12 @@ def render_outputs():
     L.append(SCOPE + "\n")
     L.append(OUT_OF_SCOPE + "\n")
     L.append(ADMISSION_RULE + "\n")
+
+    L.append("## 问题探索\n")
+    L.append("[问题探索](https://ai-era-software.nesnilnehc.top/#questions)记录待研究疑点，"
+             "而非已验证结论。数据源为 `meta/questions.json`，构建生成 `questions.json`；"
+             "维护规则见 [问题维护说明](meta/QUESTIONS.md)。"
+             "它与决定材料收录的 `meta/candidates.tsv` 分开。\n")
 
     L.append("## 怎么用\n")
     L.append("- **要交互探索**：[AI 重构软件 · 一手材料]"
@@ -273,11 +281,16 @@ def render_outputs():
              "done"]
     fetch_text = "\n".join(lines) + "\n"
 
-    return items, {
+    outputs = {
         "README.md": readme_text,
         "index.tsv": index_text,
         "fetch.sh": fetch_text,
+        "questions.json": json.dumps(load_questions(), ensure_ascii=False, indent=2) + "\n",
     }
+    site_snapshot = "sites/ai-software-atlas/dist/questions.json"
+    if os.path.isdir(os.path.join(ROOT, "sites/ai-software-atlas/dist")):
+        outputs[site_snapshot] = outputs["questions.json"]
+    return items, outputs
 
 
 def write_outputs(outputs):
@@ -285,7 +298,8 @@ def write_outputs(outputs):
     pending = []
     try:
         for name, content in outputs.items():
-            fd, tmp = tempfile.mkstemp(prefix=".%s." % name, dir=ROOT, text=True)
+            target = os.path.join(ROOT, name)
+            fd, tmp = tempfile.mkstemp(prefix=".%s." % os.path.basename(name), dir=os.path.dirname(target), text=True)
             pending.append((tmp, os.path.join(ROOT, name)))
             with io.open(fd, "w", encoding="utf-8", newline="") as fh:
                 fh.write(content)
@@ -345,7 +359,7 @@ def main():
         die(bad)
     write_outputs(outputs)
 
-    print("生成完毕：%d 条；README.md、index.tsv、fetch.sh（校验通过）" % len(items))
+    print("生成完毕：%d 条；README.md、index.tsv、fetch.sh、questions.json（校验通过）" % len(items))
     print("提示：", ARXIV_NOTE)
 
 

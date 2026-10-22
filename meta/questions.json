@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "Q-0001",
+      "title": "AI 安全扫描只给建议时，合并审查怎样承接风险？",
+      "basis": "GitHub 的 AI Scan 公告将发现定义为建议，并明确其不能阻止合并；由此产生审查责任如何承接的待研究问题。",
+      "sources": [
+        {
+          "title": "AI Scan for pull requests generally available",
+          "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/",
+          "checked": "2026-10-22",
+          "evidence": "How it works 段明确：发现不会使扫描检查失败，不能通过 ruleset 阻止合并；不覆盖 fork 与 Dependabot PR。"
+        }
+      ],
+      "value": "帮助区分 AI 发现与可执行门禁，设计人工复核和风险升级流程。",
+      "known": "该公告描述了建议效力、启用条件与适用 PR 边界。",
+      "unknown": "团队怎样处理未采纳建议、谁承担复核责任，以及这种流程的漏报与处置成本；公告没有提供实证答案。",
+      "next_step": "查阅配套官方配置文档；选公开仓库的审查规则与处置记录，分别核对责任、例外和结果，不能由产品公告推导效果。",
+      "status": "待研究",
+      "updated": "2026-10-22",
+      "history": [
+        {
+          "date": "2026-10-22",
+          "reason": "核读公开公告后建立问题；仅确认产品规则，未验证治理效果。"
+        }
+      ],
+      "merged_into": null
+    }
+  ]
+}

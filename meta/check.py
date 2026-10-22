@@ -14,6 +14,7 @@ import csv
 import sys
 import datetime
 import subprocess
+from questions import load_questions, validate as validate_questions
 from catalog import (Item, ITEMS, TAGS, TOPICS, GENRES, ORG_KINDS,
                      NO_REDISTRIBUTION, SUMMARY_GAPS, BRAND_CONTEXT)
 
@@ -229,6 +230,10 @@ def run(stage="全部"):
     data_bad = []
     if stage in ("全部", "数据"):
         data_bad = check_data() + check_fetched()
+        try:
+            data_bad += validate_questions(load_questions())
+        except (ValueError, OSError) as error:
+            data_bad.append("问题数据无法读取：%s" % error)
         bad += data_bad
     if stage in ("全部", "生成物"):
         bad += check_index_tsv()
