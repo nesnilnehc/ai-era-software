@@ -22,6 +22,16 @@
       <category>运行与问责</category>
     </item>
     <item>
+      <title>[资料] Toward Evidence-Based Agentic Software Engineering</title>
+      <link>https://arxiv.org/abs/2610.35348</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:2341fcd12771e9ffa015afedd039eca5a6bf12b0beee7d321ccb8822e19b2e90</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-26。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 146 篇论文中的 325 项实验编码，区分模型、框架实现、框架配置、任务和用户交互，检查报告完整性及比较中的混杂因素。公开逐实验标注、证据和汇总脚本；仅编码论文正文，未检查其外链资产，模型间一致性不等同人工标注准确率。
+收录理由：相较既有模型与框架性能对比，新增跨研究的实验配置披露与因果归因审查方法；公开编码规则、325 行数据及重复和缺失项检查脚本，使评测证据的可比较性可以核对。参考框架及扩展组合实验仍是提案，不作为已验证效果。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
       <title>[资料] When Coding Agents Outpace Review: Evaluating PRD-Driven Development in Mature Enterprise Repositories</title>
       <link>https://arxiv.org/abs/2610.26394</link>
       <guid isPermaLink="false">urn:ai-era-software:material:4a8e199fa018aca6d6cba7919db7640bda55d8f782b33c6308adb4f67c6c4815</guid>

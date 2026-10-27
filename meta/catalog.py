@@ -102,6 +102,12 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-10-26", "-", "Toward Evidence-Based Agentic Software Engineering",
+     "Heidelberg University; Singapore Management University (Sebastian Baltes; Christoph Treude)",
+     "论文", "学界", ["构造方式"],
+     ["empirical-study"],
+     "https://arxiv.org/abs/2610.35348",
+     "", "对 146 篇论文中的 325 项实验编码，区分模型、框架实现、框架配置、任务和用户交互，检查报告完整性及比较中的混杂因素。公开逐实验标注、证据和汇总脚本；仅编码论文正文，未检查其外链资产，模型间一致性不等同人工标注准确率。", "相较既有模型与框架性能对比，新增跨研究的实验配置披露与因果归因审查方法；公开编码规则、325 行数据及重复和缺失项检查脚本，使评测证据的可比较性可以核对。参考框架及扩展组合实验仍是提案，不作为已验证效果。"),
     ("2026-10-14", "2026-10-15", "What Coding Agents Leave Unsaid: Measuring Task-State Gaps Between Execution and Reports",
      "Tencent",
      "论文", "厂商", ["构造方式", "运行与问责"],
