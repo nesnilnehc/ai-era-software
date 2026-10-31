@@ -102,6 +102,13 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-10-26", "-", "How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation",
+     "Singapore Management University; Heidelberg University (Christoph Treude; Sebastian Baltes)",
+     "论文", "学界", ["构造方式", "运行与问责"],
+     ["skills", "context-engineering", "empirical-study"],
+     "https://arxiv.org/abs/2610.34938",
+     "", "对 30 次编码会话的 125 项复盘建议进行编码，并在同仓其他任务上比较 12 项框架修改有无启用时的行为。公开轨迹、修改、标注和汇总脚本；研究包含人工筛选，不是完全自主进化，减少特定动作不等于任务成功率或总耗时改善。",
+     "相较既有技能准入与删除机制，新增逐项经验迁移到同仓后续任务的对照证据，区分目标问题出现、经验覆盖、内容被读取与行为改变。公开的最终标注、排除记录和修改补丁可核对不完整经验增加额外检查的情况，不推导所有仓库的效果。"),
     ("2026-10-26", "-", "Toward Evidence-Based Agentic Software Engineering",
      "Heidelberg University; Singapore Management University (Sebastian Baltes; Christoph Treude)",
      "论文", "学界", ["构造方式"],
