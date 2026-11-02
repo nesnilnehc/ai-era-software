@@ -102,6 +102,14 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-10-30", "-", "What Does a Repair Agent Gain from Remembering Its Failure? An Exploratory Study on Real Python Bugs",
+     "Independent Researchers (Wenbo Ye; Yongxi Zhou; Junwei Yao; Jiahui Ge)",
+     "论文", "个人", ["构造方式"],
+     ["memory", "empirical-study"],
+     "https://arxiv.org/abs/2610.41433",
+     "", "对 75 个 Python 缺陷的首次修复进行重复试验，并对 181 次失败比较普通重试、原始记录、模型总结与测试信号。公开输入、逐失败结果和分析脚本，另做较大模型及仅告知失败的对照；主要比较未得到显著改善，事后全套测试检查改变部分结果判断。",
+     "相较已有跨任务经验迁移研究，新增同一缺陷失败后如何传递记录的配对比较，并把总结步骤与原始记录、失败通知分开。可检查记忆构造代码及逐失败结果，区分目标测试通过与其他测试退化；不把未显著解释为没有效果，也不外推到所有模型和仓库。"),
+
     ("2026-10-26", "-", "How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation",
      "Singapore Management University; Heidelberg University (Christoph Treude; Sebastian Baltes)",
      "论文", "学界", ["构造方式", "运行与问责"],

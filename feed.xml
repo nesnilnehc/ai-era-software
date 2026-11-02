@@ -7,7 +7,19 @@
     <language>zh-cn</language>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[问题] AI 修复失败后再试：给它原始记录，还是先让它总结教训？</title>
+      <link>https://ai-era-software.nesnilnehc.top/#Q-0002</link>
+      <guid isPermaLink="false">urn:ai-era-software:question:Q-0002:b6c2f7d30abbbe3d7a6b542a</guid>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>问题实质修订日期：2026-11-03（仅精确到日；RSS 时间部分统一用 UTC 00:00 表示）。状态：待研究；类型：决策型。待研究问题，不代表已验证结论。
+研究价值：示意场景：AI 修改 CRM 导入功能后，目标测试仍失败。开发者决定下一次尝试拿到什么信息；QA 同时看目标测试和原有回归测试，避免只修好当前错误却破坏其他功能。此场景不是用户系统现状。
+已知：研究公开了记忆构造代码和逐失败结果。本轮重算了主试验的五组通过率及四个配对差值，与发布表一致；这只是公开结果汇总复核，未独立执行修复。原文的目标测试结果和事后全套测试结果不完全一致，不能只用单项测试判断方案优劣。
+未知：在其他模型、更长预算和企业仓库中，原始记录与总结的效果、额外成本和新缺陷风险如何变化，仍不清楚。公开工作目录快照缺失，本轮未展开原始轨迹包、重算置信区间或运行模型，不能确认具体补丁的业务正确性。
+候选：A 回到原始版本，给相同任务，不附上次失败记录。；B 回到原始版本，把上次操作和测试记录交给 AI 再试。；C 先让 AI 从同一失败记录总结，再把总结交给下一次尝试。</description>
+      <category>构造方式</category>
+    </item>
     <item>
       <title>[问题] AI 提醒代码可能不安全：谁来查，没查完能合并吗？</title>
       <link>https://ai-era-software.nesnilnehc.top/#Q-0001</link>
@@ -20,6 +32,16 @@
 候选：A 提交代码的人自己查，不新增自动拦合并的规则。；B 指定另一人再查，但不新增自动拦合并的规则。；C 审查者认定必须先处理，就加规则挡合并；处理好再放行。</description>
       <category>安全与攻防</category>
       <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] What Does a Repair Agent Gain from Remembering Its Failure? An Exploratory Study on Real Python Bugs</title>
+      <link>https://arxiv.org/abs/2610.41433</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:c8d98d8234c3922b3404c0ee2adbdeae8a972a48569d9f6a651ad6a35d17322b</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-30。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+对 75 个 Python 缺陷的首次修复进行重复试验，并对 181 次失败比较普通重试、原始记录、模型总结与测试信号。公开输入、逐失败结果和分析脚本，另做较大模型及仅告知失败的对照；主要比较未得到显著改善，事后全套测试检查改变部分结果判断。
+收录理由：相较已有跨任务经验迁移研究，新增同一缺陷失败后如何传递记录的配对比较，并把总结步骤与原始记录、失败通知分开。可检查记忆构造代码及逐失败结果，区分目标测试通过与其他测试退化；不把未显著解释为没有效果，也不外推到所有模型和仓库。</description>
+      <category>构造方式</category>
     </item>
     <item>
       <title>[资料] How Do Coding-Agent Harnesses Self-Evolve? An Empirical Study of Retrospective Adaptation</title>

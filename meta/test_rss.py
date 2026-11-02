@@ -34,8 +34,10 @@ class RSSFeedTests(unittest.TestCase):
     def test_all_guids_unique_and_question_links_open_details(self):
         root=ET.fromstring(render_feed([Item(*i) for i in ITEMS],self.data));entries=root.findall('channel/item')
         guids=[i.findtext('guid') for i in entries];self.assertEqual(len(guids),len(set(guids)))
-        question=next(i for i in entries if i.findtext('title').startswith('[问题]'))
-        self.assertTrue(question.findtext('link').endswith('#Q-0001'))
+        questions=[i for i in entries if i.findtext('title').startswith('[问题]')]
+        self.assertEqual(len(questions),len(self.data['questions']))
+        self.assertEqual({i.findtext('link').rsplit('#',1)[-1] for i in questions},
+                         {q['id'] for q in self.data['questions']})
     def test_build_includes_feed_and_exact_self_url(self):
         _, outputs=build.render_outputs();root=ET.fromstring(outputs['feed.xml'])
         self.assertEqual(root.find('channel/{http://www.w3.org/2005/Atom}link').get('href'),FEED_URL)

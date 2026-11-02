@@ -21,8 +21,10 @@ class QuestionValidationTests(unittest.TestCase):
         self.assertTrue(any("历史" in e for e in validate(data)))
 
     def test_merge_preserves_old_id_with_existing_destination(self):
-        data=copy.deepcopy(load_questions()); other=copy.deepcopy(data["questions"][0]); other["id"]="Q-0002"
-        data["questions"].append(other); data["questions"][0].update(status="搁置", merged_into="Q-0002")
+        data=copy.deepcopy(load_questions()); other=copy.deepcopy(data["questions"][0])
+        next_id="Q-%04d" % (1 + max(int(q["id"].split("-")[1]) for q in data["questions"]))
+        other["id"]=next_id
+        data["questions"].append(other); data["questions"][0].update(status="搁置", merged_into=next_id)
         self.assertEqual(validate(data), [])
     def test_malformed_fields_return_errors(self):
         for field,value in (("id", 3),("merged_into", []),("history", [{}]),("sources", [None])):

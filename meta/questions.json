@@ -267,10 +267,145 @@
           ]
         }
       ]
+    },
+    {
+      "id": "Q-0002",
+      "title": "AI 修复失败后再试：给它原始记录，还是先让它总结教训？",
+      "kind": "决策型",
+      "topics": [
+        "构造方式"
+      ],
+      "tags": [
+        "retry-evidence"
+      ],
+      "basis": "新收录研究把同一次失败配对交给不同重试方式，并区分原始记录与模型总结。这提供了比较方法，但尚不能确定哪种方式更适合企业软件的修复任务。",
+      "value": "示意场景：AI 修改 CRM 导入功能后，目标测试仍失败。开发者决定下一次尝试拿到什么信息；QA 同时看目标测试和原有回归测试，避免只修好当前错误却破坏其他功能。此场景不是用户系统现状。",
+      "known": "研究公开了记忆构造代码和逐失败结果。本轮重算了主试验的五组通过率及四个配对差值，与发布表一致；这只是公开结果汇总复核，未独立执行修复。原文的目标测试结果和事后全套测试结果不完全一致，不能只用单项测试判断方案优劣。",
+      "unknown": "在其他模型、更长预算和企业仓库中，原始记录与总结的效果、额外成本和新缺陷风险如何变化，仍不清楚。公开工作目录快照缺失，本轮未展开原始轨迹包、重算置信区间或运行模型，不能确认具体补丁的业务正确性。",
+      "next_step": "先在公开结果中按同一失败对齐三种方案，区分框架失败、目标测试通过和全套测试结果，并核对总结调用成本是否计入。若证据仍不足，再拟定隔离的公开缺陷试验：固定起始版本与预算，记录总耗时、费用及回归失败；这里只列研究计划，不自动运行模型或修改真实业务系统。",
+      "status": "待研究",
+      "updated": "2026-11-03",
+      "merged_into": null,
+      "history": [
+        {
+          "date": "2026-11-03",
+          "reason": "依据失败记忆配对研究新增问题；区别于 Q-0001 的人工审批与合并控制。新增可复用标签 retry-evidence，专门表示重试时传递哪些证据，便于关联后续重试与恢复材料；三个方案均待评估。"
+        }
+      ],
+      "sources": [
+        {
+          "id": "failure-memory-paper",
+          "title": "失败记忆研究 v1 · 试验设计与限制",
+          "url": "https://arxiv.org/html/2610.41433v1",
+          "checked": "2026-11-03",
+          "evidence": "核读 III、IV、VI：区分重试条件、目标测试与事后全套测试；单一模型家族、紧预算及中断排除限制外推。未显著不等于证明没有效果。"
+        },
+        {
+          "id": "failure-memory-code",
+          "title": "失败记忆构造 · 同一记录与总结输入",
+          "url": "https://github.com/Weypher/agent-failure-memory/blob/1827cdb9f8a939d653baf6be3d94f1e00589fe93/m1/memory.py",
+          "checked": "2026-11-03",
+          "evidence": "静态核读 failure_record、reflection_messages、retry_messages：NONE 不加失败记录，HISTORY 使用截断记录，REFLECT 使用从同一记录生成的总结。未运行代码或模型。"
+        },
+        {
+          "id": "failure-memory-data",
+          "title": "公开逐失败结果 · 主试验 C.json",
+          "url": "https://github.com/Weypher/agent-failure-memory/blob/1827cdb9f8a939d653baf6be3d94f1e00589fe93/data/results/full/C.json",
+          "checked": "2026-11-03",
+          "evidence": "用自写标准库代码汇总，五组通过率和四个配对点估计与发布分析表一致；这是数据汇总核查，不是独立复现实验。"
+        },
+        {
+          "id": "failure-memory-analysis",
+          "title": "主试验分析代码 · 配对与缺失处理",
+          "url": "https://github.com/Weypher/agent-failure-memory/blob/1827cdb9f8a939d653baf6be3d94f1e00589fe93/m1/analyze_main.py",
+          "checked": "2026-11-03",
+          "evidence": "静态核读 itt、paired 及分析入口：框架失败按缺失处理，按任务聚类分析并校正多重比较；本轮未执行原脚本或复算区间。"
+        }
+      ],
+      "basis_refs": [
+        "failure-memory-paper"
+      ],
+      "known_refs": [
+        "failure-memory-paper",
+        "failure-memory-code",
+        "failure-memory-data"
+      ],
+      "next_step_refs": [
+        "failure-memory-data",
+        "failure-memory-analysis"
+      ],
+      "checks": [
+        {
+          "id": "V-001",
+          "date": "2026-11-03",
+          "result": "已核对 450 次首次尝试、181 次失败及五组通过率，四个配对差值一致；总结组有一次框架失败，不能把其分母写成 181。未重跑模型、测试或置信区间。",
+          "source_refs": [
+            "failure-memory-data",
+            "failure-memory-analysis"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "content": "回到原始版本，给相同任务，不附上次失败记录。",
+          "basis": "待评估方案：开发者在隔离副本恢复起始版本，让 AI 重新修复；用作判断额外记忆是否真的有帮助的基准。 三种方案都由 QA 检查目标测试与原有回归测试；任一关键检查失败则保留失败状态，由开发者决定继续修复或停止，不能把补丁直接当作已上线。",
+          "evidence_needed": "比较同一失败、同一起始版本下的目标测试、回归测试、总费用和耗时；核对框架错误与未运行检查，不以绿色摘要替代日志。",
+          "conditions": "起始版本、任务和预算须一致；已确认的安全限制仍保留，不能为了对照取消。",
+          "cost": "省去整理记忆，但可能重复排查；总成本待比较。",
+          "basis_refs": [
+            "failure-memory-code",
+            "failure-memory-paper"
+          ],
+          "evidence_refs": [],
+          "counter_refs": [],
+          "target_refs": [
+            "failure-memory-data",
+            "failure-memory-analysis"
+          ]
+        },
+        {
+          "id": "B",
+          "content": "回到原始版本，把上次操作和测试记录交给 AI 再试。",
+          "basis": "待评估方案：开发者给 AI 可追溯的失败记录，并明确截断范围；不把上次错误推断当事实。记录缺失时先说明，不能假装完整。 三种方案都由 QA 检查目标测试与原有回归测试；任一关键检查失败则保留失败状态，由开发者决定继续修复或停止，不能把补丁直接当作已上线。",
+          "evidence_needed": "比较同一失败、同一起始版本下的目标测试、回归测试、总费用和耗时；核对框架错误与未运行检查，不以绿色摘要替代日志。",
+          "conditions": "记录能够合法使用且已去除敏感信息；需控制长度并标明遗漏。",
+          "cost": "增加输入和阅读成本；可能重复受错误线索影响，效果待验证。",
+          "basis_refs": [
+            "failure-memory-code",
+            "failure-memory-paper"
+          ],
+          "evidence_refs": [],
+          "counter_refs": [],
+          "target_refs": [
+            "failure-memory-data",
+            "failure-memory-analysis"
+          ]
+        },
+        {
+          "id": "C",
+          "content": "先让 AI 从同一失败记录总结，再把总结交给下一次尝试。",
+          "basis": "待评估方案：开发者保留原记录，让 AI 写出已尝试动作、失败证据及不确定点；发现总结与记录冲突时回查原文，再决定是否使用。 三种方案都由 QA 检查目标测试与原有回归测试；任一关键检查失败则保留失败状态，由开发者决定继续修复或停止，不能把补丁直接当作已上线。",
+          "evidence_needed": "比较同一失败、同一起始版本下的目标测试、回归测试、总费用和耗时；核对框架错误与未运行检查，不以绿色摘要替代日志。",
+          "conditions": "总结必须能追溯原记录，不能用猜测补齐缺失原因；总结调用计入预算。",
+          "cost": "多一次总结调用及必要核对；压缩信息可能遗漏细节，不能预设更便宜或更准确。",
+          "basis_refs": [
+            "failure-memory-code",
+            "failure-memory-paper"
+          ],
+          "evidence_refs": [],
+          "counter_refs": [],
+          "target_refs": [
+            "failure-memory-data",
+            "failure-memory-analysis"
+          ]
+        }
+      ]
     }
   ],
   "tag_vocabulary": {
     "human-review": "人工复核",
-    "merge-gate": "合并门禁"
+    "merge-gate": "合并门禁",
+    "retry-evidence": "重试证据"
   }
 }
