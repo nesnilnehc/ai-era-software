@@ -7,7 +7,17 @@
     <language>zh-cn</language>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[资料] FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification</title>
+      <link>https://arxiv.org/abs/2611.13241</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:aa6c36b89790f103c5a669335c2f6f8562e7981e6493932f55696738f162fec0</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-09。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+用函数级控制流图或数据流图定位问题，编辑之前记录预期的结构变化，编辑后重建图并比较；结束时还检查计划没有覆盖的修改。论文在六种模型与基准组合中比较修复通过率及词元用量。
+收录理由：新增以函数图变化表达计划、复核实际修改的工程做法；不同于 EPISTEME 的逐工具调用审计，也不同于 PACE-Bench 按需求验收点给补丁打分。作者原仓公开计划与比对实现；同类结构变化也可能判为匹配，工作流约定不是强制门禁，图匹配不证明业务语义正确。作者报告五种组合显著减少词元，六种均未检出修复率的显著差异；不据此认定修复率相同。</description>
+      <category>构造方式</category>
+    </item>
     <item>
       <title>[资料] EPISTEME: Trustworthy Coding Agents Through Tool Call Intent</title>
       <link>https://arxiv.org/abs/2611.06563</link>

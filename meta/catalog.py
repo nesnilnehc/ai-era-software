@@ -102,6 +102,13 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-09", "-", "FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification",
+     "York University (Melika Sepidband; Jiho Shin; Song Wang; Hadi Hemmati)",
+     "论文", "学界", ["构造方式"],
+     ["MCP", "empirical-study"],
+     "https://arxiv.org/abs/2611.13241",
+     "", "用函数级控制流图或数据流图定位问题，编辑之前记录预期的结构变化，编辑后重建图并比较；结束时还检查计划没有覆盖的修改。论文在六种模型与基准组合中比较修复通过率及词元用量。",
+     "新增以函数图变化表达计划、复核实际修改的工程做法；不同于 EPISTEME 的逐工具调用审计，也不同于 PACE-Bench 按需求验收点给补丁打分。作者原仓公开计划与比对实现；同类结构变化也可能判为匹配，工作流约定不是强制门禁，图匹配不证明业务语义正确。作者报告五种组合显著减少词元，六种均未检出修复率的显著差异；不据此认定修复率相同。"),
     ("2026-11-04", "-", "EPISTEME: Trustworthy Coding Agents Through Tool Call Intent",
      "KTH Royal Institute of Technology (Sofia Bobadilla; Carmine Cesarano; Raphina Liu; Javier Ron; Martin Monperrus)",
      "论文", "学界", ["构造方式", "运行与问责"],
