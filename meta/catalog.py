@@ -102,6 +102,13 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-13", "-", "HerAgent: A Block-Level Checkpointing Harness for Coding-Agent Environment Setup",
+     "University College London; Uppsala University; Carnegie Mellon University (Xiang Li; Siyu Lu; Federica Sarro; Claire Le Goues; He Ye)",
+     "论文", "学界", ["构造方式"],
+     ["sandbox", "empirical-study"],
+     "https://arxiv.org/abs/2611.18443",
+     "", "构建环境时把命令按功能分块，验证通过后保存容器检查点；遇到较晚暴露的错误，可回到早先的块重做，再在干净环境重放保存的脚本。论文用四套环境配置数据集比较恢复方式。",
+     "与 FlowPlan 的代码结构复核及失败记忆研究的重试输入不同，该方法把构建环境的检查点、功能块修复和最终脚本重放分开。作者原仓可核对分块存储、检查点与干净重放的实现；这些是测试环境构建结果，不是业务补丁验收或生产部署验证。"),
     ("2026-11-09", "-", "FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification",
      "York University (Melika Sepidband; Jiho Shin; Song Wang; Hadi Hemmati)",
      "论文", "学界", ["构造方式"],

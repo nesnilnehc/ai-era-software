@@ -7,7 +7,17 @@
     <language>zh-cn</language>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[资料] HerAgent: A Block-Level Checkpointing Harness for Coding-Agent Environment Setup</title>
+      <link>https://arxiv.org/abs/2611.18443</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:a9059e56e65c6d8045471a39085db346d85e2bde2938e9f3c925853ef149e597</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-13。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+构建环境时把命令按功能分块，验证通过后保存容器检查点；遇到较晚暴露的错误，可回到早先的块重做，再在干净环境重放保存的脚本。论文用四套环境配置数据集比较恢复方式。
+收录理由：与 FlowPlan 的代码结构复核及失败记忆研究的重试输入不同，该方法把构建环境的检查点、功能块修复和最终脚本重放分开。作者原仓可核对分块存储、检查点与干净重放的实现；这些是测试环境构建结果，不是业务补丁验收或生产部署验证。</description>
+      <category>构造方式</category>
+    </item>
     <item>
       <title>[资料] FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification</title>
       <link>https://arxiv.org/abs/2611.13241</link>
