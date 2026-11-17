@@ -280,16 +280,20 @@
       ],
       "basis": "新收录研究把同一次失败配对交给不同重试方式，并区分原始记录与模型总结。这提供了比较方法，但尚不能确定哪种方式更适合企业软件的修复任务。",
       "value": "示意场景：AI 修改 CRM 导入功能后，目标测试仍失败。开发者决定下一次尝试拿到什么信息；QA 同时看目标测试和原有回归测试，避免只修好当前错误却破坏其他功能。此场景不是用户系统现状。",
-      "known": "研究公开了记忆构造代码和逐失败结果。本轮重算了主试验的五组通过率及四个配对差值，与发布表一致；这只是公开结果汇总复核，未独立执行修复。原文的目标测试结果和事后全套测试结果不完全一致，不能只用单项测试判断方案优劣。",
+      "known": "研究公开了记忆构造代码和逐失败结果。本轮重算了主试验的五组通过率及四个配对差值，与发布表一致；这只是公开结果汇总复核，未独立执行修复。原文的目标测试结果和事后全套测试结果不完全一致，不能只用单项测试判断方案优劣。 GitHub 的项目规范和配套测试提供一个记账例子：看不到上次是否结束就记为未知，不能算作成功或失败；同一次运行的汇总快照不重复算费用。",
       "unknown": "在其他模型、更长预算和企业仓库中，原始记录与总结的效果、额外成本和新缺陷风险如何变化，仍不清楚。公开工作目录快照缺失，本轮未展开原始轨迹包、重算置信区间或运行模型，不能确认具体补丁的业务正确性。",
-      "next_step": "先在公开结果中按同一失败对齐三种方案，区分框架失败、目标测试通过和全套测试结果，并核对总结调用成本是否计入。若证据仍不足，再拟定隔离的公开缺陷试验：固定起始版本与预算，记录总耗时、费用及回归失败；这里只列研究计划，不自动运行模型或修改真实业务系统。",
+      "next_step": "先在公开结果中按同一失败对齐三种方案，区分框架失败、目标测试通过和全套测试结果，并核对总结调用成本是否计入。若证据仍不足，再拟定隔离的公开缺陷试验：固定起始版本与预算，记录总耗时、费用及回归失败；这里只列研究计划，不自动运行模型或修改真实业务系统。 设计记录表时，单列未观察到完成、归属不明和重复快照；不把它们合成普通测试失败。",
       "status": "待研究",
-      "updated": "2026-11-03",
+      "updated": "2026-11-18",
       "merged_into": null,
       "history": [
         {
           "date": "2026-11-03",
           "reason": "依据失败记忆配对研究新增问题；区别于 Q-0001 的人工审批与合并控制。新增可复用标签 retry-evidence，专门表示重试时传递哪些证据，便于关联后续重试与恢复材料；三个方案均待评估。"
+        },
+        {
+          "date": "2026-11-18",
+          "reason": "补充记录中断和计算费用的具体规则，不改变三个方案、分类或待研究状态。"
         }
       ],
       "sources": [
@@ -320,6 +324,20 @@
           "url": "https://github.com/Weypher/agent-failure-memory/blob/1827cdb9f8a939d653baf6be3d94f1e00589fe93/m1/analyze_main.py",
           "checked": "2026-11-03",
           "evidence": "静态核读 itt、paired 及分析入口：框架失败按缺失处理，按任务聚类分析并校正多重比较；本轮未执行原脚本或复算区间。"
+        },
+        {
+          "id": "gh-aw-retry-spec",
+          "title": "GitHub Agentic Workflows 项目草稿 · 重试记录与用量",
+          "url": "https://github.com/github/gh-aw/blob/ea67aef627d4fbfbbfd5a956cb2d74f0574ce645/docs/src/content/docs/specs/unified-agent-session-specification.md#L1388",
+          "checked": "2026-11-18",
+          "evidence": "§6.4 区分真实观察到的尝试、摘要和用量；无清单不推造，未观察到完成的退出码为空，时间证据不足不猜归属。"
+        },
+        {
+          "id": "gh-aw-retry-fixture",
+          "title": "同提交的重试记录测试",
+          "url": "https://github.com/github/gh-aw/blob/ea67aef627d4fbfbbfd5a956cb2d74f0574ce645/actions/setup/js/harness_retry_session.test.cjs",
+          "checked": "2026-11-18",
+          "evidence": "测试覆盖缺失清单、中断退出码、无法归属的记录与快照去重。只核读测试，未执行，未比较原始记录和总结的修复效果。"
         }
       ],
       "basis_refs": [
@@ -328,11 +346,14 @@
       "known_refs": [
         "failure-memory-paper",
         "failure-memory-code",
-        "failure-memory-data"
+        "failure-memory-data",
+        "gh-aw-retry-spec",
+        "gh-aw-retry-fixture"
       ],
       "next_step_refs": [
         "failure-memory-data",
-        "failure-memory-analysis"
+        "failure-memory-analysis",
+        "gh-aw-retry-spec"
       ],
       "checks": [
         {
@@ -342,6 +363,15 @@
           "source_refs": [
             "failure-memory-data",
             "failure-memory-analysis"
+          ]
+        },
+        {
+          "id": "V-002",
+          "date": "2026-11-18",
+          "result": "按同一固定提交核对规范和四类测试用例。补充的是重试记录和用量计算规则，没有运行测试，也不提供方案 A、B、C 的效果证据。",
+          "source_refs": [
+            "gh-aw-retry-spec",
+            "gh-aw-retry-fixture"
           ]
         }
       ],
