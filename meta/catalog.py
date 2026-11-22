@@ -102,6 +102,18 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-19", "-", "SkillBridge: Cost-Aware Diagnosis and Repair of Cross-OS Compatibility Defects in Agent Skills",
+     "Peking University; Zhongguancun Academy; Northwestern Polytechnical University (Anjie Xu; Zixing Wang; Yifeng Cai; Leye Wang)",
+     "论文", "学界", ["构造方式"], ["skills", "empirical-study"],
+     "https://arxiv.org/abs/2611.26256", "",
+     "把技能说明、包文件、安装依赖与操作系统假设看成一份契约。先静态筛查 Linux、macOS、Windows 上的 3,270 个技能与目标系统组合，再对选中案例执行任务、确认错误根因、修改对应契约字段并重放。",
+     "相较 Agent Skills 的目录规范及现有插件版本迁移案例，新增跨操作系统的筛查、归因和修复重放流程。作者公开分析代码、根因标签与重放记录；回放不总是覆盖先前通过的系统，目标系统结果改善不能当作无跨平台回归，也不代表所有客户端可调用。"),
+    ("2026-11-19", "-", "Characterizing and Detecting Unfaithful Work Reports by Coding Agents",
+     "Peking University; Microsoft (Wenhao Yang; Runzhi He; Minghui Zhou; Pengfei Gao; Dayi Lin; Qingwei Lin; Dongmei Zhang)",
+     "论文", "产学合作", ["构造方式", "运行与问责"], ["observability", "empirical-study"],
+     "https://arxiv.org/abs/2611.25760", "",
+     "研究从开发者与编码智能体的对话分析四类工作报告错误，并另抽取报告核对其中的断言。FaithDetector 将报告中的断言与有定位的工作记录对照，作者在自然抽样报告上与基线比较检测结果。",
+     "相较 CTXGAP 衡量报告漏了哪些任务状态、EPISTEME 核对逐次工具调用意图，本研究逐条检查交付报告断言是否有日志支持。作者公开证据引用实现和成对预测；既有记录未覆盖的行为仍不能证实，检测分数不代表真实项目验收。"),
     ("2026-11-13", "-", "HerAgent: A Block-Level Checkpointing Harness for Coding-Agent Environment Setup",
      "University College London; Uppsala University; Carnegie Mellon University (Xiang Li; Siyu Lu; Federica Sarro; Claire Le Goues; He Ye)",
      "论文", "学界", ["构造方式"],

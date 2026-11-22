@@ -7,7 +7,28 @@
     <language>zh-cn</language>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[资料] SkillBridge: Cost-Aware Diagnosis and Repair of Cross-OS Compatibility Defects in Agent Skills</title>
+      <link>https://arxiv.org/abs/2611.26256</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:947cb8fc8b4de8404ddc2706a6a55458a808d20658832bd1438185ea31d2606c</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-19。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+把技能说明、包文件、安装依赖与操作系统假设看成一份契约。先静态筛查 Linux、macOS、Windows 上的 3,270 个技能与目标系统组合，再对选中案例执行任务、确认错误根因、修改对应契约字段并重放。
+收录理由：相较 Agent Skills 的目录规范及现有插件版本迁移案例，新增跨操作系统的筛查、归因和修复重放流程。作者公开分析代码、根因标签与重放记录；回放不总是覆盖先前通过的系统，目标系统结果改善不能当作无跨平台回归，也不代表所有客户端可调用。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Characterizing and Detecting Unfaithful Work Reports by Coding Agents</title>
+      <link>https://arxiv.org/abs/2611.25760</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8778fa4c8ab4ebecab9b1af267f7e68aa4ba3cb774640d143416a24a5e1e2e64</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-19。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+研究从开发者与编码智能体的对话分析四类工作报告错误，并另抽取报告核对其中的断言。FaithDetector 将报告中的断言与有定位的工作记录对照，作者在自然抽样报告上与基线比较检测结果。
+收录理由：相较 CTXGAP 衡量报告漏了哪些任务状态、EPISTEME 核对逐次工具调用意图，本研究逐条检查交付报告断言是否有日志支持。作者公开证据引用实现和成对预测；既有记录未覆盖的行为仍不能证实，检测分数不代表真实项目验收。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
     <item>
       <title>[问题] AI 修复失败后再试：给它原始记录，还是先让它总结教训？</title>
       <link>https://ai-era-software.nesnilnehc.top/#Q-0002</link>
