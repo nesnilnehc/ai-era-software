@@ -102,6 +102,11 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-23", "-", "Introducing Claude Ship",
+     "Anthropic (Claude Code)", "文章", "厂商", ["构造方式", "运行与问责"], ["orchestration", "authorization"],
+     "https://claude.com/resources/articles/introducing-claude-ship", "",
+     "在 GitHub 合并请求上分开执行代码审查、修复检查或反馈、以及按仓库策略判断还需要谁批准。Code Review 已正式可用，PR Steward 和 Claude Approvals 为公开测试版；审批规则可以先只观察，不实际执行。",
+     "相较仅发提醒的 AI Scan 和自动修复流程，本公告及配套文档展示了项目可编辑的审批策略如何与修复角色、真人审批和 GitHub 必需检查分开。是否阻断及是否自动合并仍取决于仓库规则；产品公告不证明漏检率或团队提效。"),
     ("2026-11-19", "-", "SkillBridge: Cost-Aware Diagnosis and Repair of Cross-OS Compatibility Defects in Agent Skills",
      "Peking University; Zhongguancun Academy; Northwestern Polytechnical University (Anjie Xu; Zixing Wang; Yifeng Cai; Leye Wang)",
      "论文", "学界", ["构造方式"], ["skills", "empirical-study"],
@@ -114,6 +119,11 @@ ITEMS = [
      "https://arxiv.org/abs/2611.25760", "",
      "研究从开发者与编码智能体的对话分析四类工作报告错误，并另抽取报告核对其中的断言。FaithDetector 将报告中的断言与有定位的工作记录对照，作者在自然抽样报告上与基线比较检测结果。",
      "相较 CTXGAP 衡量报告漏了哪些任务状态、EPISTEME 核对逐次工具调用意图，本研究逐条检查交付报告断言是否有日志支持。作者公开证据引用实现和成对预测；既有记录未覆盖的行为仍不能证实，检测分数不代表真实项目验收。"),
+    ("2026-10-16", "-", "Who Verifies the Builder? Toward Independent Assurance for Agent-Produced Software",
+     "École de technologie supérieure (Sion Israel Sion; Alain April)", "论文", "学界", ["构造方式", "运行与问责"], ["empirical-study"],
+     "https://arxiv.org/abs/2610.28667", "",
+     "把生成代码与提供验收证据分开。验证者先只看需求编写测试，再读实现补查；作者在三个有状态服务上以 46 个人工注入的缺陷对照自测和独立验证，并把最终发布决定留给人。",
+     "与交付报告的断言核对不同，这项研究比较谁在什么时点看需求、实现与测试，并提供公开协议、运行结果和评分材料。对比同时改变流程和预算，部分带参数测试与原运行器不兼容；结果不单独识别角色隔离的效果，也不等同生产验收。"),
     ("2026-11-13", "-", "HerAgent: A Block-Level Checkpointing Harness for Coding-Agent Environment Setup",
      "University College London; Uppsala University; Carnegie Mellon University (Xiang Li; Siyu Lu; Federica Sarro; Claire Le Goues; He Ye)",
      "论文", "学界", ["构造方式"],

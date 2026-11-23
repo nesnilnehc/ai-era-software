@@ -7,7 +7,31 @@
     <language>zh-cn</language>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 19 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[问题] AI 提醒代码可能不安全：谁来查，没查完能合并吗？</title>
+      <link>https://ai-era-software.nesnilnehc.top/#Q-0001</link>
+      <guid isPermaLink="false">urn:ai-era-software:question:Q-0001:5b716f61280733a3e1501fd6</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>问题实质修订日期：2026-11-24（仅精确到日；RSS 时间部分统一用 UTC 00:00 表示）。状态：待研究；类型：决策型。待研究问题，不代表已验证结论。
+研究价值：示意：AI 检查一段准备合并的代码，提醒“可能不安全”，但不会拦合并。A 由开发者自己查；B 找指定的人再查；C 认定必须处理时先挡住合并。合并是把改动并入项目代码，不等于发布上线。
+已知：已核读 GitHub 原文：AI Scan 在代码合并请求（PR）中显示提醒。这些提醒不会让代码扫描检查失败，也不能直接设成“发现问题就不准合并”的规则。来自分叉副本（fork）的请求和 Dependabot 自动创建的请求不在扫描范围。启用代码扫描和 AI Scan 设置，且改动属于支持的语言或框架时，才会运行。官方还说明可能有误报，即看似有问题、实际没有问题。这里确认的是产品说明，没有测试 A/B/C。 新增相关个案：Bashi AI 作者报告，智能体可以通过人的账号提交审批。因此看到另一账号点了批准，不足以证明另一个人亲自判断；该个案不是 AI Scan 的效果验证。 本轮另核读官方执行条件：硬预算用尽、没有可用 AI Credits 时，AI Scan 不能产生发现；新提交会触发扫描，结果会陆续出现。AI Scan 与 CodeQL 独立运行，因此另一项检查的状态不能替代它的执行记录。 另一个产品 Agentic Workflows 的官方文档提供了具体边界：检测执行失败或结果无法解析，不等于发现威胁，也不等于检查通过；警告模式可以产生带警告的审查 PR，但警告标签本身不能阻止合并，还需配置仓库合并保护。这不是 AI Scan 新增的能力，也不是 A/B/C 的效果证据。 Agent Merge 的文档进一步区分了自动修复与自动合并：前者可以再次改动 PR，但不会自动启用后者，也不替代审查。此规则不证明修复后的新版本已经被人检查。 GitHub 分支保护文档说明，是否撤销旧批准或要求最近推送重新获批取决于配置，不是自动修复自带保证。必需检查还可能接受跳过状态，因此绿色标记不一定说明相关测试实际执行。 另一个产品 Claude Approvals 提供可先观察、再执行的审批策略：报告“还需要谁批准”不等于已经挡住合并。项目仍要把它设为 GitHub 必需检查，CI 要另设检查。此例不改变 AI Scan 本身的规则。
+未知：还不知道：实际由谁跟进每条提醒，没采纳提醒时怎样说明理由，三种做法各会漏掉多少真问题、花多少检查时间、让合并多等多久。这些来源没有给出比较结果。 对 B/C，还需确认审批是人作出的决定，还是智能体代为提交；审批与检查是否对应最后合并的那版代码。 还需区分“扫描完成且没有提醒”和“扫描未覆盖、未完成或预算不足”，目前未取得实际执行记录来区分这些情况。 还需核查被要求人工审查的输出，在真实仓库规则下是否会被其他自动化继续合并；文档中的审查要求不能替代实际阻断记录。 若自动修复在审批后再次改动代码，原审批和扫描是否仍有效、新版本是否被重新检查，尚缺实际 PR 记录。 尚未确认样本仓库采用哪种重审规则、哪些账号能绕过，以及最后版本的相关测试是否被条件跳过。
+候选：A 提交代码的人自己查，不新增自动拦合并的规则。；B 指定另一人再查，但不新增自动拦合并的规则。；C 审查者认定必须先处理，就加规则挡合并；处理好再放行。</description>
+      <category>安全与攻防</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Introducing Claude Ship</title>
+      <link>https://claude.com/resources/articles/introducing-claude-ship</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b5129d6fc89af52dbb221093582b3062f27076437d52e78fc40a0d58a7f3445f</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-23。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在 GitHub 合并请求上分开执行代码审查、修复检查或反馈、以及按仓库策略判断还需要谁批准。Code Review 已正式可用，PR Steward 和 Claude Approvals 为公开测试版；审批规则可以先只观察，不实际执行。
+收录理由：相较仅发提醒的 AI Scan 和自动修复流程，本公告及配套文档展示了项目可编辑的审批策略如何与修复角色、真人审批和 GitHub 必需检查分开。是否阻断及是否自动合并仍取决于仓库规则；产品公告不证明漏检率或团队提效。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
     <item>
       <title>[资料] SkillBridge: Cost-Aware Diagnosis and Repair of Cross-OS Compatibility Defects in Agent Skills</title>
       <link>https://arxiv.org/abs/2611.26256</link>
@@ -84,19 +108,6 @@
       <category>运行与问责</category>
     </item>
     <item>
-      <title>[问题] AI 提醒代码可能不安全：谁来查，没查完能合并吗？</title>
-      <link>https://ai-era-software.nesnilnehc.top/#Q-0001</link>
-      <guid isPermaLink="false">urn:ai-era-software:question:Q-0001:88d653f428411dcf48ece775</guid>
-      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
-      <description>问题实质修订日期：2026-11-01（仅精确到日；RSS 时间部分统一用 UTC 00:00 表示）。状态：待研究；类型：决策型。待研究问题，不代表已验证结论。
-研究价值：示意：AI 检查一段准备合并的代码，提醒“可能不安全”，但不会拦合并。A 由开发者自己查；B 找指定的人再查；C 认定必须处理时先挡住合并。合并是把改动并入项目代码，不等于发布上线。
-已知：已核读 GitHub 原文：AI Scan 在代码合并请求（PR）中显示提醒。这些提醒不会让代码扫描检查失败，也不能直接设成“发现问题就不准合并”的规则。来自分叉副本（fork）的请求和 Dependabot 自动创建的请求不在扫描范围。启用代码扫描和 AI Scan 设置，且改动属于支持的语言或框架时，才会运行。官方还说明可能有误报，即看似有问题、实际没有问题。这里确认的是产品说明，没有测试 A/B/C。 新增相关个案：Bashi AI 作者报告，智能体可以通过人的账号提交审批。因此看到另一账号点了批准，不足以证明另一个人亲自判断；该个案不是 AI Scan 的效果验证。 本轮另核读官方执行条件：硬预算用尽、没有可用 AI Credits 时，AI Scan 不能产生发现；新提交会触发扫描，结果会陆续出现。AI Scan 与 CodeQL 独立运行，因此另一项检查的状态不能替代它的执行记录。 另一个产品 Agentic Workflows 的官方文档提供了具体边界：检测执行失败或结果无法解析，不等于发现威胁，也不等于检查通过；警告模式可以产生带警告的审查 PR，但警告标签本身不能阻止合并，还需配置仓库合并保护。这不是 AI Scan 新增的能力，也不是 A/B/C 的效果证据。 Agent Merge 的文档进一步区分了自动修复与自动合并：前者可以再次改动 PR，但不会自动启用后者，也不替代审查。此规则不证明修复后的新版本已经被人检查。 GitHub 分支保护文档说明，是否撤销旧批准或要求最近推送重新获批取决于配置，不是自动修复自带保证。必需检查还可能接受跳过状态，因此绿色标记不一定说明相关测试实际执行。
-未知：还不知道：实际由谁跟进每条提醒，没采纳提醒时怎样说明理由，三种做法各会漏掉多少真问题、花多少检查时间、让合并多等多久。这些来源没有给出比较结果。 对 B/C，还需确认审批是人作出的决定，还是智能体代为提交；审批与检查是否对应最后合并的那版代码。 还需区分“扫描完成且没有提醒”和“扫描未覆盖、未完成或预算不足”，目前未取得实际执行记录来区分这些情况。 还需核查被要求人工审查的输出，在真实仓库规则下是否会被其他自动化继续合并；文档中的审查要求不能替代实际阻断记录。 若自动修复在审批后再次改动代码，原审批和扫描是否仍有效、新版本是否被重新检查，尚缺实际 PR 记录。 尚未确认样本仓库采用哪种重审规则、哪些账号能绕过，以及最后版本的相关测试是否被条件跳过。
-候选：A 提交代码的人自己查，不新增自动拦合并的规则。；B 指定另一人再查，但不新增自动拦合并的规则。；C 审查者认定必须先处理，就加规则挡合并；处理好再放行。</description>
-      <category>安全与攻防</category>
-      <category>运行与问责</category>
-    </item>
-    <item>
       <title>[资料] What Does a Repair Agent Gain from Remembering Its Failure? An Exploratory Study on Real Python Bugs</title>
       <link>https://arxiv.org/abs/2610.41433</link>
       <guid isPermaLink="false">urn:ai-era-software:material:c8d98d8234c3922b3404c0ee2adbdeae8a972a48569d9f6a651ad6a35d17322b</guid>
@@ -148,6 +159,17 @@ PACE-Bench 将企业增量开发的 PRD 转成冻结的验收点，结合结构�
 收录理由：报告给出员工采用工具前后比较、会话工时和任务分类的测量口径，记录软件组织在智能体密集运行下的工作重分配与监督成本；补充既有团队成本模拟以外的单一企业观察证据，不推导普遍因果效果。</description>
       <category>商业与组织</category>
       <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Who Verifies the Builder? Toward Independent Assurance for Agent-Produced Software</title>
+      <link>https://arxiv.org/abs/2610.28667</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9d9f6e341b8c3a75c3e2569a9e7b685ff8897b3e33e0e537cb29e10364efb9ce</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-16。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+把生成代码与提供验收证据分开。验证者先只看需求编写测试，再读实现补查；作者在三个有状态服务上以 46 个人工注入的缺陷对照自测和独立验证，并把最终发布决定留给人。
+收录理由：与交付报告的断言核对不同，这项研究比较谁在什么时点看需求、实现与测试，并提供公开协议、运行结果和评分材料。对比同时改变流程和预算，部分带参数测试与原运行器不兼容；结果不单独识别角色隔离的效果，也不等同生产验收。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
     </item>
     <item>
       <title>[资料] CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests</title>
