@@ -102,6 +102,21 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-24", "-", "MCP servers can now ship skills, run tasks, and more with Claude",
+     "Anthropic", "文章", "厂商", ["协议与生态", "构造方式"], ["MCP", "skills", "orchestration"],
+     "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more", "",
+     "Claude 与 Claude Code 开始公测由 MCP 服务端随工具发布、按需载入的技能；公告还区分可在服务端继续运行的长任务，以及在调用中暂停并向用户征询输入的交互机制。",
+     "相较本地技能目录和只发布工具清单的连接器，公告记录了服务端同时分发工作指引与动作的客户端入口；配套 MCP Skills 扩展规范定义技能清单、按项查询与静态资源摘要。规范能力不等同各客户端均已支持，也不保证服务端指引可信。"),
+    ("2026-11-24", "-", "Turn artifacts into Mac and Windows apps",
+     "Anthropic", "文章", "厂商", ["界面与接入", "运行与问责"], ["computer-use", "authorization"],
+     "https://claude.com/resources/articles/install-as-app", "",
+     "Install as app 公测可将部分 Claude Artifacts 安装为有独立图标和窗口的 Mac 或 Windows 应用。应用可调用 Claude 和连接器，随原 Artifact 修改而更新；连接本机功能的权限由用户决定，打开应用需要联网及登录。",
+     "相较浏览器里的共享 Artifact，此入口把生成物变成独立桌面应用，同时保留原稿联动更新与逐版本授权；来自其他网站的内容变动是公告列出的例外。该资料说明分发与授权机制，不代表可以离线运行或向未登录用户分发。"),
+    ("2026-11-19", "-", "Throwing Headcount at the Problem",
+     "Replit (Vaibhav Kumar; Ibrahim Sheikh; Peter Zhong; Saurav Joshi; Patrick Ma; Jason Dellaluce; Darsh Patel; Phil MacEachron; Michele Catasta)", "文章", "厂商", ["构造方式"], ["orchestration", "benchmark", "empirical-study"],
+     "https://frontier.replit.com/throwing-headcount-at-the-problem/", "",
+     "在 Optimization-Bench 的库性能优化任务中，作者比较单智能体与 8、16、32 个智能体的协作设置；冻结的最终分支交给独立环境构建，用仓库测试和公开、隐藏输入核对输出，再测量运行时间。",
+     "相较以代码测试通过率和重建任务为主的协作评测，这项厂商实验提供可检查的性能工作负载、输出等价约束和独立判分。结果随模型、任务和规模变化；比较使用相同墙钟窗口但未匹配总计算资源，不能说明普遍收益或单位成本更优。"),
     ("2026-11-23", "-", "Introducing Claude Ship",
      "Anthropic (Claude Code)", "文章", "厂商", ["构造方式", "运行与问责"], ["orchestration", "authorization"],
      "https://claude.com/resources/articles/introducing-claude-ship", "",

@@ -22,6 +22,28 @@
       <category>运行与问责</category>
     </item>
     <item>
+      <title>[资料] Turn artifacts into Mac and Windows apps</title>
+      <link>https://claude.com/resources/articles/install-as-app</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:b3db646d86cce70fafc8b4dd1e9bdf3dec99882cc3fb01d42f24187a48909126</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Install as app 公测可将部分 Claude Artifacts 安装为有独立图标和窗口的 Mac 或 Windows 应用。应用可调用 Claude 和连接器，随原 Artifact 修改而更新；连接本机功能的权限由用户决定，打开应用需要联网及登录。
+收录理由：相较浏览器里的共享 Artifact，此入口把生成物变成独立桌面应用，同时保留原稿联动更新与逐版本授权；来自其他网站的内容变动是公告列出的例外。该资料说明分发与授权机制，不代表可以离线运行或向未登录用户分发。</description>
+      <category>界面与接入</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] MCP servers can now ship skills, run tasks, and more with Claude</title>
+      <link>https://claude.com/resources/articles/skills-over-mcp-tasks-and-more</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:8befc30ac765ba8adae65db9599dd3cfe5b2adde6a3d6d0bf838921d724ce707</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+Claude 与 Claude Code 开始公测由 MCP 服务端随工具发布、按需载入的技能；公告还区分可在服务端继续运行的长任务，以及在调用中暂停并向用户征询输入的交互机制。
+收录理由：相较本地技能目录和只发布工具清单的连接器，公告记录了服务端同时分发工作指引与动作的客户端入口；配套 MCP Skills 扩展规范定义技能清单、按项查询与静态资源摘要。规范能力不等同各客户端均已支持，也不保证服务端指引可信。</description>
+      <category>协议与生态</category>
+      <category>构造方式</category>
+    </item>
+    <item>
       <title>[资料] Introducing Claude Ship</title>
       <link>https://claude.com/resources/articles/introducing-claude-ship</link>
       <guid isPermaLink="false">urn:ai-era-software:material:b5129d6fc89af52dbb221093582b3062f27076437d52e78fc40a0d58a7f3445f</guid>
@@ -31,6 +53,16 @@
 收录理由：相较仅发提醒的 AI Scan 和自动修复流程，本公告及配套文档展示了项目可编辑的审批策略如何与修复角色、真人审批和 GitHub 必需检查分开。是否阻断及是否自动合并仍取决于仓库规则；产品公告不证明漏检率或团队提效。</description>
       <category>构造方式</category>
       <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Throwing Headcount at the Problem</title>
+      <link>https://frontier.replit.com/throwing-headcount-at-the-problem/</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:d56654755ce7aeaa6e7f895937e6ec4b2e41ea06c2936977aedd5e798a9b4136</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-19。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+在 Optimization-Bench 的库性能优化任务中，作者比较单智能体与 8、16、32 个智能体的协作设置；冻结的最终分支交给独立环境构建，用仓库测试和公开、隐藏输入核对输出，再测量运行时间。
+收录理由：相较以代码测试通过率和重建任务为主的协作评测，这项厂商实验提供可检查的性能工作负载、输出等价约束和独立判分。结果随模型、任务和规模变化；比较使用相同墙钟窗口但未匹配总计算资源，不能说明普遍收益或单位成本更优。</description>
+      <category>构造方式</category>
     </item>
     <item>
       <title>[资料] SkillBridge: Cost-Aware Diagnosis and Repair of Cross-OS Compatibility Defects in Agent Skills</title>
