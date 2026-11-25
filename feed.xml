@@ -44,6 +44,17 @@ Claude 与 Claude Code 开始公测由 MCP 服务端随工具发布、按需载�
       <category>构造方式</category>
     </item>
     <item>
+      <title>[资料] Spec-Test Coverage Gap: Detecting Overspecified Tests in SWE-Bench-Style Benchmarks</title>
+      <link>https://arxiv.org/abs/2611.31839</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:135b764f2af283c6f6cc732234cb649a8decd2f50464f887ac6d6cc5c7a14539</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-24。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+将任务说明与测试补丁交给两种模型独立评分，二者都认为测试限制了未要求的实现细节才标记；作者用既有人工审计和公开运行证据校验标记，再对部分测试调整后重新评判已有补丁。
+收录理由：相较按需求给提交打分的 PACE-Bench，这项研究反向检查评分测试是否拒绝说明允许的实现，并公开任务、评分和复评分记录。标记是筛查，不等于人工逐例确认；测试放宽后通过也不等于补丁满足完整业务要求。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
       <title>[资料] Introducing Claude Ship</title>
       <link>https://claude.com/resources/articles/introducing-claude-ship</link>
       <guid isPermaLink="false">urn:ai-era-software:material:b5129d6fc89af52dbb221093582b3062f27076437d52e78fc40a0d58a7f3445f</guid>

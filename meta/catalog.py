@@ -102,6 +102,11 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-24", "-", "Spec-Test Coverage Gap: Detecting Overspecified Tests in SWE-Bench-Style Benchmarks",
+     "Purdue University (Avi Aggarwal; Yiran Hu)", "论文", "学界", ["构造方式", "运行与问责"], ["benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2611.31839", "",
+     "将任务说明与测试补丁交给两种模型独立评分，二者都认为测试限制了未要求的实现细节才标记；作者用既有人工审计和公开运行证据校验标记，再对部分测试调整后重新评判已有补丁。",
+     "相较按需求给提交打分的 PACE-Bench，这项研究反向检查评分测试是否拒绝说明允许的实现，并公开任务、评分和复评分记录。标记是筛查，不等于人工逐例确认；测试放宽后通过也不等于补丁满足完整业务要求。"),
     ("2026-11-24", "-", "MCP servers can now ship skills, run tasks, and more with Claude",
      "Anthropic", "文章", "厂商", ["协议与生态", "构造方式"], ["MCP", "skills", "orchestration"],
      "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more", "",
