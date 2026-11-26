@@ -102,6 +102,16 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-25", "-", "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches",
+     "Microsoft (Aakash Goel; Benjamin Steenhoek; Yu Hu)", "论文", "厂商", ["构造方式", "运行与问责"], ["benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2611.34875", "",
+     "从 7,660 条完成任务的 Copilot CLI 轨迹中，把最终补丁的编辑块追溯到写入步骤，逐块撤销并重跑任务测试；以同样方法对照开发者补丁，同时区分代码、测试和文档。",
+     "相较按补丁行数衡量改动范围，该研究给出了按编辑块核对必要性和比较自动裁剪的方法。必要性取决于所用测试及分块；样本以跑通任务的轨迹为主，删除后测试仍通过不代表可安全删去该改动。"),
+    ("2026-11-22", "-", "Edit-Induced Dependency Mismatch: Propagation Omissions, Recovery, and Evaluation Blind Spots in Coding Agents",
+     "Alibaba Group (Fei Ding)", "论文", "厂商", ["构造方式", "运行与问责"], ["benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2611.29242", "",
+     "审计编码智能体的修改轨迹，区分过程中更正的遗漏与最终补丁中仍存在的遗漏；对部分任务补跑原测试未覆盖的下游路径，核对上游修改是否传到已有调用方。",
+     "相较检查测试是否额外限制实现或验证报告是否忠实，此研究检查已有下游行为是否被一并更新，附录列出人工审计和定向执行证据。作者所用模型、任务与附加检查有限，不据此估计真实项目的漏测频率。"),
     ("2026-11-24", "-", "Spec-Test Coverage Gap: Detecting Overspecified Tests in SWE-Bench-Style Benchmarks",
      "Purdue University (Avi Aggarwal; Yiran Hu)", "论文", "学界", ["构造方式", "运行与问责"], ["benchmark", "empirical-study"],
      "https://arxiv.org/abs/2611.31839", "",

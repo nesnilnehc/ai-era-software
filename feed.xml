@@ -7,7 +7,18 @@
     <language>zh-cn</language>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>[资料] How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches</title>
+      <link>https://arxiv.org/abs/2611.34875</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:9051afa44fb6f3c90ee368dce143bada8ed78f048c1b560beac12a0ffb6dfe6f</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+从 7,660 条完成任务的 Copilot CLI 轨迹中，把最终补丁的编辑块追溯到写入步骤，逐块撤销并重跑任务测试；以同样方法对照开发者补丁，同时区分代码、测试和文档。
+收录理由：相较按补丁行数衡量改动范围，该研究给出了按编辑块核对必要性和比较自动裁剪的方法。必要性取决于所用测试及分块；样本以跑通任务的轨迹为主，删除后测试仍通过不代表可安全删去该改动。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
     <item>
       <title>[问题] AI 提醒代码可能不安全：谁来查，没查完能合并吗？</title>
       <link>https://ai-era-software.nesnilnehc.top/#Q-0001</link>
@@ -62,6 +73,17 @@ Claude 与 Claude Code 开始公测由 MCP 服务端随工具发布、按需载�
       <description>原文首发日期：2026-11-23。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
 在 GitHub 合并请求上分开执行代码审查、修复检查或反馈、以及按仓库策略判断还需要谁批准。Code Review 已正式可用，PR Steward 和 Claude Approvals 为公开测试版；审批规则可以先只观察，不实际执行。
 收录理由：相较仅发提醒的 AI Scan 和自动修复流程，本公告及配套文档展示了项目可编辑的审批策略如何与修复角色、真人审批和 GitHub 必需检查分开。是否阻断及是否自动合并仍取决于仓库规则；产品公告不证明漏检率或团队提效。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
+      <title>[资料] Edit-Induced Dependency Mismatch: Propagation Omissions, Recovery, and Evaluation Blind Spots in Coding Agents</title>
+      <link>https://arxiv.org/abs/2611.29242</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:f77e8872cdb550485b40e845a714fa41c5d334a6fc8febeee8b0294ce3bfe068</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-22。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+审计编码智能体的修改轨迹，区分过程中更正的遗漏与最终补丁中仍存在的遗漏；对部分任务补跑原测试未覆盖的下游路径，核对上游修改是否传到已有调用方。
+收录理由：相较检查测试是否额外限制实现或验证报告是否忠实，此研究检查已有下游行为是否被一并更新，附录列出人工审计和定向执行证据。作者所用模型、任务与附加检查有限，不据此估计真实项目的漏测频率。</description>
       <category>构造方式</category>
       <category>运行与问责</category>
     </item>
