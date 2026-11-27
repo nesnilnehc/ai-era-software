@@ -102,6 +102,16 @@ Item = namedtuple("Item", "first updated title org genre org_kind topics tags ur
 
 # 发布日期, 标题, 出品方, 体裁, 出品方类型, [主题], [标签], 出处, 原件键名（对应 fetched.tsv 的名称列）, 摘要, 收录理由
 ITEMS = [
+    ("2026-11-25", "-", "Evaluating More with Less: Black-Box Test Selection for AI Agents",
+     "Delft University of Technology (Ali Asgari; Mitchell Olsthoorn; Arie van Deursen; Annibale Panichella)", "论文", "学界", ["构造方式", "运行与问责"], ["benchmark", "empirical-study"],
+     "https://arxiv.org/abs/2611.34617", "",
+     "用任务说明、分类和难度估计挑选少量任务，不预先运行待测智能体；在十套基准上分别比较估计整体成功率和尽早发现失败。",
+     "给更新模型、提示词或工具后的回归评测提供两类不同的选题方法。论文分别报告估计误差和找出失败的数量；这里不将这些结果视为真实项目的验收表现。"),
+    ("2026-10-23", "-", "Ephyra: A Property-Based Testing Framework for the LLM Era",
+     "Datadog (Alperen Keles)", "论文", "厂商", ["构造方式"], ["empirical-study"],
+     "https://arxiv.org/abs/2611.23282", "",
+     "介绍一个 Rust 测试库，把输入生成、变异和反例缩减拆成可替换部件。运行时检查生成的输入是否满足约束，并利用统计和覆盖率反馈指导智能体改进输入生成器。",
+     "展示从编写单个测试用例转向维护软件应满足的规则和输入约束的测试工作流。论文列出案例，项目公开实现与示例；初步案例不等于同预算下比现有方法更有效。"),
     ("2026-11-25", "-", "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches",
      "Microsoft (Aakash Goel; Benjamin Steenhoek; Yu Hu)", "论文", "厂商", ["构造方式", "运行与问责"], ["benchmark", "empirical-study"],
      "https://arxiv.org/abs/2611.34875", "",

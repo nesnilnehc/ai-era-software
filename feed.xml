@@ -9,6 +9,17 @@
     <atom:link href="https://raw.githubusercontent.com/nesnilnehc/ai-era-software/main/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Wed, 25 Nov 2026 00:00:00 GMT</lastBuildDate>
     <item>
+      <title>[资料] Evaluating More with Less: Black-Box Test Selection for AI Agents</title>
+      <link>https://arxiv.org/abs/2611.34617</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:e826266e972595c91ccdfdc02f6243af91f7dab1bbb56f92b2edacf185173c39</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-11-25。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+用任务说明、分类和难度估计挑选少量任务，不预先运行待测智能体；在十套基准上分别比较估计整体成功率和尽早发现失败。
+收录理由：给更新模型、提示词或工具后的回归评测提供两类不同的选题方法。论文分别报告估计误差和找出失败的数量；这里不将这些结果视为真实项目的验收表现。</description>
+      <category>构造方式</category>
+      <category>运行与问责</category>
+    </item>
+    <item>
       <title>[资料] How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches</title>
       <link>https://arxiv.org/abs/2611.34875</link>
       <guid isPermaLink="false">urn:ai-era-software:material:9051afa44fb6f3c90ee368dce143bada8ed78f048c1b560beac12a0ffb6dfe6f</guid>
@@ -201,6 +212,16 @@ Claude 与 Claude Code 开始公测由 MCP 服务端随工具发布、按需载�
       <description>原文首发日期：2026-10-26。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
 对 146 篇论文中的 325 项实验编码，区分模型、框架实现、框架配置、任务和用户交互，检查报告完整性及比较中的混杂因素。公开逐实验标注、证据和汇总脚本；仅编码论文正文，未检查其外链资产，模型间一致性不等同人工标注准确率。
 收录理由：相较既有模型与框架性能对比，新增跨研究的实验配置披露与因果归因审查方法；公开编码规则、325 行数据及重复和缺失项检查脚本，使评测证据的可比较性可以核对。参考框架及扩展组合实验仍是提案，不作为已验证效果。</description>
+      <category>构造方式</category>
+    </item>
+    <item>
+      <title>[资料] Ephyra: A Property-Based Testing Framework for the LLM Era</title>
+      <link>https://arxiv.org/abs/2611.23282</link>
+      <guid isPermaLink="false">urn:ai-era-software:material:23fcac2b65d57173f8835d2363488a07274279052d3e8c3965ca0781dd779fcf</guid>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+      <description>原文首发日期：2026-10-23。原文最后更新：-。历史材料缺少本项目收录时间；RSS pubDate 使用原文首发日期，不代表本项目新增时间。
+介绍一个 Rust 测试库，把输入生成、变异和反例缩减拆成可替换部件。运行时检查生成的输入是否满足约束，并利用统计和覆盖率反馈指导智能体改进输入生成器。
+收录理由：展示从编写单个测试用例转向维护软件应满足的规则和输入约束的测试工作流。论文列出案例，项目公开实现与示例；初步案例不等于同预算下比现有方法更有效。</description>
       <category>构造方式</category>
     </item>
     <item>
